@@ -65,11 +65,15 @@ class Articles extends Component {
     return (
       <Container>
         <Row>
-          <Col size="md-12 sm-12">
+          <Col size="twelve columns">
             <Jumbotron>
               <h1 style= {{ fontSize: "3em"}}>World News Article Scrubber</h1>
 			  <h2>Search for and annotate articles of interest</h2>
             </Jumbotron>
+						</Col>
+				</Row>
+				<Row>
+					<Col size="twelve columns">
 			<Card>
 				<Cardheader>
 					Search
