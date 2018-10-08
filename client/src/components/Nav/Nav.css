@@ -1,13 +1,14 @@
 .navbar {
-    width: 100%;
-    background-color: rgb(194, 153, 92);
-    margin: 0 0 1rem 0;
+  width: 100%;
+  font: 100% "Cinzel", serif;
 }
 
 .navbar a {
-    padding-left: 3rem;
-    text-decoration: none;
-    font-size: 2em;
-    font-family: 'Cinzel', serif;
-    color: #111;
+  color: #090909;
+  margin: 0 0 1rem 0;
+  font-size: 2em;
+  padding-left: 3rem;
+  text-decoration: none;
 }
+
+/*# sourceMappingURL=Nav.css.map */

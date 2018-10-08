@@ -1,13 +1,14 @@
 .footNavbar {
-    width: 100%;
-    background-color: burlywood;
-    margin: 0;
+  width: 100%;
+  font: 100% "Cinzel", serif;
 }
 
 .footNavbar a {
-    padding-left: 3rem;
-    text-decoration: none;
-    font-size: 2em;
-    font-family: 'Cinzel', serif;
-    color: #111;
+  color: #090909;
+  margin: 0;
+  font-size: 2em;
+  padding-left: 3rem;
+  text-decoration: none;
 }
+
+/*# sourceMappingURL=FootNav.css.map */
