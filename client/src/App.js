@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Articles from "./pages/Articles";
 import Detail from "./pages/Detail";
 import NoMatch from "./pages/NoMatch";
-import * from "./pages/test";
+
 import Nav from "./components/Nav";
 
 const App = () => (
@@ -16,7 +16,6 @@ const App = () => (
         <Route exact path="/" component={Articles} />
         <Route exact path="/articles" component={Articles} />
         <Route exact path="/articles/:id" component={Detail} />
-        <Route exact path="/d3" component={test} />
         <Route component={NoMatch} />
       </Switch>
 	  <Nav bottom="fixed-bottom" color="navbar-light bg-light" target="_blank" rel="noopener" forHtml="https://newsapi.org">

@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Jumbotron from "../../components/Jumbotron";
 import API from "../../utils/API";
 import DeleteBtn from "../../components/DeleteBtn";
 import SaveBtn from "../../components/SaveBtn";
@@ -66,10 +65,7 @@ class Articles extends Component {
       <Container>
         <Row>
           <Col size="twelve columns">
-            <Jumbotron>
-              <h1 style= {{ fontSize: "3em"}}>World News Article Scrubber</h1>
-			  <h2>Search for and annotate articles of interest</h2>
-            </Jumbotron>
+
 						</Col>
 				</Row>
 				<Row>
