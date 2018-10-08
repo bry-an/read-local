@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import API from "../../utils/API";
+import Map from "../../components/Map";
 import DeleteBtn from "../../components/DeleteBtn";
 import SaveBtn from "../../components/SaveBtn";
 import { Link } from "react-router-dom";
@@ -67,6 +68,7 @@ class Articles extends Component {
           <Col size="two columns">
 					</Col>
 					<Col size="ten columns">
+          <Map/>
 					</Col>
 				</Row>
 				
