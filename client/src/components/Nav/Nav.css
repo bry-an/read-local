@@ -1,0 +1,13 @@
+.navbar {
+    width: 100%;
+    background-color: rgb(194, 153, 92);
+    margin: 0 0 1rem 0;
+}
+
+.navbar a {
+    padding-left: 3rem;
+    text-decoration: none;
+    font-size: 2em;
+    font-family: 'Cinzel', serif;
+    color: #111;
+}

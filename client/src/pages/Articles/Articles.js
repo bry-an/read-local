@@ -64,100 +64,12 @@ class Articles extends Component {
     return (
       <Container>
         <Row>
-          <Col size="twelve columns">
-
-						</Col>
+          <Col size="two columns">
+					</Col>
+					<Col size="ten columns">
+					</Col>
 				</Row>
-				<Row>
-					<Col size="twelve columns">
-			<Card>
-				<Cardheader>
-					Search
-				</Cardheader>
-				<form>
-					<Label>
-					Topic
-					</Label>
-				  <Input
-					value={this.state.topic}
-					onChange={this.handleInputChange}
-					name="topic"
-					placeholder="Topic (required)"
-				  />
-				  <Label>
-					Start Date (last 30 days)
-					</Label>
-				  <Input
-					value={this.state.startYear}
-					onChange={this.handleInputChange}
-					name="startYear"
-					placeholder="ex. 2016"
-					type="date"
-				  />
-				  <Label>
-					End Date
-					</Label>
-				  <Input
-					value={this.state.endYear}
-					onChange={this.handleInputChange}
-					name="endYear"
-					placeholder="ex. 2018"
-					type="date"
-				  />
-				  <FormBtn
-					disabled={!(this.state.topic)}
-					onClick={this.handleFormSubmit}
-				  >
-					Search
-				  </FormBtn>
-				</form>
-			</Card>
-			<Card>
-				<Cardheader>
-					Results
-				</Cardheader>
-				{this.state.articles.length ? (
-				  <List>
-					{this.state.articles.map(article => (
-					  <ListItem key={article.url}>
-						<Link to={"/articles/" + article._id}>
-						  <strong>
-							{article.title}
-						  </strong>
-						</Link>
-					  </ListItem>
-					))}
-				  </List>
-				) : (
-				  <h3>No Results to Display</h3>
-				)}
-			</Card>
-            <Card>
-				<Cardheader>
-					Saved Articles
-				</Cardheader>
-				{this.state.articles.length ? (
-				  <List>
-					{this.state.articles.map(article => {
-					  return (
-						<ListItem key={article._id}>
-						  <a href={"/articles/" + article._id}>
-							<strong>
-							  {article.title} by {article.author}
-							</strong>
-						  </a>
-						  <SaveBtn onClick={() => this.saveArticle(article._id)} />
-						  <DeleteBtn onClick={() => this.deleteArticle(article._id)} />
-						</ListItem>
-					  );
-					})}
-				  </List>
-				) : (
-				  <h3>No Saved Articles</h3>
-				)}
-			</Card>
-          </Col>
-        </Row>
+				
       </Container>
     );
   }
