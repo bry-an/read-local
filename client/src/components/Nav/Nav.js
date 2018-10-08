@@ -1,7 +1,8 @@
 import React from "react";
+import "./Nav.css";
 
 const Nav = props => (
-  <nav className={`navbar navbar-expand-lg ${props.color} ${props.bottom}`}>
+  <nav className={"navbar"}>
     <a className="navbar-brand" href={props.forHtml} target={props.target} rel={props.rel}>
 	{props.children}
     </a>
