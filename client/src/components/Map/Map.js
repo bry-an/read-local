@@ -2,8 +2,6 @@ import * as d3 from "d3";
 import * as topojson from "topojson";
 import "./Map.css";
 
-const Map = () => {
-
     var width = 960,
         height = 500,
         centered;
@@ -68,6 +66,4 @@ const Map = () => {
         .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")scale(" + k + ")translate(" + -x + "," + -y + ")")
         .style("stroke-width", 1.5 / k + "px");
     }
-}
 
-export default Map;

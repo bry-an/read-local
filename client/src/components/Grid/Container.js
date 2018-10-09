@@ -1,8 +1,8 @@
 import React from "react";
+import "./Grid.css";
 
 export const Container = ({ children }) => (
-  <div className="container"
-  style={{marginBottom:50, border: "1px solid red"}}>
+  <div className="container">
     {children}
   </div>
 );
