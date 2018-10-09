@@ -1,4 +1,3 @@
-import React from "react";
 import * as d3 from "d3";
 import * as topojson from "topojson";
 import "./Map.css";
@@ -28,7 +27,7 @@ const Map = () => {
 
     var g = svg.append("g");
 
-    d3.json("../src/utils/topology.json", function(error, us) {
+    d3.json("https://cors-anywhere.herokuapp.com/https://bl.ocks.org/mbostock/raw/4090846/us.json", function(error, us) {
     if (error) throw error;
 
     g.append("g")
