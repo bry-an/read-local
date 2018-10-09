@@ -62,7 +62,12 @@ class Articles extends Component {
       <Container>
         <Row>
           <Col size="four columns">
-            <Sidebar/>
+            <Sidebar>
+              <p>Test data</p>
+              <p>Test data</p>
+              <p>Test data</p>
+              <p>Test data</p>
+            </Sidebar>
           </Col>
           <Col size="eight columns">
             <MapTemp/>
