@@ -1,7 +1,7 @@
 import React from "react";
-import "./FootNav.css";
+import "./Footer.css";
 
-const FootNav = props => (
+const Footer = props => (
   <nav className={"footNavbar"}>
     <a href={props.forHtml} target={props.target} rel={props.rel}>
 	{props.children}
@@ -9,4 +9,4 @@ const FootNav = props => (
   </nav>
 );
 
-export default FootNav;
+export default Footer;

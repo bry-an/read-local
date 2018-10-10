@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Articles from "./pages/Articles";
 import Detail from "./pages/Detail";
 import NoMatch from "./pages/NoMatch";
-import FootNav from "./components/FootNav";
+import Footer from "./components/Footer";
 import Navbar from "./components/Nav/Navbar";
 
 const App = () => (
@@ -18,9 +18,9 @@ const App = () => (
         <Route exact path="/articles/:id" component={Detail} />
         <Route component={NoMatch} />
       </Switch>
-	  <FootNav>
-      Something neat here
-	  </FootNav>
+	  <Footer>
+    &copy;2018 GABY
+	  </Footer>
     </div>
   </Router>
 );
