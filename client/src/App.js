@@ -3,13 +3,14 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Articles from "./pages/Articles";
 import Detail from "./pages/Detail";
 import NoMatch from "./pages/NoMatch";
+import FootNav from "./components/FootNav";
 import Nav from "./components/Nav";
 
 const App = () => (
   <Router>
     <div>
-		<Nav color="navbar-dark bg-primary" forHtml="/">
-			Washington Post Headlines
+		<Nav forHtml="/">
+			Think National, Read Local
 		</Nav>
       <Switch>
         <Route exact path="/" component={Articles} />
@@ -17,9 +18,9 @@ const App = () => (
         <Route exact path="/articles/:id" component={Detail} />
         <Route component={NoMatch} />
       </Switch>
-	  <Nav bottom="fixed-bottom" color="navbar-light bg-light" target="_blank" rel="noopener" forHtml="https://newsapi.org">
-		Powered by News API
-	  </Nav>
+	  <FootNav>
+      Something neat here
+	  </FootNav>
     </div>
   </Router>
 );
