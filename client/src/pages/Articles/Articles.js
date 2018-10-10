@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import API from "../../utils/API";
 import Sidebar from "../../components/Sidebar";
-import { MapTemp } from  "../../components/MapTemp";
+import  Map  from  "../../components/Map";
 import { Col, Row, Container } from "../../components/Grid";
 
 
@@ -70,7 +70,7 @@ class Articles extends Component {
             </Sidebar>
           </Col>
           <Col size="eight columns">
-            <MapTemp/>
+            <Map/>
           </Col>
         </Row>
 				
