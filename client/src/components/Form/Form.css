@@ -1,0 +1,11 @@
+.button-primary {
+  padding: 0 1rem;
+  background-color: #aaa !important;
+  border-color: #aaa !important;
+}
+
+.button-primary:hover {
+  background-color: #888 !important;
+}
+
+/*# sourceMappingURL=Form.css.map */

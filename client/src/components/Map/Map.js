@@ -57,7 +57,7 @@ import "./Map.css";
 
 
 	
-   return (d3.json({ topology }, function(error, us) {
+   d3.json({ topology }, function(error, us) {
     if (error) throw error;
 
     g.append("g")
@@ -73,7 +73,7 @@ import "./Map.css";
         .attr("id", "state-borders")
         .attr("d", path);
     });
-)
+
 	 
 	}
 	
