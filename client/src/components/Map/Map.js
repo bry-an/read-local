@@ -1,6 +1,9 @@
 import * as d3 from "d3";
 import * as topojson from "topojson";
+import topology from "../../utils/topology.json";
 import "./Map.css";
+
+	const Map = () => {
 
     var width = 960,
         height = 500,
@@ -25,22 +28,7 @@ import "./Map.css";
 
     var g = svg.append("g");
 
-    d3.json("https://cors-anywhere.herokuapp.com/https://bl.ocks.org/mbostock/raw/4090846/us.json", function(error, us) {
-    if (error) throw error;
 
-    g.append("g")
-        .attr("id", "states")
-        .selectAll("path")
-        .data(topojson.feature(us, us.objects.states).features)
-        .enter().append("path")
-        .attr("d", path)
-        .on("click", clicked);
-
-    g.append("path")
-        .datum(topojson.mesh(us, us.objects.states, function(a, b) { return a !== b; }))
-        .attr("id", "state-borders")
-        .attr("d", path);
-    });
 
     function clicked(d) {
     var x, y, k;
@@ -67,3 +55,25 @@ import "./Map.css";
         .style("stroke-width", 1.5 / k + "px");
     }
 
+
+	
+    d3.json({ topology }, function(error, us) {
+    if (error) throw error;
+
+    g.append("g")
+        .attr("id", "states")
+        .selectAll("path")
+        .data(topojson.feature(us, us.objects.states).features)
+        .enter().append("path")
+        .attr("d", path)
+        .on("click", clicked);
+
+    g.append("path")
+        .datum(topojson.mesh(us, us.objects.states, function(a, b) { return a !== b; }))
+        .attr("id", "state-borders")
+        .attr("d", path);
+    });
+
+	}
+	
+	export default Map;
