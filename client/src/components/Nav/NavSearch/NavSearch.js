@@ -1,5 +1,5 @@
 import React from "react";
-import { Input, FormBtn } from "../../components/Form"
+import { Input, FormBtn } from "../../../components/Form"
 import "./NavSearch.css";
 
 const NavSearch = props => (
