@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import API from "../../utils/API";
-import  { MapTemp } from  "../../components/MapTemp";
+import  Map from  "../../components/Map";
 import { Col, Row, Container } from "../../components/Grid";
 
 
@@ -61,10 +61,9 @@ class Articles extends Component {
       <Container>
         <Row>
           <Col size="twelve columns">
-            <MapTemp/>
+            <Map/>
           </Col>
         </Row>
-				
       </Container>
     );
   }
