@@ -23,20 +23,7 @@
   "bugs": {
     "url": "https://github.com/bry-an/read-local/issues"
   },
-<<<<<<< HEAD
   "homepage": "https://github.com/bry-an/read-local#readme",
-=======
-  "devDependencies": {
-    "concurrently": "^3.5.0",
-    "eslint": "^5.6.1",
-    "eslint-config-standard": "^12.0.0",
-    "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-node": "^7.0.1",
-    "eslint-plugin-promise": "^4.0.1",
-    "eslint-plugin-standard": "^4.0.0",
-    "nodemon": "^1.11.0"
-  },
->>>>>>> eee3bead9202ec31c6a1d288bf822449b3964b12
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.3",
@@ -47,16 +34,12 @@
     "path": "^0.12.7",
     "axios": "^0.16.2",
     "d3": "^3.5.12",
-<<<<<<< HEAD
     "dotenv": "^6.1.0",
     "express": "^4.15.4",
-=======
->>>>>>> eee3bead9202ec31c6a1d288bf822449b3964b12
     "if-env": "^1.0.4",
     "mime": "^2.3.1",
     "topojson": "^3.0.2"
   },
-<<<<<<< HEAD
   "devDependencies": {
     "concurrently": "^3.5.0",
     "eslint": "^5.6.1",
@@ -67,7 +50,4 @@
     "eslint-plugin-standard": "^4.0.0",
     "nodemon": "^1.11.0"
   }
-=======
-  "homepage": "https://github.com/bry-an/read-local#readme"
->>>>>>> eee3bead9202ec31c6a1d288bf822449b3964b12
 }
