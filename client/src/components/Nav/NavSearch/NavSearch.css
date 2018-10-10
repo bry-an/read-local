@@ -1,0 +1,9 @@
+.search-input {
+  width: 30rem;
+}
+
+.search-input::placeholder {
+  color: #090909;
+}
+
+/*# sourceMappingURL=NavSearch.css.map */
