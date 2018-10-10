@@ -1,0 +1,19 @@
+.navbar-login {
+  border: 1px #090909 solid;
+  border-radius: 3px;
+  font-family: Arial, sans-serif;
+  padding: 0.9rem 1rem;
+  cursor: pointer;
+  color: #999;
+  font-weight: 600;
+}
+
+.two {
+  margin-top: 0.75rem;
+}
+
+.navbar-login:hover {
+  background-color: #ddd;
+}
+
+/*# sourceMappingURL=NavLogin.css.map */

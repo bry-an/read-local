@@ -4,14 +4,14 @@ import Articles from "./pages/Articles";
 import Detail from "./pages/Detail";
 import NoMatch from "./pages/NoMatch";
 import FootNav from "./components/FootNav";
-import Nav from "./components/Nav";
+import Navbar from "./components/Nav/Navbar";
 
 const App = () => (
   <Router>
     <div>
-		<Nav forHtml="/">
+		<Navbar >
 			Think National, Read Local
-		</Nav>
+		</Navbar>
       <Switch>
         <Route exact path="/" component={Articles} />
         <Route exact path="/articles" component={Articles} />
