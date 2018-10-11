@@ -9,23 +9,27 @@ module.exports = {
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
-  findById: function(req, res) {
-    db.Article
-      .findById(req.params.id)
-      .then(dbModel => res.json(dbModel))
-      .catch(err => res.status(422).json(err));
+  // Gets the article with the given id
+  getSavedArticle: function(req, res) {
+    return db.savedArticles.findOne({ _id: req.params.id });
   },
-  update: function(req, res) {
-    db.Article
-      .findOneAndUpdate({ _id: req.params.id }, req.body)
-      .then(dbModel => res.json(dbModel))
-      .catch(err => res.status(422).json(err));
+  // Deletes the article with the given id
+  deleteArticle: function(req, res) {
+    return db.savedArticles.deleteOne({ _id: req.params.id });
   },
-  remove: function(req, res) {
-    db.Article
-      .findById({ _id: req.params.id })
-      .then(dbModel => dbModel.remove())
-      .then(dbModel => res.json(dbModel))
-      .catch(err => res.status(422).json(err));
+  // Saves a article to the database
+  saveArticle: function(articleData) {
+    return db.savedArticles.findOneAndUpdate({ uri: articleData.uri }, 
+      {
+        uri: articleData.uri,
+        url: articleData.url,
+        datetime: articleData.datetime,
+        title: articleData.title,
+        body: articleData.body,
+        source: articleData.source.uri,
+        location: articleData.location,
+        lat: articleData.lat,
+        long: articleData.lng
+      }, { upsert: true })
   }
 };
