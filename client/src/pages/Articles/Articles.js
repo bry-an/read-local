@@ -14,35 +14,13 @@ class Article extends Component {
     });
   };
 
-  handleFormSubmit = event => {
-    event.preventDefault();
-	let startYear = this.state.startYear;
-	let endYear = this.state.endYear;
-	if (startYear) {
-		const startYearArr = startYear.split("/");
-		startYear = startYearArr[2] + "-" + startYearArr[0] + "-" + startYearArr[1];
-	}
-	if (endYear) {
-		const endYearArr = endYear.split("/");
-		endYear = endYearArr[2] + "-" + endYearArr[0] + "-" + endYearArr[1];
-	}
-    if (this.state.topic) {
-      API.getArticles({
-        topic: this.state.topic,
-        startYear: startYear,
-        endYear: endYear
-      })
-        .then(res => this.setState({articles: res.data.articles}))
-        .catch(err => console.log(err));
-    }
-  };
 
   render() {
     return (
       <Container>
         <Row>
           <Col size="twelve columns">
-            <MapTemp/>
+            <Map />
           </Col>
         </Row>
       </Container>
