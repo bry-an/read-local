@@ -1,24 +1,47 @@
-import React from "react";
-import { Col, Row } from "../../../components/Grid";
+import React, { Component } from "react";
+import { Col, Row } from "../..//Grid";
 import NavSearch from "../NavSearch";
 import NavLogin from "..//NavLogin";
 import NavLink from "..//NavLink";
+import { Select } from "../../Form";
+import states from "../../../utils/States.json"
 import "./Nav.css";
 
-const Nav = props => (
-  <nav className={"navbar"}>
-    <Row>
-      <Col size="five columns">
-        <NavLink forHtml="/"/>
-      </Col>
-      <Col size="five columns">
-        <NavSearch/>
-      </Col>
-      <Col size="two columns">
-        <NavLogin />
-      </Col>
-    </Row>
-  </nav>
-);
+class Nav extends Component {
+
+  state = {
+    
+    logState: "Login"
+  }
+
+  render() {
+    return (
+      <nav className={"navbar"}>
+      
+        <Row>
+          <Col size="five columns">
+            <NavLink forHtml="/"/>
+          </Col>
+          <Col size="two columns">
+          <select>
+            {states.map(stateName=><Select options={stateName.stateName} key={stateName.stateName}/>)}
+          </select>
+          </Col>
+          <Col size="three columns">
+          <NavSearch
+					value={this.state.search}
+					onChange={this.handleInputChange}
+					name="search"
+					placeholder="Keyword Search"
+				  />
+          </Col>
+          <Col size="two columns">
+            <NavLogin value={this.state.logState}/>
+          </Col>
+        </Row>
+      </nav>
+    )
+  }
+}
 
 export default Nav;
