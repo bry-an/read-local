@@ -1,7 +1,7 @@
-import React from 'react';
-import Modal from 'react-modal';
+import React, { Component } from "react";
+import ReactModal from 'react-modal';
 
-ReactModal.setAppElement('#main');
+ReactModal.setAppElement('#root');
 
 class ExampleApp extends React.Component {
   constructor () {
@@ -30,6 +30,7 @@ class ExampleApp extends React.Component {
            isOpen={this.state.showModal}
            contentLabel="onRequestClose Example"
            onRequestClose={this.handleCloseModal}
+           shouldCloseOnOverlayClick={false}
         >
           <p>Modal text!</p>
           <button onClick={this.handleCloseModal}>Close Modal</button>
@@ -39,4 +40,3 @@ class ExampleApp extends React.Component {
   }
 }
 
-export default ExampleApp;
