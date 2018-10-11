@@ -5,7 +5,7 @@ import "./NavSearch.css";
 const NavSearch = props => (
     <form>
         <Input id="Search" type="text" placeholder="Search" className="u-pull-left search-input" ></Input>
-        <FormBtn class="button-primary" type="submit" value="Submit">Submit</FormBtn>
+        <FormBtn className="button-primary" type="submit" value="Submit">Submit</FormBtn>
     </form>
 )
 
