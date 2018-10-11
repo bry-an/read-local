@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import ExampleApp from "../../components/Modal"
+
 import { Col, Row, Container } from "../../components/Grid";
 
 
@@ -15,7 +15,7 @@ class Articles extends Component {
   render() {
     return (
       <Container>
-        <ExampleApp />
+
         <Row>
           <Col size="four columns">
           
