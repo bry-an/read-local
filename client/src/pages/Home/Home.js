@@ -1,26 +1,16 @@
 import React, { Component } from "react";
+import API from "../../utils/API";
+import Map from  "../../components/Map";
 import { Col, Row, Container } from "../../components/Grid";
 
 
-class Article extends Component {
-  state = {
-    articles: []
-  };
-
-  handleInputChange = event => {
-    const { name, value } = event.target;
-    this.setState({
-      [name]: value
-    });
-  };
-
-
+class Home extends Component {
   render() {
     return (
       <Container>
         <Row>
           <Col size="twelve columns">
-            <Map />
+            <Map/>
           </Col>
         </Row>
       </Container>
@@ -28,4 +18,4 @@ class Article extends Component {
   }
 }
 
-export default Article;
+export default Home;
