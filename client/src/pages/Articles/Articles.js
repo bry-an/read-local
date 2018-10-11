@@ -1,15 +1,10 @@
 import React, { Component } from "react";
-import API from "../../utils/API";
-import  Map from  "../../components/Map";
 import { Col, Row, Container } from "../../components/Grid";
 
 
-class Articles extends Component {
+class Article extends Component {
   state = {
-    articles: [],
-    topic: "",
-    startYear: "",
-    endYear: ""
+    articles: []
   };
 
   handleInputChange = event => {
@@ -17,20 +12,6 @@ class Articles extends Component {
     this.setState({
       [name]: value
     });
-  };
-  
-    // Deletes a book from the database with a given id, then reloads books from the db
-  deleteArticle = id => {
-    API.deleteArticle(id)
-      .then(res => this.loadArticles())
-      .catch(err => console.log(err));
-  };
-    
-	// Deletes a book from the database with a given id, then reloads books from the db
-  saveArticle = id => {
-    API.saveArticle(id)
-      .then(res => this.loadArticles())
-      .catch(err => console.log(err));
   };
 
   handleFormSubmit = event => {
@@ -61,7 +42,7 @@ class Articles extends Component {
       <Container>
         <Row>
           <Col size="twelve columns">
-            <Map/>
+            <MapTemp/>
           </Col>
         </Row>
       </Container>
@@ -69,4 +50,4 @@ class Articles extends Component {
   }
 }
 
-export default Articles;
+export default Article;
