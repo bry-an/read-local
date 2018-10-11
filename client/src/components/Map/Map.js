@@ -22,7 +22,7 @@ const drawMap = () => {
     var path = d3.geo.path()
         .projection(projection);
 
-    var svg = d3.select("#map").append("svg")
+    var svg = d3.select(".mapDiv").append("svg")
         .attr("width", width)
         .attr("height", height);
 
