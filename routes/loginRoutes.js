@@ -14,12 +14,14 @@ router.post('/register', function (req, res) {
     console.log("in register");
     console.log(req.body);
     var hashedPassword = bcrypt.hashSync(req.body.password, 8);
-    db.Login.create({
-        first_name: req.body.firstname,
+    db.Login.findOneAndUpdate({
+        login_email: req.body.email
+    }, {first_name: req.body.firstname,
         last_name: req.body.lastname,
         login_email: req.body.email,
         password: hashedPassword
-    }, function (err, logins) {
+    }, { upsert: true, returnNewDocument: true }, 
+    function (err, logins) {
         console.log(logins);
         if (err) return res.status(500).send("There was a problem registering the user.")
         // create a token
