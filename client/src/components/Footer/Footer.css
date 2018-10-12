@@ -1,6 +1,8 @@
 .footNavbar {
   width: 100%;
   font: 100% "Cinzel", serif;
+  margin-top:3rem;
+  margin-left: 5rem;
 }
 
 .footNavbar a {

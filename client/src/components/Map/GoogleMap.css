@@ -1,5 +1,6 @@
 #googleMap {
-    height: 800px;
-    width: 800px;
+    height: 75rem;
+    width: 135rem;
     background-color: black;
+	margin: 0 auto;
 }
