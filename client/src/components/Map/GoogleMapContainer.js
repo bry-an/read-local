@@ -26,9 +26,9 @@ class GoogleMapContainer extends Component {
         autocomplete.setFields(['geometry'])
         const infowindow = new google.maps.InfoWindow()
         autocomplete.addListener('place_changed', () => {
-            console.log('place changed!!!')
             infowindow.close()
             const placeObj = autocomplete.getPlace()
+            console.log('placeobj', placeObj)
             if (placeObj.geometry) {
             const placeGoogle = placeObj.geometry.location
             const place = {
