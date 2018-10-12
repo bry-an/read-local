@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-
 import { Col, Row, Container } from "../../components/Grid";
 
 
@@ -15,11 +14,8 @@ class Articles extends Component {
   render() {
     return (
       <Container>
-
         <Row>
           <Col size="four columns">
-          <div id="test"></div>
-          Achoo!
           </Col>
           <Col size="eight columns">
           Achoo!

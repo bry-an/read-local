@@ -1,11 +1,7 @@
 import React, { Component } from "react";
 import ReactModal from 'react-modal';
 
-//ReactModal.setAppElement('#test');
-
-function getParent() {
-  return document.querySelector('#test');
-}
+ReactModal.setAppElement('#modal');
 
 class ExampleApp extends React.Component {
   constructor () {
@@ -31,11 +27,10 @@ class ExampleApp extends React.Component {
       <div>
         <button onClick={this.handleOpenModal}>Trigger Modal</button>
         <ReactModal 
-          parentSelector={getParent}
            isOpen={this.state.showModal}
            contentLabel="onRequestClose Example"
            onRequestClose={this.handleCloseModal}
-           shouldCloseOnOverlayClick={false}
+           shouldCloseOnOverlayClick={true}
         >
           <p>Modal text!</p>
           <button onClick={this.handleCloseModal}>Close Modal</button>
@@ -45,3 +40,4 @@ class ExampleApp extends React.Component {
   }
 }
 
+export default ExampleApp;
