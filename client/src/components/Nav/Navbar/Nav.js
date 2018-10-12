@@ -35,7 +35,7 @@ class Nav extends Component {
               placeholder="Keyword Search"
               />
           </Col>
-          <Col size="two columns">
+          <Col size="two columns" loginId="navLogin">
             <NavLogin value={this.state.logState}/>
           </Col>
         </Row>
