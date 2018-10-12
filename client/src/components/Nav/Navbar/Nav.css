@@ -3,4 +3,16 @@
   margin-top: 2rem;
 }
 
+select {
+	margin-bottom: 25px;
+}
+
+.two {
+	margin: 0 auto;
+}
+
+#navLogin {
+	margin-top: .8rem;
+}
+
 /*# sourceMappingURL=Nav.css.map */

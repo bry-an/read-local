@@ -1,12 +1,13 @@
 .footNavbar {
   width: 100%;
   font: 100% "Cinzel", serif;
+  margin-top:3rem;
+	
 }
 
 .footNavbar a {
   color: #090909;
-  margin: 0;
-  padding-left: 3rem;
+  margin-left: 5rem;
   text-decoration: none;
 }
 

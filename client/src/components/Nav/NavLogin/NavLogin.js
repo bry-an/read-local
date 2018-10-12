@@ -1,11 +1,10 @@
 import React, { Component, Fragment } from "react";
 import ReactModal from 'react-modal';
-import { Col, Row, Container } from "../../Grid";
 import "./NavLogin.css";
 
 ReactModal.setAppElement('#modal');
 
-class NavLogin extends React.Component {
+class NavLogin extends Component {
   constructor (props) {
     super(props);
     this.state = {

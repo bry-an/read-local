@@ -20,7 +20,7 @@ class GoogleMap extends Component {
     initMap = () => {
         let map = new google.maps.Map(document.getElementById('googleMap'), {
             zoom: 5,
-            center: { lat: 38.755, lng: -98.434 },
+            center: { lat: 38.755, lng: -95.434 },
 
         })
 
