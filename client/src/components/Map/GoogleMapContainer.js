@@ -7,10 +7,10 @@ class GoogleMapContainer extends Component {
 
     state = {
         mapCenter: { lat: 39.755, lng: -104.99 },
-        points: []
+        points: [{ lat: 39.55, lng: -104.99 }]
     }
 
-    componentDidMount () {
+    componentDidMount() {
         this.autoComplete()
     }
 
@@ -30,14 +30,14 @@ class GoogleMapContainer extends Component {
             infowindow.close()
             const placeObj = autocomplete.getPlace()
             if (placeObj.geometry) {
-            const placeGoogle = placeObj.geometry.location
-            const place = {
-                lat: placeGoogle.lat(), 
-                lng: placeGoogle.lng()
+                const placeGoogle = placeObj.geometry.location
+                const place = {
+                    lat: placeGoogle.lat(),
+                    lng: placeGoogle.lng()
+                }
+                console.log('place', place)
+                this.setMapCenter(place)
             }
-            console.log('place', place)
-            this.setMapCenter(place)
-        }
         })
     }
 

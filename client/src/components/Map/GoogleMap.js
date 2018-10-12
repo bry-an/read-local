@@ -13,13 +13,14 @@ class GoogleMap extends Component {
 
     componentWillReceiveProps(nextProps) {
         if (nextProps.center !== this.props.center)
-        this.initMap(nextProps.center, nextProps.points, 5)
+            this.initMap(nextProps.center, nextProps.points, 6)
     }
 
 
     initMap = (center, points, zoom) => {
+        const formattedPoints = this.createLatLng(points)
 
-        const styledMapType = new google.maps.StyledMapType(mapStyle, {name: 'ReadLocal Map'})
+        const styledMapType = new google.maps.StyledMapType(mapStyle, { name: 'ReadLocal Map' })
         const map = new google.maps.Map(document.getElementById('googleMap'), {
             zoom,
             center,
@@ -31,15 +32,11 @@ class GoogleMap extends Component {
         map.setMapTypeId('styled_map')
 
         const heatmap = new google.maps.visualization.HeatmapLayer({
-            data: points,
+            data: [new google.maps.LatLng(39.5, -105)],
             map
         })
 
-        heatmap.setMap(heatmap.getMap()
-            ? null
-            : map
-        )
-        console.log('center', this.props.center)
+        heatmap.setMap(map)
 
 
 
