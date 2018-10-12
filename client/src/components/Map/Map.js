@@ -6,6 +6,13 @@ import "./Map.css";
 
 class Map extends Component {
 
+  state = {
+    points: [
+
+    ]
+  }
+
+
   componentDidMount() {
     this.drawMap()
   }

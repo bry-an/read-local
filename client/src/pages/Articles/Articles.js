@@ -1,26 +1,27 @@
 import React, { Component } from "react";
 import { Col, Row, Container } from "../../components/Grid";
+import Dashboard from "../../components/Dashboard"
 
 
-class Article extends Component {
+class Articles extends Component {
   state = {
     articles: []
   };
 
-  handleInputChange = event => {
-    const { name, value } = event.target;
-    this.setState({
-      [name]: value
-    });
-  };
+  componentDidMount() {
 
+  }
 
   render() {
     return (
       <Container>
         <Row>
-          <Col size="twelve columns">
-            <Map />
+          <Col size="four columns">
+		  Achoo
+		  <Dashboard/>
+          </Col>
+          <Col size="eight columns">
+          Achoo!
           </Col>
         </Row>
       </Container>
@@ -28,4 +29,4 @@ class Article extends Component {
   }
 }
 
-export default Article;
+export default Articles;

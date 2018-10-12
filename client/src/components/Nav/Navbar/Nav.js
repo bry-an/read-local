@@ -38,13 +38,13 @@ class Nav extends Component {
           </Col>
           <Col size="three columns">
           <NavSearch
-					value={this.state.search}
-					onChange={this.handleInputChange}
-					name="search"
-					placeholder="Keyword Search"
-				  />
+              value={this.state.search}
+              onChange={this.handleInputChange}
+              name="search"
+              placeholder="Keyword Search"
+              />
           </Col>
-          <Col size="two columns">
+          <Col size="two columns" loginId="navLogin">
             <NavLogin value={this.state.logState}/>
           </Col>
         </Row>

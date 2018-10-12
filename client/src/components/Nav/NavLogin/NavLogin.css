@@ -8,12 +8,12 @@
   font-weight: 600;
 }
 
-.two {
-  margin-top: 0.75rem;
-}
-
 .navbar-login:hover {
   background-color: #ddd;
+}
+
+.loginModal {
+	width: 50rem;
 }
 
 /*# sourceMappingURL=NavLogin.css.map */
