@@ -8,7 +8,7 @@ select {
 }
 
 .two {
-	margin: 0 auto;
+	margin: .8rem auto 0;
 }
 
 #navLogin {

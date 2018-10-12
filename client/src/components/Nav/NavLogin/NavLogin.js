@@ -2,6 +2,17 @@ import React, { Component, Fragment } from "react";
 import ReactModal from 'react-modal';
 import "./NavLogin.css";
 
+const customStyles = {
+  content : {
+    top                   : '50%',
+    left                  : '50%',
+    right                 : 'auto',
+    bottom                : 'auto',
+    marginRight           : '-50%',
+    transform             : 'translate(-50%, -50%)'
+  }
+};
+
 ReactModal.setAppElement('#modal');
 
 class NavLogin extends Component {
@@ -35,6 +46,7 @@ class NavLogin extends Component {
 			   contentLabel="onRequestClose Example"
 			   onRequestClose={this.handleCloseModal}
 			   shouldCloseOnOverlayClick={true}
+			   style={customStyles}
 			>
 			  <p>Modal text!</p>
 			  <button onClick={this.handleCloseModal}>Close Modal</button>
