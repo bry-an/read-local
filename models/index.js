@@ -1,4 +1,6 @@
 module.exports = {
   Login: require("./login"),
-  savedArticles: require("./savedArticles")
+  savedArticles: require("./savedArticles"),
+  City: require("./cities"),
+  UsState: require("./states")
 };
