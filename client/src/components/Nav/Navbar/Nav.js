@@ -10,7 +10,7 @@ import "./Nav.css";
 class Nav extends Component {
 
   state = {
-    
+    stateNames: states,
     logState: "Login"
   }
 
@@ -24,16 +24,16 @@ class Nav extends Component {
           </Col>
           <Col size="two columns">
           <select>
-            {states.map(stateName=><Select options={stateName.stateName} key={stateName.stateName}/>)}
+            {this.state.stateNames.map(stateName=><Select options={stateName.stateName} key={stateName.stateName}/>)}
           </select>
           </Col>
           <Col size="three columns">
           <NavSearch
-					value={this.state.search}
-					onChange={this.handleInputChange}
-					name="search"
-					placeholder="Keyword Search"
-				  />
+              value={this.state.search}
+              onChange={this.handleInputChange}
+              name="search"
+              placeholder="Keyword Search"
+              />
           </Col>
           <Col size="two columns">
             <NavLogin value={this.state.logState}/>
