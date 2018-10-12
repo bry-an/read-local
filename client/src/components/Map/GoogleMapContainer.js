@@ -1,13 +1,15 @@
 import React, { Fragment, Component } from 'react'
 import GoogleMap from './GoogleMap'
+import { Input } from "../Form"
+import { Col, Row } from "../Grid";
 
 const google = window.google
 class GoogleMapContainer extends Component {
 
 
     state = {
-        mapCenter: { lat: 39.755, lng: -104.99 },
-        points: [{ lat: 39.55, lng: -104.99 }]
+        mapCenter: { lat: 39.755, lng: -96.99 },
+        points: []
     }
 
     componentDidMount() {
@@ -45,11 +47,19 @@ class GoogleMapContainer extends Component {
     render() {
         return (
             <Fragment>
-                <input type='text' id='locationInput' placeholder='Enter your location'></input>
-                <GoogleMap
-                    center={this.state.mapCenter}
-                    points={this.state.points}
-                />
+				<Row>
+					<Col size="three columns offset-by-five" colId="centerCol">
+						<Input type='text' id='locationInput' placeholder='Enter your location'/>
+					</Col>
+				</Row>
+				<Row>
+				<Col size="twelve columns">
+					<GoogleMap
+						center={this.state.mapCenter}
+						points={this.state.points}
+					/>
+				</Col>
+				</Row>
             </Fragment>
         )
     }
