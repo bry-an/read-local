@@ -7,6 +7,11 @@ export default {
 	  const startDate = (articleData.startYear ? "&from=" + articleData.startYear + "-01-01" : "");
 	  const endDate = (articleData.endYear ? "&to=" + articleData.endYear + "-01-01" : "");
 	  return axios.get(`https://newsapi.org/v2/everything?q=${topic}${startDate}${endDate}&domains=wsj.com,nytimes.com&apiKey=c3729246d799406a84cde63905f0d328`);
+  },
+  fillStates: function() {
+    const states = axios.get('/api/articles/usstates');
+    console.log(states);
+    return states;
   }
   
 };

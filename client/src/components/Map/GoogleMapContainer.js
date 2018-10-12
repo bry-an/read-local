@@ -1,16 +1,18 @@
 import React, { Fragment, Component } from 'react'
 import GoogleMap from './GoogleMap'
+import { Input } from "../Form"
+import { Col, Row } from "../Grid";
 
 const google = window.google
 class GoogleMapContainer extends Component {
 
 
     state = {
-        mapCenter: { lat: 39.755, lng: -104.99 },
+        mapCenter: { lat: 39.755, lng: -96.99 },
         points: []
     }
 
-    componentDidMount () {
+    componentDidMount() {
         this.autoComplete()
     }
 
@@ -26,18 +28,18 @@ class GoogleMapContainer extends Component {
         autocomplete.setFields(['geometry'])
         const infowindow = new google.maps.InfoWindow()
         autocomplete.addListener('place_changed', () => {
+            console.log('place changed!!!')
             infowindow.close()
             const placeObj = autocomplete.getPlace()
-            console.log('placeobj', placeObj)
             if (placeObj.geometry) {
-            const placeGoogle = placeObj.geometry.location
-            const place = {
-                lat: placeGoogle.lat(), 
-                lng: placeGoogle.lng()
+                const placeGoogle = placeObj.geometry.location
+                const place = {
+                    lat: placeGoogle.lat(),
+                    lng: placeGoogle.lng()
+                }
+                console.log('place', place)
+                this.setMapCenter(place)
             }
-            console.log('place', place)
-            this.setMapCenter(place)
-        }
         })
     }
 
@@ -45,11 +47,19 @@ class GoogleMapContainer extends Component {
     render() {
         return (
             <Fragment>
-                <input type='text' id='locationInput' placeholder='Enter your location'></input>
-                <GoogleMap
-                    center={this.state.mapCenter}
-                    points={this.state.points}
-                />
+				<Row>
+					<Col size="three columns offset-by-five" colId="centerCol">
+						<Input type='text' id='locationInput' placeholder='Enter your location'/>
+					</Col>
+				</Row>
+				<Row>
+				<Col size="twelve columns">
+					<GoogleMap
+						center={this.state.mapCenter}
+						points={this.state.points}
+					/>
+				</Col>
+				</Row>
             </Fragment>
         )
     }

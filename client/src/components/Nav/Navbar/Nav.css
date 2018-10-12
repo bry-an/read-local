@@ -15,4 +15,15 @@ select {
 	margin-top: .8rem;
 }
 
+.one {
+	margin:0;
+}
+
+.cityDisplayTrue {
+	display: inline;
+}
+.cityDisplayFalse {
+	visibility: hidden;
+}
+
 /*# sourceMappingURL=Nav.css.map */

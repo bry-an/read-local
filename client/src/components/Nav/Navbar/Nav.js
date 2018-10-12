@@ -4,14 +4,23 @@ import NavSearch from "../NavSearch";
 import NavLogin from "..//NavLogin";
 import NavLink from "..//NavLink";
 import { Select } from "../../Form";
-import states from "../../../utils/States.json"
 import "./Nav.css";
+import API from "../../../utils/API";
 
 class Nav extends Component {
 
   state = {
-    stateNames: states,
+    stateItems: [],
+	cityItems: [],
+	cityDisplay: "cityDisplayFalse",
     logState: "Login"
+  }
+
+  componentDidMount() {
+    API.fillStates()
+      .then(res =>  {this.setState({ stateItems: res.data});}
+  )
+      .catch(err => console.log(err));
   }
 
   render() {
@@ -19,14 +28,19 @@ class Nav extends Component {
       <nav className={"navbar"}>
       
         <Row>
-          <Col size="five columns">
+          <Col size="four columns">
             <NavLink forHtml="/"/>
           </Col>
-          <Col size="two columns">
-          <select>
-            {this.state.stateNames.map(stateName=><Select options={stateName.stateName} key={stateName.stateName}/>)}
-          </select>
+          <Col size="one column">
+			  <select>
+				{this.state.stateItems.map(item=><Select options={item.usstate} key={item.usstate}/>)}
+			  </select>
           </Col>
+		  <Col size="two columns">
+			<select className={this.state.cityDisplay}>
+				{this.state.cityItems.map(item=><Select options={item.city} key={item.city}/>)}
+			  </select>
+		  </Col>
           <Col size="three columns">
           <NavSearch
               value={this.state.search}
