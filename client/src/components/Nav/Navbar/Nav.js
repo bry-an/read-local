@@ -6,12 +6,21 @@ import NavLink from "..//NavLink";
 import { Select } from "../../Form";
 import states from "../../../utils/States.json"
 import "./Nav.css";
+import API from "../../../utils/API";
 
 class Nav extends Component {
 
   state = {
-    stateNames: states,
+    listItems: [],
     logState: "Login"
+  }
+
+  componentDidMount() {
+    API.fillStates()
+      .then(res =>  {this.setState({ listItems: res.data});
+    console.log(res.data, this.state.listItems)}
+  )
+      .catch(err => console.log(err));
   }
 
   render() {
@@ -24,7 +33,7 @@ class Nav extends Component {
           </Col>
           <Col size="two columns">
           <select>
-            {this.state.stateNames.map(stateName=><Select options={stateName.stateName} key={stateName.stateName}/>)}
+            {this.state.listItems.map(item=><Select options={item.usstate} key={item.usstate}/>)}
           </select>
           </Col>
           <Col size="three columns">

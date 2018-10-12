@@ -18,18 +18,23 @@ module.exports = {
     return db.savedArticles.deleteOne({ _id: req.params.id });
   },
   // Saves a article to the database
-  saveArticle: function(articleData) {
-    return db.savedArticles.findOneAndUpdate({ uri: articleData.uri }, 
+  saveArticle: function(req, res) {
+    return db.savedArticles.findOneAndUpdate({ uri: req.body.uri }, 
       {
-        uri: articleData.uri,
-        url: articleData.url,
-        datetime: articleData.datetime,
-        title: articleData.title,
-        body: articleData.body,
-        source: articleData.source.uri,
-        location: articleData.location,
-        lat: articleData.lat,
-        long: articleData.lng
+        uri: req.body.uri,
+        url: req.body.url,
+        datetime: req.body.datetime,
+        title: req.body.title,
+        body: req.body.body,
+        source: req.body.source.uri,
+        location: req.body.location,
+        lat: req.body.lat,
+        long: req.body.lng
       }, { upsert: true })
+  },
+  getStates: function(req, res) {
+    db.UsState.find({})
+    .then(states => res.json(states))
+    .catch(err => console.log(err));
   }
 };
