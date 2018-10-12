@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import './GoogleMap.css'
 import mapStyle from './GoogleMapStyle.js'
-
+import latLngData from './newCoordsArray'
 
 const google = window.google
 
@@ -13,13 +13,14 @@ class GoogleMap extends Component {
 
     componentWillReceiveProps(nextProps) {
         if (nextProps.center !== this.props.center)
-        this.initMap(nextProps.center, nextProps.points, 5)
+            this.initMap(nextProps.center, nextProps.points, 6)
     }
 
 
     initMap = (center, points, zoom) => {
+        const formattedPoints = this.createLatLng(latLngData)
 
-        const styledMapType = new google.maps.StyledMapType(mapStyle, {name: 'ReadLocal Map'})
+        const styledMapType = new google.maps.StyledMapType(mapStyle, { name: 'ReadLocal Map' })
         const map = new google.maps.Map(document.getElementById('googleMap'), {
             zoom,
             center,
@@ -31,17 +32,14 @@ class GoogleMap extends Component {
         map.setMapTypeId('styled_map')
 
         const heatmap = new google.maps.visualization.HeatmapLayer({
-            data: points,
+            data: this.createLatLng(latLngData),
             map
         })
 
-        heatmap.setMap(heatmap.getMap()
-            ? null
-            : map
-        )
-        console.log('center', this.props.center)
+        heatmap.setMap(map)
 
 
+        // console.log('createLatLng', this.createLatLng(latLngData))
 
     }
 
@@ -50,7 +48,8 @@ class GoogleMap extends Component {
     //It returns an array of those values converted to google LatLng objects, 
     //which can be passed to the data property of the HeatmapLayer constructor.
     createLatLng = pointsArr => {
-        pointsArr.map(point => new google.maps.LatLng(point.lat, point.lng))
+        const arr = pointsArr.map(point => new google.maps.LatLng(point.lat, point.lng))
+        return arr
     }
 
 
@@ -60,6 +59,7 @@ class GoogleMap extends Component {
             </div>
         )
     }
+
 
 }
 
