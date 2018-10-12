@@ -1,6 +1,8 @@
 import React, { Component } from "react";
+
+
+import GoogleMapContainer from '../../components/Map/GoogleMapContainer'
 import { Col, Row } from "../../components/Grid";
-import GoogleMap from '../../components/Map/GoogleMap'
 
 
 class Home extends Component {
@@ -9,7 +11,7 @@ class Home extends Component {
 
         <Row>
           <Col size="twelve columns">
-            <GoogleMap />
+            <GoogleMapContainer />
           </Col>
         </Row>
 
