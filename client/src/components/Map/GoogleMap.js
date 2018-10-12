@@ -1,24 +1,41 @@
 import React, { Component } from "react";
-import 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDqEyqqpMD23rErtt__7gxgYsuA6pfYdOE&libraries=visualization&callback=initMap'
+import './GoogleMap.css'
 
 
+const google = window.google
 
 class GoogleMap extends Component {
+
+
     state = {
         center: { lat: 38.755, lng: -98.434 },
         points: []
     }
 
+    componentDidMount() {
+        this.initMap()
+        console.log('can you see this?', google)
+    }
+
     initMap = () => {
-        map = new google.maps.Map(document.querySelector('mapDiv'), {
+        let map = new google.maps.Map(document.getElementById('googleMap'), {
             zoom: 5,
-            center: this.state.center
+            center: { lat: 38.755, lng: -98.434 },
+
         })
 
-        heatmap = new google.maps.visualization.HeatmapLayer({
+        let heatmap = new google.maps.visualization.HeatmapLayer({
             data: this.state.points,
             map
         })
+
+        heatmap.setMap(heatmap.getMap()
+            ? null
+            : map
+        )
+        console.log('center', this.state.center)
+
+
 
     }
 
@@ -26,5 +43,13 @@ class GoogleMap extends Component {
         return new google.maps.LatLng(twoPointsArr[0], twoPointsArr[1])
     }
 
+    render() {
+        return (
+            <div id='googleMap'>
+            </div>
+        )
+    }
 
 }
+
+export default GoogleMap
