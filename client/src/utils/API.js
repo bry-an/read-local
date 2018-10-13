@@ -10,6 +10,11 @@ export default {
     const states = axios.get('/api/articles/usstates');
     console.log(states);
     return states;
+  },
+  fillArticles: function() {
+    const articles = axios.get('/api/articles');
+    console.log(articles);
+    return articles;
   }
   
 };

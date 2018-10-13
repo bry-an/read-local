@@ -11,8 +11,8 @@ class Articles extends Component {
   };
 
   componentDidMount() {
-    API.getArticles()
-      .then(res =>  {this.setState({articles: res.data.articles});}
+    API.fillArticles()
+      .then(res =>  {this.setState({articles: res.data});}
 	)
       .catch(err => console.log(err));
   }
