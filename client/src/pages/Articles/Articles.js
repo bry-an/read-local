@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Col, Row, Container } from "../../components/Grid";
 import { List, ListItem } from "../../components/List";
 import API from "../../utils/API";
+import "./Articles.css";
 
 
 class Articles extends Component {
@@ -24,11 +25,12 @@ class Articles extends Component {
 			{this.state.articles.length ? (
 				  <List>
 					{this.state.articles.map((article, i) => {
+						const url = article.url.split("/").pop().split(".").shift();
 					  return (
-						<ListItem key={article.url}>
-						  <a href={"/articles/" + article.url}>
+						<ListItem key={url} >
+						  <a href={"/articles/" + url} id={"id-" + url}>
 							<strong>
-							  {article.title} by {article.author}
+							  {article.title} <span className="author">by {article.author}</span>
 							</strong>
 						  </a>
 						</ListItem>
