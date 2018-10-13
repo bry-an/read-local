@@ -12,4 +12,32 @@
   background-color: #ddd;
 }
 
+#cancel {
+	float: right;
+}
+
+#loginBtn.button-primary {
+	background-color: #90df95!important;
+}
+
+#loginBtn.button-primary:hover {
+	background-color: #81c686!important;
+}
+
+.newUser {
+	clear: both;
+	margin: 1rem 0 0;
+	
+	text-align: center;
+}
+
+#newUserSpan {
+	color: #cc0000;
+	cursor: pointer;
+}
+
+#newUserSpan:hover {
+	color: #aa0000;
+}
+
 /*# sourceMappingURL=NavLogin.css.map */
