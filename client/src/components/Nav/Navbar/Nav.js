@@ -29,7 +29,15 @@ class Nav extends Component {
       
         <Row>
           <Col size="four columns">
-            <NavLink forHtml="/"/>
+            <NavLink href="/"/>
+          </Col>
+		  <Col size="three columns">
+          <NavSearch
+              value={this.state.search}
+              onChange={this.handleInputChange}
+              name="search"
+              placeholder="Keyword Search"
+              />
           </Col>
           <Col size="one column">
 			  <select>
@@ -41,14 +49,7 @@ class Nav extends Component {
 				{this.state.cityItems.map(item=><Select options={item.city} key={item.city}/>)}
 			  </select>
 		  </Col>
-          <Col size="three columns">
-          <NavSearch
-              value={this.state.search}
-              onChange={this.handleInputChange}
-              name="search"
-              placeholder="Keyword Search"
-              />
-          </Col>
+          
           <Col size="two columns" loginId="navLogin">
             <NavLogin value={this.state.logState}/>
           </Col>
