@@ -35,10 +35,6 @@ class NavLogin extends Component {
     this.setState({ showModal: false });
   }
   
-  newUserModal () {
-	console.log("thismuchworks")
-  }
-  
   render () {
     return (
       <Fragment>
@@ -63,7 +59,7 @@ class NavLogin extends Component {
 			<Input id="password" type="password" placeholder="Password"/>
 			<FormBtn onClick={this.handleCloseModal} id="loginBtn">Log In</FormBtn>
 			<FormBtn onClick={this.handleCloseModal} id="cancel">Cancel</FormBtn>
-			<p className="newUser" >New user? <span id="newUserSpan" onClick={this.newUserModal}>Click here</span></p>
+			<p className="newUser" >New user? <a id="newUserSpan" href="newuser">Click here</a></p>
 			</ReactModal>
 		</div>
       </Fragment>
