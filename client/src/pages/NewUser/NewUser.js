@@ -59,7 +59,7 @@ class NewUser extends Component {
 				  <Input className="u-full-width" type="password" placeholder="Password" id="newUserPassword"></Input>
 				</Col>
 			  </Row>
-			  <FormBtn className="button-primary" type="submit">Submit</FormBtn>
+			  <FormBtn className="button-primary" type="submit" id="newUserCreate">Submit</FormBtn>
 			  <LinkBtn href="home" id="cancelNewUser">Cancel</LinkBtn>
 			</form>
 			</ReactModal>

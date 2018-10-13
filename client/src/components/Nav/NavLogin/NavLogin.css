@@ -16,11 +16,12 @@
 	float: right;
 }
 
-#loginBtn.button-primary {
+#loginBtn {
 	background-color: #90df95!important;
+	border-color: #90df95!important;
 }
 
-#loginBtn.button-primary:hover {
+#loginBtn:hover {
 	background-color: #81c686!important;
 }
 

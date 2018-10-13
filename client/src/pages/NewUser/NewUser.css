@@ -1,3 +1,14 @@
 #cancelNewUser {
 	float: right;
+	margin-right: 2rem;
+}
+
+#newUserCreate {
+	background-color: #90df95!important;
+	border-color: #90df95!important;
+	margin-left: 2rem;
+}
+
+#newUserCreate:hover {
+	background-color: #81c686!important;
 }
