@@ -29,7 +29,7 @@ class Nav extends Component {
       
         <Row>
           <Col size="four columns">
-            <NavLink forHtml="/"/>
+            <NavLink href="/"/>
           </Col>
 		  <Col size="three columns">
           <NavSearch

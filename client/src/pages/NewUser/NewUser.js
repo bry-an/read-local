@@ -1,7 +1,8 @@
 import React, { Fragment, Component } from "react";
 import ReactModal from 'react-modal';
 import { Row, Col } from "../../components/Grid";
-import { FormBtn, Input, Label } from "../../components/Form";
+import { FormBtn, Input, Label, LinkBtn } from "../../components/Form";
+import "./NewUser.css";
 
 const customStyles = {
   content : {
@@ -34,31 +35,32 @@ class NewUser extends Component {
 			   isOpen={this.state.showModal}
 			   contentLabel="onRequestClose Example"
 			   onRequestClose={this.handleCloseModal}
-			   shouldCloseOnOverlayClick={true}
+			   shouldCloseOnOverlayClick={false}
 			   style={customStyles}
 			>
             <form>
 			  <Row>
 				<Col size="six columns">
-				  <Label forHtml="firstName">First Name</Label>
+				  <Label htmlFor ="firstName">First Name</Label>
 				  <Input className="u-full-width" type="text" placeholder="ex. John" id="firstName"></Input>
 				</Col>
 				<Col size="six columns">
-				  <Label forHtml="lastName">Last Name</Label>
+				  <Label htmlFor ="lastName">Last Name</Label>
 				  <Input className="u-full-width" type="text" placeholder="ex. Smith" id="lastName"></Input>
 				</Col>
 			  </Row>
 			  <Row>
 				<Col size="six columns">
-				  <Label forHtml="newUserEmail">Your email</Label>
+				  <Label htmlFor ="newUserEmail">Your email</Label>
 				  <Input className="u-full-width" type="email" placeholder="test@mailbox.com" id="newUserEmail"></Input>
 				</Col>
 				<Col size="six columns">
-				  <Label forHtml="newUserPassword">First Name</Label>
+				  <Label htmlFor ="newUserPassword">First Name</Label>
 				  <Input className="u-full-width" type="password" placeholder="Password" id="newUserPassword"></Input>
 				</Col>
 			  </Row>
-			  <FormBtn class="button-primary" type="submit">Submit</FormBtn>
+			  <FormBtn className="button-primary" type="submit">Submit</FormBtn>
+			  <LinkBtn href="home" id="cancelNewUser">Cancel</LinkBtn>
 			</form>
 			</ReactModal>
 			</div>
