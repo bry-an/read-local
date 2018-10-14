@@ -1,20 +1,14 @@
 import React, { Component } from "react";
-
-
 import GoogleMapContainer from '../../components/Map/GoogleMapContainer'
-import { Col, Row } from "../../components/Grid";
+import { Container } from "../../components/Grid";
 
 
 class Home extends Component {
   render() {
     return (
-
-        <Row>
-          <Col size="twelve columns">
+		<Container>
             <GoogleMapContainer />
-          </Col>
-        </Row>
-
+		</Container>
     );
   }
 }

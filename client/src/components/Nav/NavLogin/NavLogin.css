@@ -1,5 +1,5 @@
 .navbar-login {
-  border: 1px #090909 solid;
+  border: 1px #d1d1d1 solid;
   border-radius: 3px;
   font-family: Arial, sans-serif;
   padding: 0.9rem 1rem;
@@ -12,8 +12,33 @@
   background-color: #ddd;
 }
 
-.loginModal {
-	width: 50rem;
+#cancel {
+	float: right;
+}
+
+#loginBtn {
+	background-color: #90df95!important;
+	border-color: #90df95!important;
+}
+
+#loginBtn:hover {
+	background-color: #81c686!important;
+}
+
+.newUser {
+	clear: both;
+	margin: 1rem 0 0;
+	
+	text-align: center;
+}
+
+#newUserSpan {
+	color: #cc0000;
+	cursor: pointer;
+}
+
+#newUserSpan:hover {
+	color: #aa0000;
 }
 
 /*# sourceMappingURL=NavLogin.css.map */

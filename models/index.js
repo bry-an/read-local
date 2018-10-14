@@ -3,5 +3,5 @@ module.exports = {
   savedArticles: require("./savedArticles"),
   City: require("./cities"),
   UsState: require("./states"),
-  Article: require("./articles")
+  Article: require("./article")
 };

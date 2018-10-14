@@ -12,6 +12,9 @@ class Nav extends Component {
   state = {
     selectState: "",
     listItems: [],
+    stateItems: [],
+	cityItems: [],
+	cityDisplay: "cityDisplayFalse",
     logState: "Login"
   }
 
@@ -35,8 +38,8 @@ class Nav extends Component {
       <nav className={"navbar"}>
       
         <Row>
-          <Col size="five columns">
-            <NavLink forHtml="/"/>
+          <Col size="four columns">
+            <NavLink href="/"/>
           </Col>
           <Col size="two columns">
             <select>
@@ -54,6 +57,17 @@ class Nav extends Component {
               placeholder="Keyword Search"
               />
           </Col>
+          <Col size="one column">
+			  <select>
+				{this.state.stateItems.map(item=><Select options={item.usstate} key={item.usstate}/>)}
+			  </select>
+          </Col>
+		  <Col size="two columns">
+			<select className={this.state.cityDisplay}>
+				{this.state.cityItems.map(item=><Select options={item.city} key={item.city}/>)}
+			  </select>
+		  </Col>
+          
           <Col size="two columns" loginId="navLogin">
             <NavLogin value={this.state.logState}/>
           </Col>
