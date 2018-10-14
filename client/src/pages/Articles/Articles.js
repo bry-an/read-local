@@ -1,8 +1,12 @@
 import React, { Component } from "react";
 import { Col, Row, Container } from "../../components/Grid";
+<<<<<<< HEAD
+// import Dashboard from "../../components/Dashboard"
+=======
 import { List, ListItem } from "../../components/List";
 import API from "../../utils/API";
 import "./Articles.css";
+>>>>>>> c8324f2a11bd9dcb512214d0c99e5c8357ff179a
 
 
 class Articles extends Component {
