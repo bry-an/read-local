@@ -13,7 +13,8 @@ class Nav extends Component {
     stateItems: [],
 	cityItems: [],
 	cityDisplay: "cityDisplayTrue",
-    logState: "Login"
+    logState: "Login",
+    selectState: "State"
   }
 
   componentDidMount() {
@@ -27,7 +28,7 @@ class Nav extends Component {
   handleInputChange(event) {
     this.setState({ selectState: event.target.value })
     .then(
-      //make dropdown visible and fill with states
+      //make dropdown visible and fill with cities
     )
   }
 
@@ -48,7 +49,8 @@ class Nav extends Component {
               />
           </Col>
           <Col size="one column">
-          <select>
+          <select  defaultValue={this.state.selectState} name="state">
+          <option value="" disabled hidden >State</option>
               {this.state.stateItems.map(item => <Select
                 options={item.usstate}
                 key={item._id}
@@ -56,8 +58,9 @@ class Nav extends Component {
             </select>
           </Col>
 		  <Col size="two columns" colId="cityCol" >
-			<select className={this.state.cityDisplay}>
-				{this.state.cityItems.map(item=><Select options={item.city} key={item.city}/>)}
+			<select className={this.state.cityDisplay} id="citySelect">
+      <option value="" disabled hidden >City</option>
+				{this.state.cityItems.map(item=><Select options={item.city} key={item.city} />)}
 			  </select>
 		  </Col>
           

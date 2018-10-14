@@ -28,4 +28,12 @@
 	  visibility: hidden;
   }
 
+  #citySelect {
+	  width: 100%;
+  }
+
+.cityOptions {
+	text-align: center;
+}
+
 /*# sourceMappingURL=Nav.css.map */
