@@ -11,10 +11,12 @@ class Articles extends Component {
   };
 
   componentDidMount() {
+    this.getArticles();
+  }
+
+  getArticles = () => {
     API.fillArticles()
-      .then(res => { this.setState({ articles: res.data }); }
-      )
-      .catch(err => console.log(err));
+      .then(x => console.log('articles?', x))
   }
 
   render() {
