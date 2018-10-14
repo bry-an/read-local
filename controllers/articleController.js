@@ -3,8 +3,7 @@ const db = require("../models");
 
 module.exports = {
   findAll: function(req, res) {
-    db.Article
-      .find({})
+    db.Article.find({})
       .then(articles => res.json(articles))
       .catch(err => res.status(422).json(err));
   },

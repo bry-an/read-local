@@ -12,7 +12,7 @@ class Nav extends Component {
   state = {
     stateItems: [],
 	cityItems: [],
-	cityDisplay: "cityDisplayFalse",
+	cityDisplay: "cityDisplayTrue",
     logState: "Login"
   }
 
