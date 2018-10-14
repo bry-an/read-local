@@ -29,21 +29,20 @@ class GoogleMapContainer extends Component {
         console.log('getting articles lat lng')
         API.fillArticles()
             .then(x => x.data)
-            .then(x => this.createLatLng(this.getLatLng(x)))
+            .then(x => this.getLatLng(x))
             .then(x => {
                 this.setState({
                     points: x
                 })
             })
-            .then(console.log('have set points state'))
     }
 
     getLatLng = responseArray => {
         const array = responseArray.map(article => {
             return (
                 {
-                    lat: article.lat,
-                    lng: article.lng
+                    lat: parseFloat(article.lat),
+                    lng: parseFloat(article.lng)
                 }
             )
         })

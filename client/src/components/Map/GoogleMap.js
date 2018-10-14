@@ -8,19 +8,20 @@ const google = window.google
 class GoogleMap extends Component {
 
     componentDidMount() {
-        this.initMap(this.props.center, this.props.points, 4)
+        this.initMap(4, this.props.center, this.props.points)
     }
 
     componentWillReceiveProps(nextProps) {
         if (nextProps.points !== this.props.points) {
-            console.log('componentwillrecprops', nextProps.points)
-            this.initMap(nextProps.center, nextProps.points, 6)
+            this.initMap(4, this.props.center, nextProps.points)
+        }
+        if (nextProps.center !== this.props.center) {
+            this.initMap(6, this.props.center, this.props.points)
         }
     }
 
 
-    initMap = (center, points, zoom) => {
-        console.log('points', points[0])
+    initMap = (zoom, center, points) => {
 
         const styledMapType = new google.maps.StyledMapType(mapStyle, { name: 'ReadLocal Map' })
         const map = new google.maps.Map(document.getElementById('googleMap'), {
@@ -33,14 +34,12 @@ class GoogleMap extends Component {
         map.mapTypes.set('styled_map', styledMapType)
         map.setMapTypeId('styled_map')
 
+        console.log('points', points)
         if (points.length > 0) {
-            console.log('points length is greater than 0')
             const heatmap = new google.maps.visualization.HeatmapLayer({
-                data: this.props.points,
+                data: this.createLatLng(points),
                 map
             })
-
-
             heatmap.setMap(map)
         }
     }
