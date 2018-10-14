@@ -1,29 +1,31 @@
 .navbar {
-  width: 100%;
-  margin-top: 2rem;
-}
+	width: 100%;
+	margin-top: 2rem;
+  }
+  
+  select {
+	  margin-bottom: 25px;
+  }
+  
+  .two {
+	  margin: 0 auto 0;
+  }
+  
+  .one {
+	  margin:0;
+  }
+  
+  #cityCol {
+	margin: 0 2rem;
+  }
 
-select {
-	margin-bottom: 25px;
-}
+  .cityDisplayTrue {
+	  display: inline;
+	  float: right;
+  }
 
-.two {
-	margin: .8rem auto 0;
-}
-
-#navLogin {
-	margin-top: .8rem;
-}
-
-.one {
-	margin:0;
-}
-
-.cityDisplayTrue {
-	display: inline;
-}
-.cityDisplayFalse {
-	visibility: hidden;
-}
+  .cityDisplayFalse {
+	  visibility: hidden;
+  }
 
 /*# sourceMappingURL=Nav.css.map */

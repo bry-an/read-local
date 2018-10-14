@@ -10,8 +10,6 @@ import API from "../../../utils/API";
 class Nav extends Component {
 
   state = {
-    selectState: "",
-    listItems: [],
     stateItems: [],
 	cityItems: [],
 	cityDisplay: "cityDisplayTrue",
@@ -20,8 +18,8 @@ class Nav extends Component {
 
   componentDidMount() {
     API.fillStates()
-      .then(res =>  {this.setState({ listItems: res.data});
-    console.log(res.data, this.state.listItems[0])}
+      .then(res =>  {this.setState({ stateItems: res.data});
+    console.log(res.data, this.state.stateItems[0])}
   )
     .catch(err => console.log(err));
   }
@@ -41,15 +39,7 @@ class Nav extends Component {
           <Col size="four columns">
             <NavLink href="/"/>
           </Col>
-          <Col size="two columns">
-            <select>
-              {this.state.listItems.map(item => <Select
-                options={item.usstate}
-                key={item._id}
-              handleInputChange={this.handleInputChange} />)}
-            </select>
-          </Col>
-          <Col size="three columns">
+		  <Col size="three columns">
           <NavSearch
               value={this.state.search}
               onChange={this.handleInputChange}
@@ -58,17 +48,20 @@ class Nav extends Component {
               />
           </Col>
           <Col size="one column">
-			  <select>
-				{this.state.stateItems.map(item=><Select options={item.usstate} key={item.usstate}/>)}
-			  </select>
+          <select>
+              {this.state.stateItems.map(item => <Select
+                options={item.usstate}
+                key={item._id}
+              handleInputChange={this.handleInputChange} />)}
+            </select>
           </Col>
-		  <Col size="two columns">
+		  <Col size="two columns" colId="cityCol" >
 			<select className={this.state.cityDisplay}>
 				{this.state.cityItems.map(item=><Select options={item.city} key={item.city}/>)}
 			  </select>
 		  </Col>
           
-          <Col size="two columns" loginId="navLogin">
+          <Col size="two columns" colId="navLogin">
             <NavLogin value={this.state.logState}/>
           </Col>
         </Row>
