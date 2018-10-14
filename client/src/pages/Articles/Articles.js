@@ -9,7 +9,7 @@ class Articles extends Component {
   };
 
   componentDidMount() {
-
+    
   }
 
   render() {

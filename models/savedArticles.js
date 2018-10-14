@@ -8,9 +8,9 @@ const savedArticlesSchema = new Schema({
   title: { type: String, required: true },
   body: { type: String, required: true },
   source: { type: String, required: true },
-  location: { type: String },
-  lat: { type: Number },
-  long: { type: Number }
+  location: String,
+  lat: Number,
+  long: Number
 });
 
 const savedArticles = mongoose.model("savedArticles", savedArticlesSchema);

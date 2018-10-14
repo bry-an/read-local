@@ -4,13 +4,13 @@ import NavSearch from "../NavSearch";
 import NavLogin from "..//NavLogin";
 import NavLink from "..//NavLink";
 import { Select } from "../../Form";
-import states from "../../../utils/States.json"
 import "./Nav.css";
 import API from "../../../utils/API";
 
 class Nav extends Component {
 
   state = {
+    selectState: "",
     listItems: [],
     logState: "Login"
   }
@@ -18,9 +18,16 @@ class Nav extends Component {
   componentDidMount() {
     API.fillStates()
       .then(res =>  {this.setState({ listItems: res.data});
-    console.log(res.data, this.state.listItems)}
+    console.log(res.data, this.state.listItems[0])}
   )
-      .catch(err => console.log(err));
+    .catch(err => console.log(err));
+  }
+
+  handleInputChange(event) {
+    this.setState({ selectState: event.target.value })
+    .then(
+      //make dropdown visible and fill with states
+    )
   }
 
   render() {
@@ -32,9 +39,12 @@ class Nav extends Component {
             <NavLink forHtml="/"/>
           </Col>
           <Col size="two columns">
-          <select>
-            {this.state.listItems.map(item=><Select options={item.usstate} key={item.usstate}/>)}
-          </select>
+            <select>
+              {this.state.listItems.map(item => <Select
+                options={item.usstate}
+                key={item._id}
+              handleInputChange={this.handleInputChange} />)}
+            </select>
           </Col>
           <Col size="three columns">
           <NavSearch
