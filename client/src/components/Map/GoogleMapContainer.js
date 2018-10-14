@@ -9,7 +9,8 @@ class GoogleMapContainer extends Component {
 
     state = {
         mapCenter: { lat: 39.755, lng: -96.99 },
-        points: []
+        points: [],
+        articleHeadlines: []
     }
 
     componentDidMount() {
@@ -22,6 +23,7 @@ class GoogleMapContainer extends Component {
             mapCenter: location
         })
     }
+
 
     autoComplete = () => {
         const autocomplete = new google.maps.places.Autocomplete(document.getElementById('locationInput'))

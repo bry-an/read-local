@@ -10,6 +10,7 @@ const AutoComplete = props => {
     const infowindow = new google.maps.InfoWindow()
     autocomplete.addListener('place_changed', () => {
         infowindow.close()
+        console.log('autocomplete place', autocomplete.getPlace())
         const placeObj = autocomplete.getPlace()
         const place = placeObj.geometry.location
         props.setMapCenter(place)
