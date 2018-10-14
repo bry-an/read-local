@@ -2,8 +2,6 @@ const router = require("express").Router();
 const articleController = require("../../controllers/articleController");
 
 
-router.get("/test", (req, res) => res.send("hello"));
-
 router
   .route("/usstates")
   .get(articleController.getStates);
