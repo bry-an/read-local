@@ -37,16 +37,8 @@ class Nav extends Component {
       <nav className={"navbar"}>
       
         <Row>
-          <Col size="four columns">
+          <Col size="five columns">
             <NavLink href="/"/>
-          </Col>
-		  <Col size="three columns">
-          <NavSearch
-              value={this.state.search}
-              onChange={this.handleInputChange}
-              name="search"
-              placeholder="Keyword Search"
-              />
           </Col>
           <Col size="one column">
           <select  defaultValue={this.state.selectState} name="state">
@@ -63,8 +55,16 @@ class Nav extends Component {
 				{this.state.cityItems.map(item=><Select options={item.city} key={item.city} />)}
 			  </select>
 		  </Col>
-          
-          <Col size="two columns" colId="navLogin">
+      <Col size="three columns">
+          <NavSearch
+              value={this.state.search}
+              onChange={this.handleInputChange}
+              name="search"
+              placeholder="Keyword Search"
+              />
+          </Col>
+
+          <Col size="one column" colId="navLogin">
             <NavLogin value={this.state.logState}/>
           </Col>
         </Row>
