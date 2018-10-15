@@ -14,4 +14,9 @@ export default {
     const articles = axios.get('/api/articles');
     return articles;
   },
+  getCities: function (stateCode) {
+    console.log("in getCities");
+    const cities = axios.get('/api/articles/cities/' + stateCode);
+    return cities;
+  },
 };

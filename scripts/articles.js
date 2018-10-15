@@ -15,8 +15,13 @@ mongoose.connect(
 axios.get('http://localhost:3001/api/articles')
     .then(articles => {
         console.log(articles.data.length);
+<<<<<<< HEAD
+        for (var i = 1040; i < 1042; i++) {
+            console.log(articles.data[i]);
+=======
         for (var i = 1010; i < 1042; i++) {
             // console.log(articles.data[i]);
+>>>>>>> 2394de9f688e89208386dd6f67b95290f33c3bac
             const lng = articles.data[i].lng.$numberDecimal;
             const lat = articles.data[i].lat;
             let cityobj = { city: "", state: "" };

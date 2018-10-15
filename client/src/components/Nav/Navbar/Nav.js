@@ -28,7 +28,10 @@ class Nav extends Component {
   handleInputChange(event) {
     this.setState({ selectState: event.target.value })
     .then(
-      //make dropdown visible and fill with cities
+      API.getCities(this.selectState)
+      .then(data => {
+        console.log(data);
+      })
     )
   }
 
