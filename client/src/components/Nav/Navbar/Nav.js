@@ -57,6 +57,7 @@ class Nav extends Component {
 
   cityClick(event) {
     console.log(event.target.value);
+    window.location.assign("/articles");
 
   }
 
