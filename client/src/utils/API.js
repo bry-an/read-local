@@ -5,6 +5,7 @@ export default {
   getArticles: function () {
     return axios.get('/api/articles')
   },
+
   fillStates: function () {
     const states = axios.get('/api/articles/usstates');
     return states;
