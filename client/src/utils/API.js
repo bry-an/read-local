@@ -6,17 +6,14 @@ export default {
     const states = axios.get('/api/articles/usstates');
     return states;
   },
-  fillArticles: function () {
-    const articles = axios.get('/api/articles');
+  fillArticles: function (search) {
+    const articles = axios.get('/api/articles/' + search);
     return articles;
   },
   getCities: function (stateCode) {
-    console.log("in getCities");
+    console.log("in getCities", stateCode);
     const cities = axios.get('/api/articles/cities/' + stateCode);
-    return cities;
-  },
-  getArticle: function (id) {
-    const article = axios.get(`/api/articles/${id}`);
-    return article;
-  },
+      console.log(cities);
+      return cities;
+  }
 };
