@@ -30,6 +30,7 @@ class GoogleMapContainer extends Component {
         API.fillArticles()
             .then(x => x.data)
             .then(x => this.getLatLng(x))
+            .then(x => this.createLatLng(x))
             .then(x => {
                 this.setState({
                     points: x
@@ -42,7 +43,8 @@ class GoogleMapContainer extends Component {
             return (
                 {
                     lat: parseFloat(article.lat),
-                    lng: parseFloat(article.lng)
+                    lng: (isNaN(article.lng)
+                        ? article.lng.$numberDecimal : article.lng)
                 }
             )
         })

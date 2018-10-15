@@ -8,31 +8,32 @@ const google = window.google
 
 class GoogleMap extends Component {
 
-    state = {
-        points: [],
-    }
 
     componentDidMount() {
-        this.initMap(4, this.props.center, this.state.points)
+        this.initMap(4, this.props.center, this.props.points)
     }
 
     componentWillReceiveProps(nextProps) {
         if (nextProps.center !== this.props.center) {
             this.initMap(6, this.props.center, this.props.points)
         }
+        if (nextProps.points !== this.props.points) {
+            console.log('points changed!')
+            this.initMap(4, this.props.center, nextProps.points)
+        }
     }
 
-    getArticlesLatLng = () => {
-        console.log('getting articles lat lng')
-        API.fillArticles()
-            .then(x => x.data)
-            .then(x => this.getLatLng(x))
-            .then(x => {
-                this.setState({
-                    points: x
-                })
-            })
-    }
+    // getArticlesLatLng = () => {
+    //     console.log('getting articles lat lng')
+    //     API.fillArticles()
+    //         .then(x => x.data)
+    //         .then(x => this.getLatLng(x))
+    //         .then(x => {
+    //             this.setState({
+    //                 points: x
+    //             })
+    //         })
+    // }
 
     initMap = (zoom, center, points) => {
 
@@ -47,10 +48,11 @@ class GoogleMap extends Component {
         map.mapTypes.set('styled_map', styledMapType)
         map.setMapTypeId('styled_map')
 
-        console.log('points', points)
+        console.log('points', this.props.points)
         if (points.length > 0) {
+            console.log('creating heatmap!')
             const heatmap = new google.maps.visualization.HeatmapLayer({
-                data: this.createLatLng(points),
+                data: points,
                 map
             })
             heatmap.setMap(map)
@@ -60,8 +62,9 @@ class GoogleMap extends Component {
         const array = responseArray.map(article => {
             return (
                 {
-                    lat: parseFloat(article.lat),
-                    lng: parseFloat(article.lng)
+                    lat: article.lat,
+                    lng: (isNaN(article.lng)
+                        ? article.lng.$numberDecimal : article.lng)
                 }
             )
         })
