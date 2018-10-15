@@ -42,21 +42,21 @@ module.exports = {
       .then(states => res.json(states))
       .catch(err => console.log(err));
   },
-  getCities: function (req, res) {
-    db.UsState.find({ usstate: req.params.state })
-      .then(state => {
-        console.log(state);
-        const stateid = state[0]._id;
-        console.log(stateid);
-        var ObjectId = (require('mongoose').Types.ObjectId);
-        var query = { state: new ObjectId(stateid) };
-        db.City.find(query)
-          .then(cities => {
-            console.log(cities);
-            res.json(cities)
-          })
-          .catch(err => console.log(err))
+  getCities: function(req, res) {
+    console.log(req.params);
+    db.UsState.findOne({ usstate: req.params.state })
+    .then(state => {  
+      console.log(state);    
+      const stateid = state._id;
+      console.log(stateid);
+      var ObjectId = require('mongoose').Types.ObjectId; 
+      var query = { state: new ObjectId(stateid) };
+      db.City.find(query)
+      .then(cities => {
+        res.json(cities);
       })
       .catch(err => console.log(err))
+    })
+    .catch(err => console.log(err))
   }
 };

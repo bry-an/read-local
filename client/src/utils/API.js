@@ -2,6 +2,10 @@ import axios from "axios";
 
 export default {
   // Gets all articles
+  getArticles: function (articleData) {
+    return axios.get('/api/articles')
+  },
+
   fillStates: function () {
     const states = axios.get('/api/articles/usstates');
     return states;
@@ -13,7 +17,7 @@ export default {
   getCities: function (stateCode) {
     console.log("in getCities", stateCode);
     const cities = axios.get('/api/articles/cities/' + stateCode);
-      console.log(cities);
-      return cities;
+    console.log(cities);
+    return cities;
   }
 };
