@@ -3,6 +3,7 @@ import GoogleMap from './GoogleMap'
 import { Input } from "../Form"
 import { Col, Row } from "../Grid";
 import API from '../../utils/API'
+import ArticleItem from './ArticleItem'
 
 const google = window.google
 class GoogleMapContainer extends Component {
@@ -12,6 +13,7 @@ class GoogleMapContainer extends Component {
         mapCenter: { lat: 39.755, lng: -96.99 },
         points: [],
         articles: [],
+        filtered: false,
         keywordInput: ''
     }
 
@@ -42,16 +44,18 @@ class GoogleMapContainer extends Component {
         })
     }
     getArticles = () => {
-        API.fillArticles()
+        API.getArticles()
             .then(x => {
                 this.setState({
                     articles: x.data
-
                 }, () => this.getArticlesLatLng())
             })
     }
 
     filterHeadlines = filter => {
+        this.setState({
+            filtered: true
+        })
         const filteredArticles = this.state.articles.filter(article => article.body.includes(filter))
         // console.log('filterbodies', filteredHeadlines)
         this.setState({
@@ -104,6 +108,12 @@ class GoogleMapContainer extends Component {
             <Fragment>
 
                 <Row>
+                    <Col size="three columns offset-by-five" colId="centerCol">
+                        <Input type='text' id='locationInput' placeholder='Enter your location' />
+                        <Input type='text' name='keywordInput' onChange={this.inputHandler} placeholder='Keyword Search' />
+                    </Col>
+                </Row>
+                <Row>
                     <Col size="twelve columns">
                         <GoogleMap
                             center={this.state.mapCenter}
@@ -112,10 +122,13 @@ class GoogleMapContainer extends Component {
                     </Col>
                 </Row>
                 <Row>
-                    <Col size="three columns offset-by-five" colId="centerCol">
-                        <Input type='text' id='locationInput' placeholder='Enter your location' />
-                    </Col>
-                </Row>
+                    {this.state.filtered
+                        ? this.state.articles.map(article =>
+                            <ArticleItem articleHeadline={article.title} />
+                        )
+                        : null
+                    }</Row>
+
             </Fragment>
         )
     }
