@@ -42,13 +42,13 @@ class Nav extends Component {
           </Col>
           <Col size="two columns" colId="cityCol" >
 			<select className={this.state.cityDisplay} id="citySelect">
-      <option value="" disabled hidden >City</option>
+      <option value="">City</option>
 				{this.state.cityItems.map(item=><Select options={item.city} key={item.city} />)}
 			  </select>
 		  </Col>
           <Col size="one column" colId="stateSel">
           <select  defaultValue={this.state.selectState} name="state">
-          <option value="" disabled hidden >State</option>
+          <option value="" >State</option>
               {this.state.stateItems.map(item => <Select
                 options={item.usstate}
                 key={item._id}
