@@ -10,7 +10,9 @@ module.exports = {
   },
   // Gets the article with the given id
   getSavedArticle: function(req, res) {
-    return db.savedArticles.findOne({ _id: req.params.id });
+    return db.savedArticles.findOne({ _id: req.params.id })
+    .then(article => res.json(article))
+    .catch(err => res.status(422).json(err));;
   },
   // Deletes the article with the given id
   deleteArticle: function(req, res) {
