@@ -1,24 +1,23 @@
 const db = require("../models");
 
-
 module.exports = {
-  findAll: function(req, res) {
+  findAll: function (req, res) {
     db.Article
       .find({})
       .then(articles => res.json(articles))
       .catch(err => res.status(422).json(err));
   },
   // Gets the article with the given id
-  getSavedArticle: function(req, res) {
+  getSavedArticle: function (req, res) {
     return db.savedArticles.findOne({ _id: req.params.id });
   },
   // Deletes the article with the given id
-  deleteArticle: function(req, res) {
+  deleteArticle: function (req, res) {
     return db.savedArticles.deleteOne({ _id: req.params.id });
   },
   // Saves a article to the database
-  saveArticle: function(req, res) {
-    return db.savedArticles.findOneAndUpdate({ uri: req.body.uri }, 
+  saveArticle: function (req, res) {
+    return db.savedArticles.findOneAndUpdate({ uri: req.body.uri },
       {
         uri: req.body.uri,
         url: req.body.url,
@@ -31,10 +30,10 @@ module.exports = {
         long: req.body.lng
       }, { upsert: true })
   },
-  getStates: function(req, res) {
+  getStates: function (req, res) {
     db.UsState.find({})
-    .then(states => res.json(states))
-    .catch(err => console.log(err));
+      .then(states => res.json(states))
+      .catch(err => console.log(err));
   },
   getCities: function(req, res) {
     console.log(req.params);

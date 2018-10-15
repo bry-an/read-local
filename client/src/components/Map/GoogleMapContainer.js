@@ -3,6 +3,7 @@ import GoogleMap from './GoogleMap'
 import { Input } from "../Form"
 import { Col, Row } from "../Grid";
 import API from '../../utils/API'
+import ArticleItem from './ArticleItem'
 
 const google = window.google
 class GoogleMapContainer extends Component {
@@ -11,16 +12,14 @@ class GoogleMapContainer extends Component {
     state = {
         mapCenter: { lat: 39.755, lng: -96.99 },
         points: [],
-        articleHeadlines: [],
-        articleBodies: [],
+        articles: [],
+        filtered: false,
         keywordInput: ''
     }
 
     componentDidMount() {
         this.autoComplete()
-        this.getArticlesLatLng()
-        this.getHeadlines()
-        this.getBody()
+        this.getArticles()
     }
 
     setMapCenter = location => {
@@ -37,40 +36,31 @@ class GoogleMapContainer extends Component {
         }, () => this.filterHeadlines(value.trim()))
     }
 
+
     getArticlesLatLng = () => {
-        API.fillArticles()
-            .then(x => x.data)
-            .then(x => this.getLatLng(x))
-            .then(x => this.createLatLng(x))
+        const lats = this.getLatLng(this.state.articles)
+        this.setState({
+            points: this.createLatLng(lats)
+        })
+    }
+    getArticles = () => {
+        API.getArticles()
             .then(x => {
                 this.setState({
-                    points: x
-                })
+                    articles: x.data
+                }, () => this.getArticlesLatLng())
             })
     }
 
-    getHeadlines = () => {
-        API.fillArticles()
-            .then(x => x.data)
-            .then(x =>
-                this.setState({
-                    articleHeadlines: x.map(item => item.title)
-                }))
-    }
-    getBody = () => {
-        API.fillArticles()
-            .then(x => x.data)
-            .then(x =>
-                this.setState({
-                    articleBodies: x.map(item => item.body)
-                }))
-    }
     filterHeadlines = filter => {
-        const filteredHeadlines = this.state.articleBodies.filter(article => article.includes(filter))
-        console.log('filterbodies', filteredHeadlines)
-        // this.setState({
-        //     articleHeadlines: allHeadlines.filter()
-        // })
+        this.setState({
+            filtered: true
+        })
+        const filteredArticles = this.state.articles.filter(article => article.body.includes(filter))
+        // console.log('filterbodies', filteredHeadlines)
+        this.setState({
+            articles: filteredArticles
+        }, () => this.getArticlesLatLng())
     }
 
     getLatLng = responseArray => {
@@ -118,6 +108,12 @@ class GoogleMapContainer extends Component {
             <Fragment>
 
                 <Row>
+                    <Col size="three columns offset-by-five" colId="centerCol">
+                        <Input type='text' id='locationInput' placeholder='Enter your location' />
+                        <Input type='text' name='keywordInput' onChange={this.inputHandler} placeholder='Keyword Search' />
+                    </Col>
+                </Row>
+                <Row>
                     <Col size="twelve columns">
                         <GoogleMap
                             center={this.state.mapCenter}
@@ -126,10 +122,13 @@ class GoogleMapContainer extends Component {
                     </Col>
                 </Row>
                 <Row>
-                    <Col size="three columns offset-by-five" colId="centerCol">
-                        <Input type='text' id='locationInput' placeholder='Enter your location' />
-                    </Col>
-                </Row>
+                    {this.state.filtered
+                        ? this.state.articles.map(article =>
+                            <ArticleItem articleHeadline={article.title} />
+                        )
+                        : null
+                    }</Row>
+
             </Fragment>
         )
     }

@@ -3,7 +3,7 @@ import { Col, Row } from "../..//Grid";
 import NavSearch from "../NavSearch";
 import NavLogin from "..//NavLogin";
 import NavLink from "..//NavLink";
-import { Select, Option } from "../../Form";
+import { Select } from "../../Form";
 import "./Nav.css";
 import API from "../../../utils/API";
 
@@ -24,7 +24,7 @@ class Nav extends Component {
   componentDidMount() {
     API.fillStates()
       .then(res =>  {this.setState({ stateItems: res.data});
-    }
+    console.log(res.data, this.state.stateItems[0])}
   )
     .catch(err => console.log(err));
   }
