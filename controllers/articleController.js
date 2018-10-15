@@ -8,8 +8,15 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   },
   // Gets the article with the given id
-  getSavedArticle: function (req, res) {
-    return db.savedArticles.findOne({ _id: req.params.id });
+  getSavedArticle: function(req, res) {
+    return db.Article.findOne({ _id: req.params.id })
+    .then(article => res.json(article))
+    .catch(err => res.status(422).json(err));;
+  },
+  getArticle: function(req, res) {
+    return db.savedArticles.findOne({ _id: req.params.id })
+    .then(article => res.json(article))
+    .catch(err => res.status(422).json(err));;
   },
   // Deletes the article with the given id
   deleteArticle: function (req, res) {

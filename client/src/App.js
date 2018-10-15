@@ -18,8 +18,7 @@ const App = () => (
 			<Route path="/newuser" component={NewUser} />
 		</Switch>
 	  <Footer>
-    &copy;2018 GABY
-
+    	&copy;2018 GABY
 	  </Footer>
     </Fragment>
   </Router>
