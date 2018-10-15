@@ -1,0 +1,39 @@
+.navbar {
+	width: 100%;
+	margin-top: 2rem;
+  }
+  
+  select {
+	  margin-bottom: 25px;
+  }
+  
+  .two {
+	  margin: 0 auto 0;
+  }
+  
+  .one {
+	  margin:0;
+  }
+  
+  #cityCol {
+	margin: 0 2rem;
+  }
+
+  .cityDisplayTrue {
+	  display: inline;
+	  float: right;
+  }
+
+  .cityDisplayFalse {
+	  visibility: hidden;
+  }
+
+  #citySelect {
+	  width: 100%;
+  }
+
+.cityOptions {
+	text-align: center;
+}
+
+/*# sourceMappingURL=Nav.css.map */
