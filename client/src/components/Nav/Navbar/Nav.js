@@ -9,15 +9,18 @@ import API from "../../../utils/API";
 
 class Nav extends Component {
 
-  state = {
-    stateItems: [],
-	cityItems: [],
-	cityDisplay: "cityDisplayTrue",
-    logState: "Login",
-    selectState: "State",
-    disable: ""
+  constructor(props) {
+    super(props);
+    this.state = {
+      stateItems: [],
+      cityItems: [],
+      cityDisplay: "cityDisplayFalse",
+      logState: "Login",
+      selectState: "State",
+      selectCity: "City"
+    }
+    this.stateClick = this.stateClick.bind(this);
   }
-
   componentDidMount() {
     API.fillStates()
       .then(res =>  {this.setState({ stateItems: res.data});
@@ -26,51 +29,72 @@ class Nav extends Component {
     .catch(err => console.log(err));
   }
 
-  handleInputChange(event) {
-    this.setState({ selectState: event.target.value, disable: "disabled" })
-    .then(
-      API.getCities(this.selectState)
-      .then(data => {
-        console.log(data);
+  // componentDidUpdate() {
+  //   if (this.state.selectState !== "State") {
+  //     // this.setState({cityItems: []});
+  //     API.getCities(this.state.selectState)
+  //     .then(res => {
+  //       console.log(res);
+  //       {this.setState({cityDisplay: "cityDisplayTrue"})};
+  //       {this.setState({cityItems: res.data})};
+  //     })
+  //   }
+  // }
+
+  stateClick(event) {
+    console.log("in stateClick", event.target.value);
+    this.setState({ cityItems: []});
+    this.setState({ selectState: event.target.value });
+    API.getCities(event.target.value)
+      .then(res => {
+        console.log(res);
+        {this.setState({cityDisplay: "cityDisplayTrue"})};
+        {this.setState({cityItems: res.data})};
       })
-    )
+  }
+
+  cityClick(event) {
+    console.log(event.target.value);
+
   }
 
   render() {
     return (
       <nav className={"navbar"}>
-      
+
         <Row>
           <Col size="five columns">
-            <NavLink href="/"/>
+            <NavLink href="/" />
           </Col>
           <Col size="two columns" colId="cityCol" >
-			<select className={this.state.cityDisplay} id="citySelect">
-      <option value=""  >City</option>
-				{this.state.cityItems.map(item=><Select options={item.city} key={item.city} />)}
-			  </select>
-		  </Col>
-          <Col size="one column" colId="stateSel">
-          <select  defaultValue={this.state.selectState} name="state">
-          <Option value="" dis={this.state.disable} >State</Option>
-              {this.state.stateItems.map(item => <Select
-                options={item.usstate}
-                key={item._id}
-              handleInputChange={this.handleInputChange} />)}
+            <select className={this.state.cityDisplay}
+            onChange={this.cityClick} id="citySelect"  defaultValue="City">
+              {/* <option ></option> */}
+              {this.state.cityItems.map(item => <Select options={item.city} key={item._id} />)}
             </select>
           </Col>
-		  
-      <Col size="three columns" colId="searchSel">
-          <NavSearch
+          <Col size="one column" colId="stateSel">
+            <select defaultValue={this.state.selectState}
+                onChange={this.stateClick}
+             name="state">
+              <Option value="" >State</Option>
+              {this.state.stateItems.map(item => <Select
+                options={item.usstate}
+                key={item._id} />)}
+            </select>
+          </Col>
+
+          <Col size="three columns" colId="searchSel">
+            <NavSearch
               value={this.state.search}
               onChange={this.handleInputChange}
               name="search"
               placeholder="Keyword Search"
-              />
+            />
           </Col>
 
           <Col size="one column" colId="navLogin">
-            <NavLogin value={this.state.logState}/>
+            <NavLogin value={this.state.logState} />
           </Col>
         </Row>
       </nav>
