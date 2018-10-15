@@ -15,13 +15,8 @@ mongoose.connect(
 axios.get('http://localhost:3001/api/articles')
     .then(articles => {
         console.log(articles.data.length);
-<<<<<<< HEAD
-        for (var i = 1040; i < 1042; i++) {
-            console.log(articles.data[i]);
-=======
         for (var i = 1010; i < 1042; i++) {
             // console.log(articles.data[i]);
->>>>>>> 2394de9f688e89208386dd6f67b95290f33c3bac
             const lng = articles.data[i].lng.$numberDecimal;
             const lat = articles.data[i].lat;
             let cityobj = { city: "", state: "" };
@@ -54,24 +49,24 @@ axios.get('http://localhost:3001/api/articles')
                         }
                     }
                     db.UsState.findOne({ usstate: statecode })
-                    .then(state => {
-                        if (state !== null) {
-                            stateid = state._id;
-                            console.log(state);
-                            db.City.findOneAndUpdate({
-                                city: cityobj.city
-                            }, {
-                                    city: cityobj.city,
-                                    state: stateid
-                                }, { upsert: true, returnNewDocument: true },
-                                function (err, city) {
-                                    console.log(city);
-                                    if (err) console.log(err);
-                                })
-                                .catch(err => console.log(err));
-                        }
-                    })
-                    .catch(err => console.log(err));
+                        .then(state => {
+                            if (state !== null) {
+                                stateid = state._id;
+                                console.log(state);
+                                db.City.findOneAndUpdate({
+                                    city: cityobj.city
+                                }, {
+                                        city: cityobj.city,
+                                        state: stateid
+                                    }, { upsert: true, returnNewDocument: true },
+                                    function (err, city) {
+                                        console.log(city);
+                                        if (err) console.log(err);
+                                    })
+                                    .catch(err => console.log(err));
+                            }
+                        })
+                        .catch(err => console.log(err));
                 }
             }, { key: "AIzaSyDqEyqqpMD23rErtt__7gxgYsuA6pfYdOE" })
 
