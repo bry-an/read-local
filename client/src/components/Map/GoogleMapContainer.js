@@ -13,6 +13,7 @@ class GoogleMapContainer extends Component {
         mapCenter: { lat: 39.755, lng: -96.99 },
         points: [],
         articles: [],
+        filteredArticles: [],
         filtered: false,
         keywordInput: ''
     }
@@ -38,7 +39,7 @@ class GoogleMapContainer extends Component {
 
 
     getArticlesLatLng = () => {
-        const lats = this.getLatLng(this.state.articles)
+        const lats = this.getLatLng(this.state.filteredArticles)
         this.setState({
             points: this.createLatLng(lats)
         })
@@ -47,7 +48,8 @@ class GoogleMapContainer extends Component {
         API.getArticles()
             .then(x => {
                 this.setState({
-                    articles: x.data
+                    articles: x.data,
+                    filteredArticles: x.data
                 }, () => this.getArticlesLatLng())
             })
     }
@@ -56,10 +58,11 @@ class GoogleMapContainer extends Component {
         this.setState({
             filtered: true
         })
-        const filteredArticles = this.state.articles.filter(article => article.body.includes(filter))
-        // console.log('filterbodies', filteredHeadlines)
+        let filteredArticles = this.state.articles.filter(article => article.body.includes(filter))
+        if (!this.state.keywordInput)
+            filteredArticles = this.state.articles
         this.setState({
-            articles: filteredArticles
+            filteredArticles: filteredArticles
         }, () => this.getArticlesLatLng())
     }
 
