@@ -23,10 +23,12 @@ class Nav extends Component {
   }
   componentDidMount() {
     API.fillStates()
-      .then(res =>  {this.setState({ stateItems: res.data});
-    console.log(res.data, this.state.stateItems[0])}
-  )
-    .catch(err => console.log(err));
+      .then(res => {
+        this.setState({ stateItems: res.data });
+        console.log(res.data, this.state.stateItems[0])
+      }
+      )
+      .catch(err => console.log(err));
   }
 
   // componentDidUpdate() {
@@ -43,13 +45,13 @@ class Nav extends Component {
 
   stateClick(event) {
     console.log("in stateClick", event.target.value);
-    this.setState({ cityItems: []});
+    this.setState({ cityItems: [] });
     this.setState({ selectState: event.target.value });
     API.getCities(event.target.value)
       .then(res => {
         console.log(res);
-        {this.setState({cityDisplay: "cityDisplayTrue"})};
-        {this.setState({cityItems: res.data})};
+        { this.setState({ cityDisplay: "cityDisplayTrue" }) };
+        { this.setState({ cityItems: res.data }) };
       })
   }
 
@@ -69,15 +71,15 @@ class Nav extends Component {
           </Col>
           <Col size="two columns" colId="cityCol" >
             <select className={this.state.cityDisplay}
-            onChange={this.cityClick} id="citySelect"  defaultValue="City">
+              onChange={this.cityClick} id="citySelect" defaultValue="City">
               {/* <option ></option> */}
               {this.state.cityItems.map(item => <Select options={item.city} key={item._id} />)}
             </select>
           </Col>
           <Col size="one column" colId="stateSel">
             <select defaultValue={this.state.selectState}
-                onChange={this.stateClick}
-             name="state">
+              onChange={this.stateClick}
+              name="state">
               <option value="" >State</option>
               {this.state.stateItems.map(item => <Select
                 options={item.usstate}

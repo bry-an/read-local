@@ -33,6 +33,7 @@ class NavLogin extends Component {
   
   handleCloseModal () {
     this.setState({ showModal: false });
+    const 
   }
   
   render () {
