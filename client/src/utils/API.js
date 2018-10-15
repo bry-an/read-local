@@ -2,7 +2,7 @@ import axios from "axios";
 
 export default {
   // Gets all articles
-  getArticles: function (articleData) {
+  getArticles: function () {
     return axios.get('/api/articles')
   },
   fillStates: function () {
