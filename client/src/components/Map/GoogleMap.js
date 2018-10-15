@@ -13,7 +13,7 @@ class GoogleMap extends Component {
 
     componentWillReceiveProps(nextProps) {
         if (nextProps.center !== this.props.center) {
-            this.initMap(6, this.props.center, this.props.points)
+            this.initMap(6, nextProps.center, this.props.points)
         }
         if (nextProps.points !== this.props.points) {
             this.initMap(4, this.props.center, nextProps.points)
