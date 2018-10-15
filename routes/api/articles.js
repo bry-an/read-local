@@ -6,6 +6,10 @@ router
   .route("/usstates")
   .get(articleController.getStates);
 
+router
+  .route("/cities/:state")
+  .get(articleController.getCities);
+
 // Matches with "/api/articles"
 router.route("/")
   .get(articleController.findAll)
