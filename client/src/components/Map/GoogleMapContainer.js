@@ -11,16 +11,13 @@ class GoogleMapContainer extends Component {
     state = {
         mapCenter: { lat: 39.755, lng: -96.99 },
         points: [],
-        articleHeadlines: [],
-        articleBodies: [],
+        articles: [],
         keywordInput: ''
     }
 
     componentDidMount() {
         this.autoComplete()
-        this.getArticlesLatLng()
-        this.getHeadlines()
-        this.getBody()
+        this.getArticles()
     }
 
     setMapCenter = location => {
@@ -37,40 +34,29 @@ class GoogleMapContainer extends Component {
         }, () => this.filterHeadlines(value.trim()))
     }
 
+
     getArticlesLatLng = () => {
+        const lats = this.getLatLng(this.state.articles)
+        this.setState({
+            points: this.createLatLng(lats)
+        })
+    }
+    getArticles = () => {
         API.fillArticles()
-            .then(x => x.data)
-            .then(x => this.getLatLng(x))
-            .then(x => this.createLatLng(x))
             .then(x => {
                 this.setState({
-                    points: x
-                })
+                    articles: x.data
+
+                }, () => this.getArticlesLatLng())
             })
     }
 
-    getHeadlines = () => {
-        API.fillArticles()
-            .then(x => x.data)
-            .then(x =>
-                this.setState({
-                    articleHeadlines: x.map(item => item.title)
-                }))
-    }
-    getBody = () => {
-        API.fillArticles()
-            .then(x => x.data)
-            .then(x =>
-                this.setState({
-                    articleBodies: x.map(item => item.body)
-                }))
-    }
     filterHeadlines = filter => {
-        const filteredHeadlines = this.state.articleBodies.filter(article => article.includes(filter))
-        console.log('filterbodies', filteredHeadlines)
-        // this.setState({
-        //     articleHeadlines: allHeadlines.filter()
-        // })
+        const filteredArticles = this.state.articles.filter(article => article.body.includes(filter))
+        // console.log('filterbodies', filteredHeadlines)
+        this.setState({
+            articles: filteredArticles
+        }, () => this.getArticlesLatLng())
     }
 
     getLatLng = responseArray => {
