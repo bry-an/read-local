@@ -35,5 +35,16 @@ module.exports = {
     db.UsState.find({})
     .then(states => res.json(states))
     .catch(err => console.log(err));
-  } 
+  },
+  getCities: function(req, res) {
+    console.log(req.body);
+    db.UsState.find({ usstate: req.params.state })
+    .then(state => {      
+      const stateid = state._id;
+      db.City.find({ state: stateid })
+      .then(cities => {
+        res.json(cities);
+      })
+    })
+  }
 };
