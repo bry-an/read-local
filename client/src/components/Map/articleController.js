@@ -1,11 +1,12 @@
 const db = require("../models");
 
-
+// Defining methods for the booksController
 module.exports = {
   findAll: function(req, res) {
     db.Article
-      .find({})
-      .then(articles => res.json(articles))
+      .find(req.query)
+      .sort({ date: -1 })
+      .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
   // Gets the article with the given id
@@ -35,5 +36,5 @@ module.exports = {
     db.UsState.find({})
     .then(states => res.json(states))
     .catch(err => console.log(err));
-  } 
+  }
 };
