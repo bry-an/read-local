@@ -43,13 +43,14 @@ class Nav extends Component {
 
   stateClick(event) {
     console.log(event.target.value);
-    this.setState({ selectState: event.target.value })
+    this.setState({ selectState: event.target.value });
+    
     
   }
 
   cityClick(event) {
     console.log(event.target.value);
-
+    this.setState({ selectCity: event.target.value })
   }
 
   render() {

@@ -16,7 +16,9 @@ class Articles extends Component {
 
   getArticles = () => {
     API.fillArticles()
-      .then(x => console.log('articles?', x))
+      .then(res =>  {this.setState({ articles: res.data});}
+  )
+    .catch(err => console.log(err));
   }
 
   render() {
@@ -27,15 +29,14 @@ class Articles extends Component {
             {this.state.articles.length ? (
               <List>
                 {this.state.articles.map((article, i) => {
-                  const url = article.url.split("/").pop().split(".").shift();
                   return (
-                    <ListItem key={url} >
-                      <a href={"/articles/" + url} id={"id-" + url}>
-                        <strong>
-                          {article.title} <span className="author">by {article.author}</span>
-                        </strong>
-                      </a>
-                    </ListItem>
+                    <ListItem key={article._id} >
+                    <a href={"/articles/" + article._id} id={"id-" + article._id}>
+                      <strong>
+                        {article.title}
+                      </strong>
+                    </a>
+                  </ListItem>
                   );
                 })}
               </List>

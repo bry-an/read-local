@@ -49,24 +49,24 @@ axios.get('http://localhost:3001/api/articles')
                         }
                     }
                     db.UsState.findOne({ usstate: statecode })
-                    .then(state => {
-                        if (state !== null) {
-                            stateid = state._id;
-                            console.log(state);
-                            db.City.findOneAndUpdate({
-                                city: cityobj.city
-                            }, {
-                                    city: cityobj.city,
-                                    state: stateid
-                                }, { upsert: true, returnNewDocument: true },
-                                function (err, city) {
-                                    console.log(city);
-                                    if (err) console.log(err);
-                                })
-                                .catch(err => console.log(err));
-                        }
-                    })
-                    .catch(err => console.log(err));
+                        .then(state => {
+                            if (state !== null) {
+                                stateid = state._id;
+                                console.log(state);
+                                db.City.findOneAndUpdate({
+                                    city: cityobj.city
+                                }, {
+                                        city: cityobj.city,
+                                        state: stateid
+                                    }, { upsert: true, returnNewDocument: true },
+                                    function (err, city) {
+                                        console.log(city);
+                                        if (err) console.log(err);
+                                    })
+                                    .catch(err => console.log(err));
+                            }
+                        })
+                        .catch(err => console.log(err));
                 }
             }, { key: "AIzaSyDqEyqqpMD23rErtt__7gxgYsuA6pfYdOE" })
 
