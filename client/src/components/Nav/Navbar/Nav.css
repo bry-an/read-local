@@ -2,9 +2,9 @@
 	width: 100%;
 	margin-top: 2rem;
   }
-  
-  select {
-	  margin-bottom: 25px;
+
+  select, form {
+    margin-bottom: 0;
   }
   
   .two {
@@ -34,6 +34,14 @@
 
 .cityOptions {
 	text-align: center;
+}
+
+#stateSel {
+  margin-right: 1rem;
+}
+
+#searchSel {
+  margin-left: 1rem;
 }
 
 /*# sourceMappingURL=Nav.css.map */

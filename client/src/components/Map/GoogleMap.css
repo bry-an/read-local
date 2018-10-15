@@ -7,7 +7,8 @@
 }
 
 #centerCol {
-	width: 19rem;
+    width: 19rem;
+    margin-top: 2rem;
 }
 
 #locationInput {
