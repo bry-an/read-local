@@ -11,12 +11,14 @@ class Articles extends Component {
   };
 
   componentDidMount() {
+    console.log("getting articles");
     this.getArticles();
   }
 
   getArticles = () => {
     API.fillArticles()
-      .then(res =>  {this.setState({ articles: res.data});}
+      .then(res =>  {this.setState({ articles: res.data});
+      console.log(res)}
   )
     .catch(err => console.log(err));
   }
@@ -36,6 +38,9 @@ class Articles extends Component {
                         {article.title}
                       </strong>
                     </a>
+                    <hr></hr>
+                    <p>{article.body}</p>
+                    <hr></hr>
                   </ListItem>
                   );
                 })}

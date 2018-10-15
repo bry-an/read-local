@@ -55,6 +55,7 @@ class Nav extends Component {
 
   cityClick(event) {
     console.log(event.target.value);
+    window.location.assign("/articles");
 
   }
 
@@ -77,7 +78,7 @@ class Nav extends Component {
             <select defaultValue={this.state.selectState}
                 onChange={this.stateClick}
              name="state">
-              <Option value="" >State</Option>
+              <option value="" >State</option>
               {this.state.stateItems.map(item => <Select
                 options={item.usstate}
                 key={item._id} />)}
