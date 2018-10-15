@@ -16,30 +16,30 @@ class Articles extends Component {
 
   getArticles = () => {
     API.fillArticles()
-        .then(x => console.log('articles?', x))
-}
+      .then(x => console.log('articles?', x))
+  }
 
   render() {
     return (
       <Container>
         <Row>
           <Col size="twelve columns">
-			{this.state.articles.length ? (
-				  <List>
-					{this.state.articles.map((article, i) => {
-						const url = article.url.split("/").pop().split(".").shift();
-					  return (
-						<ListItem key={url} >
-						  <a href={"/articles/" + url} id={"id-" + url}>
-							<strong>
-							  {article.title} <span className="author">by {article.author}</span>
-							</strong>
-						  </a>
-						</ListItem>
-					  );
-					})}
-				  </List>
-				) : ""}
+            {this.state.articles.length ? (
+              <List>
+                {this.state.articles.map((article, i) => {
+                  const url = article.url.split("/").pop().split(".").shift();
+                  return (
+                    <ListItem key={url} >
+                      <a href={"/articles/" + url} id={"id-" + url}>
+                        <strong>
+                          {article.title} <span className="author">by {article.author}</span>
+                        </strong>
+                      </a>
+                    </ListItem>
+                  );
+                })}
+              </List>
+            ) : ""}
           </Col>
         </Row>
       </Container>
