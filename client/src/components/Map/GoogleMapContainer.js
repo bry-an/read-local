@@ -81,17 +81,18 @@ class GoogleMapContainer extends Component {
     render() {
         return (
             <Fragment>
-                <Row>
-                    <Col size="three columns offset-by-five" colId="centerCol">
-                        <Input type='text' id='locationInput' placeholder='Enter your location' />
-                    </Col>
-                </Row>
+                
                 <Row>
                     <Col size="twelve columns">
                         <GoogleMap
                             center={this.state.mapCenter}
                             points={this.state.points}
                         />
+                    </Col>
+                </Row>
+                <Row>
+                    <Col size="three columns offset-by-five" colId="centerCol">
+                        <Input type='text' id='locationInput' placeholder='Enter your location' />
                     </Col>
                 </Row>
             </Fragment>

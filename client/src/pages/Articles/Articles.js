@@ -16,8 +16,7 @@ class Articles extends Component {
 
   getArticles = () => {
     API.fillArticles()
-      .then(res =>  {this.setState({ articles: res.data});
-    console.log(res.data, this.state.articles[0])}
+      .then(res =>  {this.setState({ articles: res.data});}
   )
     .catch(err => console.log(err));
   }
