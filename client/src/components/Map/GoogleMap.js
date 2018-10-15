@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import './GoogleMap.css'
 import mapStyle from './GoogleMapStyle.js'
-import coords from './newCoordsArray'
-import API from '../../utils/API'
 
 const google = window.google
 
@@ -18,22 +16,10 @@ class GoogleMap extends Component {
             this.initMap(6, this.props.center, this.props.points)
         }
         if (nextProps.points !== this.props.points) {
-            console.log('points changed!')
             this.initMap(4, this.props.center, nextProps.points)
         }
     }
 
-    // getArticlesLatLng = () => {
-    //     console.log('getting articles lat lng')
-    //     API.fillArticles()
-    //         .then(x => x.data)
-    //         .then(x => this.getLatLng(x))
-    //         .then(x => {
-    //             this.setState({
-    //                 points: x
-    //             })
-    //         })
-    // }
 
     initMap = (zoom, center, points) => {
 
@@ -50,7 +36,6 @@ class GoogleMap extends Component {
 
         console.log('points', this.props.points)
         if (points.length > 0) {
-            console.log('creating heatmap!')
             const heatmap = new google.maps.visualization.HeatmapLayer({
                 data: points,
                 map
