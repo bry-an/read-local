@@ -2,24 +2,38 @@ import React, { Component } from "react";
 import './GoogleMap.css'
 import mapStyle from './GoogleMapStyle.js'
 import coords from './newCoordsArray'
+import API from '../../utils/API'
 
 const google = window.google
 
 class GoogleMap extends Component {
+
 
     componentDidMount() {
         this.initMap(4, this.props.center, this.props.points)
     }
 
     componentWillReceiveProps(nextProps) {
-        if (nextProps.points !== this.props.points) {
-            this.initMap(4, this.props.center, nextProps.points)
-        }
         if (nextProps.center !== this.props.center) {
             this.initMap(6, this.props.center, this.props.points)
         }
+        if (nextProps.points !== this.props.points) {
+            console.log('points changed!')
+            this.initMap(4, this.props.center, nextProps.points)
+        }
     }
 
+    // getArticlesLatLng = () => {
+    //     console.log('getting articles lat lng')
+    //     API.fillArticles()
+    //         .then(x => x.data)
+    //         .then(x => this.getLatLng(x))
+    //         .then(x => {
+    //             this.setState({
+    //                 points: x
+    //             })
+    //         })
+    // }
 
     initMap = (zoom, center, points) => {
 
@@ -34,14 +48,27 @@ class GoogleMap extends Component {
         map.mapTypes.set('styled_map', styledMapType)
         map.setMapTypeId('styled_map')
 
-        console.log('points', points)
+        console.log('points', this.props.points)
         if (points.length > 0) {
+            console.log('creating heatmap!')
             const heatmap = new google.maps.visualization.HeatmapLayer({
-                data: this.createLatLng(points),
+                data: points,
                 map
             })
             heatmap.setMap(map)
         }
+    }
+    getLatLng = responseArray => {
+        const array = responseArray.map(article => {
+            return (
+                {
+                    lat: article.lat,
+                    lng: (isNaN(article.lng)
+                        ? article.lng.$numberDecimal : article.lng)
+                }
+            )
+        })
+        return array
     }
 
     //createLatLng expects an array of objects containing lat and long properties
