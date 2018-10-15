@@ -2,24 +2,37 @@ import React, { Component } from "react";
 import './GoogleMap.css'
 import mapStyle from './GoogleMapStyle.js'
 import coords from './newCoordsArray'
+import API from '../../utils/API'
 
 const google = window.google
 
 class GoogleMap extends Component {
 
+    state = {
+        points: [],
+    }
+
     componentDidMount() {
-        this.initMap(4, this.props.center, this.props.points)
+        this.initMap(4, this.props.center, this.state.points)
     }
 
     componentWillReceiveProps(nextProps) {
-        if (nextProps.points !== this.props.points) {
-            this.initMap(4, this.props.center, nextProps.points)
-        }
         if (nextProps.center !== this.props.center) {
             this.initMap(6, this.props.center, this.props.points)
         }
     }
 
+    getArticlesLatLng = () => {
+        console.log('getting articles lat lng')
+        API.fillArticles()
+            .then(x => x.data)
+            .then(x => this.getLatLng(x))
+            .then(x => {
+                this.setState({
+                    points: x
+                })
+            })
+    }
 
     initMap = (zoom, center, points) => {
 
@@ -42,6 +55,17 @@ class GoogleMap extends Component {
             })
             heatmap.setMap(map)
         }
+    }
+    getLatLng = responseArray => {
+        const array = responseArray.map(article => {
+            return (
+                {
+                    lat: parseFloat(article.lat),
+                    lng: parseFloat(article.lng)
+                }
+            )
+        })
+        return array
     }
 
     //createLatLng expects an array of objects containing lat and long properties
