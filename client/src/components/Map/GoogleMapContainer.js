@@ -4,6 +4,8 @@ import { Input } from "../Form"
 import { Col, Row } from "../Grid";
 import API from '../../utils/API'
 import ArticleItem from './ArticleItem'
+const geocoder = require('geocoder')
+
 
 const google = window.google
 class GoogleMapContainer extends Component {
@@ -36,6 +38,14 @@ class GoogleMapContainer extends Component {
             [name]: value.trim()
         }, () => this.filterHeadlines(value.trim()))
     }
+    
+    reverseGeocoder = (lat, lng) => {
+        geocoder.reverseGeocode(lat, lng, (err, data) => {
+            if (err) console.log(err)
+            console.log(data)
+        })
+    }
+
 
 
     getArticlesLatLng = () => {

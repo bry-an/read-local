@@ -34,6 +34,8 @@ class GoogleMap extends Component {
         map.mapTypes.set('styled_map', styledMapType)
         map.setMapTypeId('styled_map')
 
+        google.maps.event.addListener(map, 'click', (event) => console.log(event))
+
         console.log('points', this.props.points)
         if (points.length > 0) {
             const heatmap = new google.maps.visualization.HeatmapLayer({

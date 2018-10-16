@@ -5,6 +5,7 @@
   "proxy": "http://localhost:3001/",
   "dependencies": {
     "axios": "^0.16.2",
+    "geocoder": "^0.2.3",
     "mime": "^2.3.1",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
