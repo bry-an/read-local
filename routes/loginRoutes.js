@@ -33,10 +33,11 @@ router.post('/register', function (req, res) {
 });
 
 router.post('/login', function (req, res) {
-    db.Login.findOne( { login_email: req.body.email } ).then(function (err, logins) {
+    console.log(req.body);
+    db.Login.findOne( { login_email: req.body.email } ).then((err, logins) => {
+        console.log(logins);
         if (err) return res.status(500).send('Error on the server.');
         if (!logins) return res.status(404).send({ auth: false });
-        console.log(logins);
         var passwordIsValid = bcrypt.compareSync(req.body.password, logins.password);
         if (!passwordIsValid) return res.status(401).send({ auth: false, token: null });
         var token = jwt.sign({ id: logins._id }, config.secret, {

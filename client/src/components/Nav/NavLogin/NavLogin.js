@@ -2,6 +2,7 @@ import React, { Component, Fragment } from "react";
 import ReactModal from 'react-modal';
 import { Label, Input, FormBtn } from "../../Form";
 import "./NavLogin.css";
+import axios from "axios";
 
 const customStyles = {
   content : {
@@ -20,11 +21,14 @@ class NavLogin extends Component {
   constructor (props) {
     super(props);
     this.state = {
-      showModal: false
+      showModal: false,
+      login: "",
+      password: ""
     };
     
     this.handleOpenModal = this.handleOpenModal.bind(this);
     this.handleCloseModal = this.handleCloseModal.bind(this);
+    this.handleInputChange = this.handleInputChange.bind(this);
   }
   
   handleOpenModal () {
@@ -33,8 +37,19 @@ class NavLogin extends Component {
   
   handleCloseModal () {
     this.setState({ showModal: false });
-    const 
+    console.log(this.state.login, this.state.password);
+     const loginData = { login_email: this.state.login, password: this.state.password };
+     axios.post("/auth/login", loginData)
+     .then(res => console.log(res))
+     .catch(err => console.log(err));
   }
+
+  handleInputChange = event => {
+    const { name, value } = event.target;
+    this.setState({
+      [name]: value
+    });
+  };
   
   render () {
     return (
@@ -53,11 +68,21 @@ class NavLogin extends Component {
 			<Label htmlFor="login">
 				Username
 			</Label>
-			<Input id="login" type="text" placeholder="Username"/>
+      <Input 
+        name="login" 
+        type="text"
+        value={this.state.login}
+        onChange={this.handleInputChange}
+        placeholder="Username"/>
 			<Label htmlFor="password">
 				Password
 			</Label>
-			<Input id="password" type="password" placeholder="Password"/>
+      <Input 
+        name="password" 
+        type="password" 
+        value={this.state.password}
+        onChange={this.handleInputChange}
+        placeholder="Password"/>
 			<FormBtn onClick={this.handleCloseModal} id="loginBtn">Log In</FormBtn>
 			<FormBtn onClick={this.handleCloseModal} id="cancel">Cancel</FormBtn>
 			<p className="newUser" >New user? <a id="newUserSpan" href="newuser">Click here</a></p>
