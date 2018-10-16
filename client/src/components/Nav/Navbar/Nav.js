@@ -76,15 +76,15 @@ class Nav extends Component {
           </Col>
 
           <Col size="three columns" colId="searchSel">
-            <NavSearch
+            {/* <NavSearch
               value={this.state.search}
               onChange={this.handleInputChange}
               name="search"
               placeholder="Keyword Search"
-            />
+            /> */}
           </Col>
 
-          <Col size="one column" colId="navLogin">
+          <Col size="one column offset-by-one" colId="navLogin">
             <NavLogin value={this.state.logState} />
           </Col>
         </Row>

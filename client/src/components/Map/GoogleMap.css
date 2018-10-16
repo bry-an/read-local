@@ -12,5 +12,18 @@
 }
 
 #locationInput {
-	text-align: center;
+    text-align: center;
+    float: left;
 }
+
+#keywordInput {
+    float: right;
+}
+ p {
+     margin-bottom: 5px;
+     margin-top: 10px;
+ }
+
+ .keywordLabel {
+     float: right;
+ }
