@@ -31,18 +31,6 @@ class Nav extends Component {
       .catch(err => console.log(err));
   }
 
-  // componentDidUpdate() {
-  //   if (this.state.selectState !== "State") {
-  //     // this.setState({cityItems: []});
-  //     API.getCities(this.state.selectState)
-  //     .then(res => {
-  //       console.log(res);
-  //       {this.setState({cityDisplay: "cityDisplayTrue"})};
-  //       {this.setState({cityItems: res.data})};
-  //     })
-  //   }
-  // }
-
   stateClick(event) {
     console.log("in stateClick", event.target.value);
     this.setState({ cityItems: [] });
