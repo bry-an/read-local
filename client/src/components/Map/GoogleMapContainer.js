@@ -58,7 +58,7 @@ class GoogleMapContainer extends Component {
         this.setState({
             filtered: true
         })
-        let filteredArticles = this.state.articles.filter(article => article.body.includes(filter))
+        let filteredArticles = this.state.articles.filter(article => article.body.toLowerCase().includes(filter.toLowerCase()))
         if (!this.state.keywordInput)
             filteredArticles = this.state.articles
         this.setState({
@@ -111,10 +111,14 @@ class GoogleMapContainer extends Component {
             <Fragment>
 
                 <Row>
-                    <Col size="three columns offset-by-five" colId="centerCol">
+                    <Col size="five columns offset-by-one">
+                    <p>To search by specific location, enter it below</p>
                         <Input type='text' id='locationInput' placeholder='Enter your location' />
-                        <Input type='text' name='keywordInput' onChange={this.inputHandler} placeholder='Keyword Search' />
-                    </Col>
+                        </Col>
+                        <Col size="five columns">
+                        <p className = 'keywordLabel'>To narrow results, enter keyword below</p>
+                        <Input type='text' id ='keywordInput' name='keywordInput' value={this.state.keywordInput} onChange={this.inputHandler} placeholder='Keyword Search' />
+                        </Col>
                 </Row>
                 <Row>
                     <Col size="twelve columns">
@@ -124,13 +128,13 @@ class GoogleMapContainer extends Component {
                         />
                     </Col>
                 </Row>
-                <Row>
+                {/* <Row>
                     {this.state.filtered
                         ? this.state.articles.map(article =>
                             <ArticleItem articleHeadline={article.title} />
                         )
                         : null
-                    }</Row>
+                    }</Row> */}
 
             </Fragment>
         )
