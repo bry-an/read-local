@@ -34,7 +34,13 @@ class GoogleMap extends Component {
         map.mapTypes.set('styled_map', styledMapType)
         map.setMapTypeId('styled_map')
 
-        google.maps.event.addListener(map, 'click', (event) => console.log(event))
+        google.maps.event.addListener(
+            map, 'click', (event) => {
+                console.log(event)
+                this.props.geocoder(event.latLng.lat(), event.latLng.lng())
+
+            }
+        )
 
         console.log('points', this.props.points)
         if (points.length > 0) {
