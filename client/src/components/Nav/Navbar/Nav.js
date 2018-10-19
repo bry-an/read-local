@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Col, Row } from "../..//Grid";
+import { Container, Col, Row } from "../..//Grid";
 import NavSearch from "../NavSearch";
 import NavLogin from "..//NavLogin";
 import NavLink from "..//NavLink";
@@ -52,19 +52,19 @@ class Nav extends Component {
   render() {
     return (
       <nav className={"navbar"}>
-
+      <Container>
         <Row>
-          <Col size="five columns">
+          <Col size="six columns">
             <NavLink href="/" />
           </Col>
-          <Col size="two columns" colId="cityCol" >
+          <Col size="three columns" colId="cityCol" >
             <select className={this.state.cityDisplay}
               onChange={this.cityClick} id="citySelect" defaultValue="City">
               {/* <option ></option> */}
               {this.state.cityItems.map(item => <Select options={item.city} key={item._id} />)}
             </select>
           </Col>
-          <Col size="one column" colId="stateSel">
+          <Col size="two columns" colId="stateSel">
             <select defaultValue={this.state.selectState}
               onChange={this.stateClick}
               name="state">
@@ -75,19 +75,11 @@ class Nav extends Component {
             </select>
           </Col>
 
-          <Col size="three columns" colId="searchSel">
-            {/* <NavSearch
-              value={this.state.search}
-              onChange={this.handleInputChange}
-              name="search"
-              placeholder="Keyword Search"
-            /> */}
-          </Col>
-
-          <Col size="one column offset-by-one" colId="navLogin">
+          <Col size="one column" colId="navLogin">
             <NavLogin value={this.state.logState} />
           </Col>
         </Row>
+        </Container>
       </nav>
     )
   }
