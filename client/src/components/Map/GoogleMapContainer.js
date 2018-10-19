@@ -4,6 +4,12 @@ import { Input } from "../Form"
 import { Col, Row } from "../Grid";
 import API from '../../utils/API'
 import ArticleItem from './ArticleItem'
+import geocoder from 'geocoder'
+import axios from 'axios'
+import { parseString } from 'xml2js'
+
+
+
 
 const google = window.google
 class GoogleMapContainer extends Component {
@@ -36,6 +42,23 @@ class GoogleMapContainer extends Component {
             [name]: value.trim()
         }, () => this.filterHeadlines(value.trim()))
     }
+
+    reverseGeocoder = (lat, lng) => {
+        geocoder.reverseGeocode(lat, lng, (err, data) => {
+            if (err) console.log(err)
+            console.log('compound code', data.plus_code.compound_code)
+            const compoundCode = data.plus_code.compound_code
+            const article = `https://cors-anywhere.herokuapp.com/https://news.google.com/news/rss/local/section/geo/${compoundCode}?ned=us&gl=US&hl=en&num=100`
+            axios.get(article)
+                .then(x => parseString(x, (err, res) => {
+                    if (err) console.log(err)
+                    console.log('json?', res)
+
+                })
+        )}, { key: "AIzaSyDqEyqqpMD23rErtt__7gxgYsuA6pfYdOE" })
+
+    }
+
 
 
     getArticlesLatLng = () => {
@@ -112,19 +135,20 @@ class GoogleMapContainer extends Component {
 
                 <Row>
                     <Col size="five columns offset-by-one">
-                    <p>To search by specific location, enter it below</p>
+                        <p>To search by specific location, enter it below</p>
                         <Input type='text' id='locationInput' placeholder='Enter your location' />
-                        </Col>
-                        <Col size="five columns">
-                        <p className = 'keywordLabel'>To narrow results, enter keyword below</p>
-                        <Input type='text' id ='keywordInput' name='keywordInput' value={this.state.keywordInput} onChange={this.inputHandler} placeholder='Keyword Search' />
-                        </Col>
+                    </Col>
+                    <Col size="five columns">
+                        <p className='keywordLabel'>To narrow results, enter keyword below</p>
+                        <Input type='text' id='keywordInput' name='keywordInput' value={this.state.keywordInput} onChange={this.inputHandler} placeholder='Keyword Search' />
+                    </Col>
                 </Row>
                 <Row>
                     <Col size="twelve columns">
                         <GoogleMap
                             center={this.state.mapCenter}
                             points={this.state.points}
+                            geocoder={this.reverseGeocoder}
                         />
                     </Col>
                 </Row>
