@@ -23,7 +23,7 @@ app.use(routes);
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/readlocal", { useNewUrlParser: true });
 
 app.get("/*", (req, res) => {
-  res.sendFile(path.join(__dirname, "./client/build", "index.html"));
+  res.sendFile(path.join(__dirname, "./client/build"));
 });
 
 // Start the API server
