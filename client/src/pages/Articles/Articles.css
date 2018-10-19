@@ -1,3 +1,20 @@
 .author {
 	color: #aaa;
 }
+
+.articleText {
+	margin:0;
+}
+
+.articleBodyTrunc {
+	height: 10rem;
+	overflow: hidden;
+}
+
+.articleBodyLong {
+	height: 100%;
+}
+
+.more {
+	color: #cc0000;
+}

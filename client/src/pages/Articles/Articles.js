@@ -7,7 +7,9 @@ import "./Articles.css";
 
 class Articles extends Component {
   state = {
-    articles: []
+    articles: [],
+    showLess: "articleBodyTrunc",
+    more: "more"
   };
 
   componentDidMount() {
@@ -23,6 +25,10 @@ class Articles extends Component {
     .catch(err => console.log(err));
   }
 
+  showMore = () => {
+    (this.state.more === "more" ? this.setState({showLess: "articleBodyLong", more: "less"}) : this.setState({showLess: "articleBodyTrunc", more: "more"}));
+  }
+
   render() {
     return (
       <Container>
@@ -35,11 +41,14 @@ class Articles extends Component {
                     <ListItem key={article._id} >
                     <a href={"/articles/" + article._id} id={"id-" + article._id}>
                       <strong>
-                        {article.title}
+                        {article.title.slice(1, -1)}
                       </strong>
                     </a>
                     <hr></hr>
-                    <p>{article.body}</p>
+                    <div className={this.state.showLess}>{article.body.slice(1, -1).replace(/\\\"/g, "\"").split("\\n\\n").map((item, index)=>
+                    <p className="articleText" key={item + index}>{item}</p>)}
+                    </div>
+                    <p className="more" onClick={this.showMore}>{this.state.more}...</p>
                     <hr></hr>
                   </ListItem>
                   );
