@@ -50,6 +50,18 @@ const mapStyle = [
     ]
   },
   {
+    "featureType": "administrative.province",
+    "elementType": "geometry.stroke",
+    "stylers": [
+      {
+        "color": "#ffeb3b"
+      },
+      {
+        "visibility": "on"
+      }
+    ]
+  },
+  {
     "featureType": "poi",
     "stylers": [
       {
@@ -199,6 +211,6 @@ const mapStyle = [
       }
     ]
   }
-] 
+]
 
 module.exports = mapStyle
