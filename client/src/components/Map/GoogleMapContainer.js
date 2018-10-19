@@ -50,12 +50,13 @@ class GoogleMapContainer extends Component {
             const compoundCode = data.plus_code.compound_code
             const article = `https://cors-anywhere.herokuapp.com/https://news.google.com/news/rss/local/section/geo/${compoundCode}?ned=us&gl=US&hl=en&num=100`
             axios.get(article)
-                .then(x => parseString(x, (err, res) => {
+                .then(x => parseString(x.data, (err, res) => {
                     if (err) console.log(err)
                     console.log('json?', res)
 
                 })
-        )}, { key: "AIzaSyDqEyqqpMD23rErtt__7gxgYsuA6pfYdOE" })
+                )
+        }, { key: "AIzaSyDqEyqqpMD23rErtt__7gxgYsuA6pfYdOE" })
 
     }
 
