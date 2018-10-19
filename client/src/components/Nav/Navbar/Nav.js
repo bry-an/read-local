@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Container, Col, Row } from "../..//Grid";
-import NavSearch from "../NavSearch";
 import NavLogin from "..//NavLogin";
 import NavLink from "..//NavLink";
 import { Select } from "../../Form";
@@ -38,8 +37,8 @@ class Nav extends Component {
     API.getCities(event.target.value)
       .then(res => {
         console.log(res);
-        { this.setState({ cityDisplay: "cityDisplayTrue" }) };
-        { this.setState({ cityItems: res.data }) };
+         this.setState({ cityDisplay: "cityDisplayTrue" });
+         this.setState({ cityItems: res.data });
       })
   }
 
