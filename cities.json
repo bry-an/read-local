@@ -1,0 +1,333 @@
+{"_id":{"$oid":"5bc3c1d393d2448a5edfce3f"},"city":"McRae","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fa5"}}
+{"_id":{"$oid":"5bc3c1d393d2448a5edfce40"},"city":"Wasatch County","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fc7"}}
+{"_id":{"$oid":"5bc3c1d393d2448a5edfce41"},"city":"Champlain","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fc9"}}
+{"_id":{"$oid":"5bc3c69293d2448a5edfd126"},"city":"Beverly","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fbc"}}
+{"_id":{"$oid":"5bc3c69293d2448a5edfd127"},"city":"Memphis","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fc5"}}
+{"_id":{"$oid":"5bc3c69293d2448a5edfd128"},"city":"Goodwater","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7f9c"}}
+{"_id":{"$oid":"5bc3c69393d2448a5edfd12c"},"city":"Seymour","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fa9"}}
+{"_id":{"$oid":"5bc3c69393d2448a5edfd12d"},"city":"Santa Cruz","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fa0"}}
+{"_id":{"$oid":"5bc3c69393d2448a5edfd130"},"city":"Hague","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fbd"}}
+{"_id":{"$oid":"5bc3c84f93d2448a5edfd21c"},"city":"North Benton","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fbe"}}
+{"_id":{"$oid":"5bc3c84f93d2448a5edfd21d"},"city":"Malakoff","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fc6"}}
+{"_id":{"$oid":"5bc3c85093d2448a5edfd220"},"city":"Braxton","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fb3"}}
+{"_id":{"$oid":"5bc3c85093d2448a5edfd221"},"city":"Bristol","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fa4"}}
+{"_id":{"$oid":"5bc3c85093d2448a5edfd225"},"city":"Quincy","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fca"}}
+{"_id":{"$oid":"5bc3ca2793d2448a5edfd311"},"city":"West Columbia","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fcb"}}
+{"_id":{"$oid":"5bc3ca2793d2448a5edfd315"},"city":"Crawfordsville","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fa9"}}
+{"_id":{"$oid":"5bc3ca2793d2448a5edfd317"},"city":"Los Banos","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fa0"}}
+{"_id":{"$oid":"5bc3cc1393d2448a5edfd452"},"city":"Forsyth","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fa5"}}
+{"_id":{"$oid":"5bc3cc1393d2448a5edfd453"},"city":"Poway","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fa0"}}
+{"_id":{"$oid":"5bc3cc1393d2448a5edfd454"},"city":"Odessa","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fb4"}}
+{"_id":{"$oid":"5bc3cc1493d2448a5edfd456"},"city":"Troy","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fc3"}}
+{"_id":{"$oid":"5bc3ccc693d2448a5edfd4d6"},"city":"Moriarty","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fba"}}
+{"_id":{"$oid":"5bc3cda093d2448a5edfd549"},"city":"Grand Island","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fbb"}}
+{"_id":{"$oid":"5bc3cda093d2448a5edfd553"},"city":"Macedonia (FYROM)","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fa0"}}
+{"_id":{"$oid":"5bc3cda093d2448a5edfd556"},"city":"Hacienda Heights","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fa0"}}
+{"_id":{"$oid":"5bc3cda093d2448a5edfd557"},"city":"Hurricane","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fc7"}}
+{"_id":{"$oid":"5bc3cda093d2448a5edfd55c"},"city":"West Hartland","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fa2"}}
+{"_id":{"$oid":"5bc3cda093d2448a5edfd55d"},"city":"Claremont","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fb2"}}
+{"_id":{"$oid":"5bc3cda093d2448a5edfd55e"},"city":"Estacada","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fc0"}}
+{"_id":{"$oid":"5bc3ebc393d2448a5edfd928"},"city":"United States","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fa2"}}
+{"_id":{"$oid":"5bc3ebc393d2448a5edfd92b"},"city":"Fort Stockton","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fc6"}}
+{"_id":{"$oid":"5bc3ebc393d2448a5edfd92d"},"city":"Eddyville","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fac"}}
+{"_id":{"$oid":"5bc3ebc393d2448a5edfd935"},"city":"Centreville","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7faf"}}
+{"_id":{"$oid":"5bc3ebc393d2448a5edfd936"},"city":"Centreville","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7faf"}}
+{"_id":{"$oid":"5bc3ebc393d2448a5edfd93b"},"city":"Cambridge","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fb0"}}
+{"_id":{"$oid":"5bc3ebc393d2448a5edfd93c"},"city":"Brazil","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fc9"}}
+{"_id":{"$oid":"5bc3ebc393d2448a5edfd93f"},"city":"Lakeland","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fa4"}}
+{"_id":{"$oid":"5bc3ebc393d2448a5edfd946"},"city":"Wakefield","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fc9"}}
+{"_id":{"$oid":"5bc3ebc393d2448a5edfd948"},"city":"North Powder","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fc0"}}
+{"_id":{"$oid":"5bc3ebc393d2448a5edfd94a"},"city":"Iran","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fca"}}
+{"_id":{"$oid":"5bc3ebc393d2448a5edfd94c"},"city":"Chapmanville","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fcb"}}
+{"_id":{"$oid":"5bc3ebf193d2448a5edfd9a7"},"city":"Big Springs","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fcb"}}
+{"_id":{"$oid":"5bc3ebf193d2448a5edfd9a9"},"city":"Carbonado","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fca"}}
+{"_id":{"$oid":"5bc3ebf193d2448a5edfd9ae"},"city":"Imlay City","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fb1"}}
+{"_id":{"$oid":"5bc3ebf193d2448a5edfd9b1"},"city":"Columbus","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fbe"}}
+{"_id":{"$oid":"5bc3ebf193d2448a5edfd9b5"},"city":"Ethiopia","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fa0"}}
+{"_id":{"$oid":"5bc3ebf193d2448a5edfd9bc"},"city":"Liberia","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fb1"}}
+{"_id":{"$oid":"5bc3ebf193d2448a5edfd9bd"},"city":"Coldwater","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fb1"}}
+{"_id":{"$oid":"5bc3ebf193d2448a5edfd9c2"},"city":"Summerfield","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fa4"}}
+{"_id":{"$oid":"5bc3ebf193d2448a5edfd9c3"},"city":"Tanzania","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fc9"}}
+{"_id":{"$oid":"5bc3ec4093d2448a5edfda1e"},"city":"West Bridgewater","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fb0"}}
+{"_id":{"$oid":"5bc3ec4093d2448a5edfda20"},"city":"Eugene","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fc0"}}
+{"_id":{"$oid":"5bc3ec4093d2448a5edfda25"},"city":"Dillsboro","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fa9"}}
+{"_id":{"$oid":"5bc3ec4093d2448a5edfda26"},"city":"Harrison","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fb1"}}
+{"_id":{"$oid":"5bc3ec4093d2448a5edfda28"},"city":"Velva","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fbd"}}
+{"_id":{"$oid":"5bc3ec4093d2448a5edfda29"},"city":"Fairfield","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7faa"}}
+{"_id":{"$oid":"5bc3ee3a93d2448a5edfdbdd"},"city":"Linwood","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fab"}}
+{"_id":{"$oid":"5bc3ee3a93d2448a5edfdbde"},"city":"Linwood","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fab"}}
+{"_id":{"$oid":"5bc3ee3a93d2448a5edfdbe4"},"city":"Sherwood","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fc5"}}
+{"_id":{"$oid":"5bc3ee3a93d2448a5edfdbe6"},"city":"Sherwood","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fc5"}}
+{"_id":{"$oid":"5bc3ee3a93d2448a5edfdbe7"},"city":"Sherwood","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fc5"}}
+{"_id":{"$oid":"5bc3ee3a93d2448a5edfdbe8"},"city":"Sherwood","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fc5"}}
+{"_id":{"$oid":"5bc3ee3a93d2448a5edfdbeb"},"city":"Etna","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fcd"}}
+{"_id":{"$oid":"5bc3ee3a93d2448a5edfdbec"},"city":"Etna","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fcd"}}
+{"_id":{"$oid":"5bc3ef1693d2448a5edfdca3"},"city":"Israel","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fc5"}}
+{"_id":{"$oid":"5bc3ef1693d2448a5edfdca4"},"city":"Israel","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fc5"}}
+{"_id":{"$oid":"5bc3efb393d2448a5edfdd68"},"city":"Lilesville","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fbc"}}
+{"_id":{"$oid":"5bc3efb393d2448a5edfdd69"},"city":"Lilesville","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fbc"}}
+{"_id":{"$oid":"5bc3efb393d2448a5edfdd6d"},"city":"Noblesville","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fa9"}}
+{"_id":{"$oid":"5bc3efb393d2448a5edfdd70"},"city":"Asher","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fbf"}}
+{"_id":{"$oid":"5bc3efb393d2448a5edfdd76"},"city":"Francesville","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fa9"}}
+{"_id":{"$oid":"5bc3efb393d2448a5edfdd77"},"city":"Francesville","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fa9"}}
+{"_id":{"$oid":"5bc3efb393d2448a5edfdd78"},"city":"Boiling Springs","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fc3"}}
+{"_id":{"$oid":"5bc3efb393d2448a5edfdd79"},"city":"Boiling Springs","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fc3"}}
+{"_id":{"$oid":"5bc3efb393d2448a5edfdd84"},"city":"Iraan","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fc6"}}
+{"_id":{"$oid":"5bc3efb393d2448a5edfdd87"},"city":"Iraan","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fc6"}}
+{"_id":{"$oid":"5bc3efb393d2448a5edfdd91"},"city":"Maricopa","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7f9e"}}
+{"_id":{"$oid":"5bc3efb393d2448a5edfdd92"},"city":"Maricopa","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7f9e"}}
+{"_id":{"$oid":"5bc3efb393d2448a5edfdd98"},"city":"High Point","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fbc"}}
+{"_id":{"$oid":"5bc3efb393d2448a5edfdd99"},"city":"High Point","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fbc"}}
+{"_id":{"$oid":"5bc3efb393d2448a5edfdd9d"},"city":"Melrose","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7faa"}}
+{"_id":{"$oid":"5bc3efb393d2448a5edfdda0"},"city":"Melrose","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7faa"}}
+{"_id":{"$oid":"5bc3f0dd93d2448a5edfde71"},"city":"Linden","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fc9"}}
+{"_id":{"$oid":"5bc3f0dd93d2448a5edfde74"},"city":"Florence","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7f9e"}}
+{"_id":{"$oid":"5bc3f0dd93d2448a5edfde75"},"city":"Linden","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fa0"}}
+{"_id":{"$oid":"5bc3f0dd93d2448a5edfde77"},"city":"Florence","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7f9e"}}
+{"_id":{"$oid":"5bc3f0dd93d2448a5edfde78"},"city":"Bosnia and Herzegovina","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fc6"}}
+{"_id":{"$oid":"5bc3f0dd93d2448a5edfde7a"},"city":"Bosnia and Herzegovina","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7f9e"}}
+{"_id":{"$oid":"5bc3f0dd93d2448a5edfde7f"},"city":"Vestal","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fbb"}}
+{"_id":{"$oid":"5bc3f0dd93d2448a5edfde81"},"city":"Vestal","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fbb"}}
+{"_id":{"$oid":"5bc3f0dd93d2448a5edfde88"},"city":"Concord","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fb8"}}
+{"_id":{"$oid":"5bc3f0dd93d2448a5edfde89"},"city":"Concord","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fa0"}}
+{"_id":{"$oid":"5bc3f1d393d2448a5edfdf5f"},"city":"Falls City","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fc6"}}
+{"_id":{"$oid":"5bc3f1d393d2448a5edfdf62"},"city":"Netherlands","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fc6"}}
+{"_id":{"$oid":"5bc3f1d393d2448a5edfdf64"},"city":"Falls City","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fc6"}}
+{"_id":{"$oid":"5bc3f1d393d2448a5edfdf65"},"city":"Netherlands","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fc6"}}
+{"_id":{"$oid":"5bc3f1d393d2448a5edfdf6a"},"city":"Punta Gorda","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fa4"}}
+{"_id":{"$oid":"5bc3f1d393d2448a5edfdf6b"},"city":"Punta Gorda","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fa4"}}
+{"_id":{"$oid":"5bc3f81093d2448a5edfe2b7"},"city":"Alma","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fbb"}}
+{"_id":{"$oid":"5bc3f81093d2448a5edfe2b8"},"city":"Alma","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fbb"}}
+{"_id":{"$oid":"5bc3f85593d2448a5edfe2f2"},"city":"Chebanse","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fa8"}}
+{"_id":{"$oid":"5bc3f85593d2448a5edfe2f4"},"city":"Chebanse","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fa8"}}
+{"_id":{"$oid":"5bc3f85593d2448a5edfe2f6"},"city":"Silver Spring","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7faf"}}
+{"_id":{"$oid":"5bc3f85593d2448a5edfe2f8"},"city":"Silver Spring","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7faf"}}
+{"_id":{"$oid":"5bc3f85593d2448a5edfe2f9"},"city":"Oakville","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7faa"}}
+{"_id":{"$oid":"5bc3f85593d2448a5edfe2fa"},"city":"Oakville","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7faa"}}
+{"_id":{"$oid":"5bc3f85593d2448a5edfe2ff"},"city":"Manlius","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fbb"}}
+{"_id":{"$oid":"5bc3f85593d2448a5edfe300"},"city":"Manlius","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fbb"}}
+{"_id":{"$oid":"5bc3fc3d93d2448a5edfe512"},"city":"Gap","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fc1"}}
+{"_id":{"$oid":"5bc3fc3d93d2448a5edfe515"},"city":"Gap","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fc1"}}
+{"_id":{"$oid":"5bc3fc3d93d2448a5edfe517"},"city":"Bakersfield","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fa0"}}
+{"_id":{"$oid":"5bc3fc3d93d2448a5edfe521"},"city":"Snow Shoe","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fc1"}}
+{"_id":{"$oid":"5bc3fc3d93d2448a5edfe522"},"city":"Somerset","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fb9"}}
+{"_id":{"$oid":"5bc3fc3d93d2448a5edfe523"},"city":"Snow Shoe","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fc1"}}
+{"_id":{"$oid":"5bc3fc3d93d2448a5edfe524"},"city":"Somerset","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fc1"}}
+{"_id":{"$oid":"5bc3fc3d93d2448a5edfe529"},"city":"Highgate Center","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fc8"}}
+{"_id":{"$oid":"5bc3fca693d2448a5edfe57b"},"city":"Corbin","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fac"}}
+{"_id":{"$oid":"5bc3fca693d2448a5edfe57c"},"city":"Corbin","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fac"}}
+{"_id":{"$oid":"5bc3fca693d2448a5edfe581"},"city":"Ashby","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fb6"}}
+{"_id":{"$oid":"5bc3fca693d2448a5edfe584"},"city":"Ashby","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fb6"}}
+{"_id":{"$oid":"5bc3fcc993d2448a5edfe5c1"},"city":"Necedah","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fcc"}}
+{"_id":{"$oid":"5bc3fcc993d2448a5edfe5c3"},"city":"Necedah","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fcc"}}
+{"_id":{"$oid":"5bc3fcc993d2448a5edfe5c5"},"city":"Newland","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fbc"}}
+{"_id":{"$oid":"5bc3fcc993d2448a5edfe5c7"},"city":"Newland","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fbc"}}
+{"_id":{"$oid":"5bc3fce493d2448a5edfe606"},"city":"Bynum","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fc6"}}
+{"_id":{"$oid":"5bc3fce493d2448a5edfe60a"},"city":"Bynum","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fc6"}}
+{"_id":{"$oid":"5bc3fce493d2448a5edfe613"},"city":"Charleston","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fcb"}}
+{"_id":{"$oid":"5bc3fce493d2448a5edfe614"},"city":"Charleston","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fb3"}}
+{"_id":{"$oid":"5bc3fe0f93d2448a5edfe74a"},"city":"Parrottsville","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fc5"}}
+{"_id":{"$oid":"5bc3fe0f93d2448a5edfe74b"},"city":"Parrottsville","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fc5"}}
+{"_id":{"$oid":"5bc3fe6193d2448a5edfe7ba"},"city":"Kenansville","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fbc"}}
+{"_id":{"$oid":"5bc3fe8193d2448a5edfe7fb"},"city":"Fayetteville","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fbc"}}
+{"_id":{"$oid":"5bc3fe8193d2448a5edfe7fc"},"city":"Fayetteville","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fbc"}}
+{"_id":{"$oid":"5bc3fe8193d2448a5edfe7fd"},"city":"Fayetteville","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fbc"}}
+{"_id":{"$oid":"5bc3fe8193d2448a5edfe805"},"city":"Piketon","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fbe"}}
+{"_id":{"$oid":"5bc4015293d2448a5edfe9b6"},"city":"Richton Park","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fb0"}}
+{"_id":{"$oid":"5bc4015293d2448a5edfe9b8"},"city":"Richton Park","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fab"}}
+{"_id":{"$oid":"5bc401d493d2448a5edfea12"},"city":"102 N Neil St","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fca"}}
+{"_id":{"$oid":"5bc401f393d2448a5edfea2b"},"city":"75004 Paris","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fa8"}}
+{"_id":{"$oid":"5bc401f393d2448a5edfea2c"},"city":"75004 Paris","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fb0"}}
+{"_id":{"$oid":"5bc4026993d2448a5edfea75"},"city":"Bridgeport","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fa2"}}
+{"_id":{"$oid":"5bc402fd93d2448a5edfead8"},"city":"San Francisco","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fa0"}}
+{"_id":{"$oid":"5bc402fd93d2448a5edfead9"},"city":"San Francisco","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fa1"}}
+{"_id":{"$oid":"5bc4071f93d2448a5edfed1a"},"city":"Denver","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fa1"}}
+{"_id":{"$oid":"5bc4071f93d2448a5edfed1b"},"city":"Manhattan","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fab"}}
+{"_id":{"$oid":"5bc4071f93d2448a5edfed1c"},"city":"Manhattan","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fab"}}
+{"_id":{"$oid":"5bc4079093d2448a5edfed78"},"city":"Mason","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fbe"}}
+{"_id":{"$oid":"5bc4079093d2448a5edfed79"},"city":"Hanover","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fb8"}}
+{"_id":{"$oid":"5bc4079093d2448a5edfed7a"},"city":"Mason","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fbe"}}
+{"_id":{"$oid":"5bc4079193d2448a5edfed7e"},"city":"San Antonio","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fc6"}}
+{"_id":{"$oid":"5bc4082b93d2448a5edfedef"},"city":"Springfield","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fb0"}}
+{"_id":{"$oid":"5bc4082b93d2448a5edfedf2"},"city":"Flint","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fb1"}}
+{"_id":{"$oid":"5bc4082b93d2448a5edfedf4"},"city":"Flint","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fb1"}}
+{"_id":{"$oid":"5bc4082b93d2448a5edfedf5"},"city":"Yuma","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7f9e"}}
+{"_id":{"$oid":"5bc4082b93d2448a5edfedfb"},"city":"Albany","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fbb"}}
+{"_id":{"$oid":"5bc4082b93d2448a5edfedfc"},"city":"Albany","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fbb"}}
+{"_id":{"$oid":"5bc4082b93d2448a5edfee01"},"city":"Las Vegas","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fb7"}}
+{"_id":{"$oid":"5bc4082b93d2448a5edfee03"},"city":"Holland","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fb1"}}
+{"_id":{"$oid":"5bc4082b93d2448a5edfee04"},"city":"Holland","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fb1"}}
+{"_id":{"$oid":"5bc4087993d2448a5edfee5c"},"city":"Rochelle","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fc6"}}
+{"_id":{"$oid":"5bc4087993d2448a5edfee60"},"city":"Bennington","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fc8"}}
+{"_id":{"$oid":"5bc4087993d2448a5edfee61"},"city":"Bennington","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fc8"}}
+{"_id":{"$oid":"5bc4087993d2448a5edfee62"},"city":"Akron","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fbe"}}
+{"_id":{"$oid":"5bc4087993d2448a5edfee63"},"city":"Akron","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fbe"}}
+{"_id":{"$oid":"5bc4087993d2448a5edfee67"},"city":"Philadelphia","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fc1"}}
+{"_id":{"$oid":"5bc4087993d2448a5edfee69"},"city":"Houston","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fc6"}}
+{"_id":{"$oid":"5bc4087993d2448a5edfee6a"},"city":"Harrisburg","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fc1"}}
+{"_id":{"$oid":"5bc4089c93d2448a5edfeeae"},"city":"Cincinnati","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fbe"}}
+{"_id":{"$oid":"5bc4089c93d2448a5edfeeb0"},"city":"Sandusky","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fbe"}}
+{"_id":{"$oid":"5bc4089c93d2448a5edfeeb3"},"city":"Weatherford","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fc6"}}
+{"_id":{"$oid":"5bc4089c93d2448a5edfeeb5"},"city":"Boston","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fb0"}}
+{"_id":{"$oid":"5bc4089c93d2448a5edfeeba"},"city":"Oak Brook","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fa8"}}
+{"_id":{"$oid":"5bc4089c93d2448a5edfeec0"},"city":"Stockton","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fa0"}}
+{"_id":{"$oid":"5bc4089c93d2448a5edfeec1"},"city":"Hingham","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fb0"}}
+{"_id":{"$oid":"5bc408be93d2448a5edfef0a"},"city":"Mountain Grove","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fb4"}}
+{"_id":{"$oid":"5bc408be93d2448a5edfef0c"},"city":"Mountain Grove","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fb4"}}
+{"_id":{"$oid":"5bc408be93d2448a5edfef0d"},"city":"Brookfield","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fa2"}}
+{"_id":{"$oid":"5bc408be93d2448a5edfef0f"},"city":"Brookfield","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fa2"}}
+{"_id":{"$oid":"5bc408be93d2448a5edfef13"},"city":"Cadillac","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fb1"}}
+{"_id":{"$oid":"5bc408be93d2448a5edfef14"},"city":"Cadillac","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fb1"}}
+{"_id":{"$oid":"5bc408be93d2448a5edfef19"},"city":"New York","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fbb"}}
+{"_id":{"$oid":"5bc408be93d2448a5edfef1a"},"city":"New York","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fbb"}}
+{"_id":{"$oid":"5bc408bf93d2448a5edfef20"},"city":"San Mateo","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fa0"}}
+{"_id":{"$oid":"5bc408bf93d2448a5edfef21"},"city":"Irvine","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fa0"}}
+{"_id":{"$oid":"5bc408bf93d2448a5edfef22"},"city":"Irvine","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fa0"}}
+{"_id":{"$oid":"5bc408bf93d2448a5edfef23"},"city":"San Mateo","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fa0"}}
+{"_id":{"$oid":"5bc408bf93d2448a5edfef26"},"city":"Augusta","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fae"}}
+{"_id":{"$oid":"5bc408bf93d2448a5edfef29"},"city":"Daytona Beach","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fa4"}}
+{"_id":{"$oid":"5bc408bf93d2448a5edfef2a"},"city":"Kalamazoo","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fb1"}}
+{"_id":{"$oid":"5bc408bf93d2448a5edfef2b"},"city":"Daytona Beach","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fa4"}}
+{"_id":{"$oid":"5bc408ef93d2448a5edfef8f"},"city":"Albuquerque","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fba"}}
+{"_id":{"$oid":"5bc408ef93d2448a5edfef94"},"city":"Mexico Beach","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fa4"}}
+{"_id":{"$oid":"5bc408ef93d2448a5edfef95"},"city":"New Bern","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fbc"}}
+{"_id":{"$oid":"5bc408ef93d2448a5edfef96"},"city":"Mexico Beach","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fa4"}}
+{"_id":{"$oid":"5bc408ef93d2448a5edfef9b"},"city":"Scottsdale","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7f9e"}}
+{"_id":{"$oid":"5bc408ef93d2448a5edfef9c"},"city":"Scottsdale","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7f9e"}}
+{"_id":{"$oid":"5bc408ef93d2448a5edfef9d"},"city":"West Harrison","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fbb"}}
+{"_id":{"$oid":"5bc408ef93d2448a5edfefa3"},"city":"Athens","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fc6"}}
+{"_id":{"$oid":"5bc408ef93d2448a5edfefa4"},"city":"Athens","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fc6"}}
+{"_id":{"$oid":"5bc408ef93d2448a5edfefa9"},"city":"Frisco","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fc6"}}
+{"_id":{"$oid":"5bc408ef93d2448a5edfefaa"},"city":"Pelham","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fbb"}}
+{"_id":{"$oid":"5bc408ef93d2448a5edfefab"},"city":"Pelham","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fbb"}}
+{"_id":{"$oid":"5bc408ef93d2448a5edfefac"},"city":"Pownal","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fc8"}}
+{"_id":{"$oid":"5bc408ef93d2448a5edfefb0"},"city":"Kansas City","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fb4"}}
+{"_id":{"$oid":"5bc408ef93d2448a5edfefb1"},"city":"Kansas City","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fb4"}}
+{"_id":{"$oid":"5bc4095a93d2448a5edff027"},"city":"Columbia","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fc3"}}
+{"_id":{"$oid":"5bc4095a93d2448a5edff029"},"city":"Columbia","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fc3"}}
+{"_id":{"$oid":"5bc4095a93d2448a5edff02b"},"city":"Coupeville","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fca"}}
+{"_id":{"$oid":"5bc4095a93d2448a5edff02c"},"city":"Coupeville","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fca"}}
+{"_id":{"$oid":"5bc4095a93d2448a5edff02d"},"city":"Kingsport","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fc5"}}
+{"_id":{"$oid":"5bc4095a93d2448a5edff02e"},"city":"Kingsport","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fc5"}}
+{"_id":{"$oid":"5bc4099d93d2448a5edff074"},"city":"Granville","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fc8"}}
+{"_id":{"$oid":"5bc4099d93d2448a5edff075"},"city":"Granville","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fc8"}}
+{"_id":{"$oid":"5bc4099d93d2448a5edff081"},"city":"Thornville","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fbe"}}
+{"_id":{"$oid":"5bc4099d93d2448a5edff083"},"city":"Thornville","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fbe"}}
+{"_id":{"$oid":"5bc4099d93d2448a5edff085"},"city":"Santa Clara","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fa0"}}
+{"_id":{"$oid":"5bc4099d93d2448a5edff086"},"city":"Santa Clara","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fa0"}}
+{"_id":{"$oid":"5bc4099d93d2448a5edff090"},"city":"Milwaukee","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fcc"}}
+{"_id":{"$oid":"5bc4099d93d2448a5edff096"},"city":"Goodells","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fb1"}}
+{"_id":{"$oid":"5bc4099d93d2448a5edff098"},"city":"Lancaster","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fc1"}}
+{"_id":{"$oid":"5bc4099d93d2448a5edff09a"},"city":"Goodells","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fb1"}}
+{"_id":{"$oid":"5bc4099d93d2448a5edff09e"},"city":"Dallas","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fc6"}}
+{"_id":{"$oid":"5bc4099d93d2448a5edff0a4"},"city":"Roseville","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fa0"}}
+{"_id":{"$oid":"5bc4099d93d2448a5edff0aa"},"city":"Syracuse","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fbb"}}
+{"_id":{"$oid":"5bc409b193d2448a5edff0e9"},"city":"Lemont Furnace","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fc1"}}
+{"_id":{"$oid":"5bc409b193d2448a5edff0ea"},"city":"Lemont Furnace","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fc1"}}
+{"_id":{"$oid":"5bc409b193d2448a5edff0eb"},"city":"Pickens","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fc3"}}
+{"_id":{"$oid":"5bc409b193d2448a5edff0ed"},"city":"Pickens","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fc3"}}
+{"_id":{"$oid":"5bc409b193d2448a5edff0f4"},"city":"Madison","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fcc"}}
+{"_id":{"$oid":"5bc409b193d2448a5edff0f7"},"city":"Birmingham","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7f9c"}}
+{"_id":{"$oid":"5bc409b193d2448a5edff0fb"},"city":"Cream Ridge","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fb9"}}
+{"_id":{"$oid":"5bc409b193d2448a5edff0ff"},"city":"Littlerock","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fa0"}}
+{"_id":{"$oid":"5bc409b193d2448a5edff102"},"city":"Bozeman","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fb5"}}
+{"_id":{"$oid":"5bc409b193d2448a5edff104"},"city":"Pittsburgh","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fc1"}}
+{"_id":{"$oid":"5bc40a4793d2448a5edff192"},"city":"Butte","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fb5"}}
+{"_id":{"$oid":"5bc40a4793d2448a5edff193"},"city":"Butte","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fb5"}}
+{"_id":{"$oid":"5bc40a4793d2448a5edff198"},"city":"Minneapolis","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fb2"}}
+{"_id":{"$oid":"5bc40a4793d2448a5edff199"},"city":"Ames","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7faa"}}
+{"_id":{"$oid":"5bc40a4793d2448a5edff19c"},"city":"Salt Lake City","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fc7"}}
+{"_id":{"$oid":"5bc40a4793d2448a5edff19d"},"city":"Salt Lake City","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fc7"}}
+{"_id":{"$oid":"5bc40a4793d2448a5edff1a1"},"city":"Parowan","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fc7"}}
+{"_id":{"$oid":"5bc40a4793d2448a5edff1a4"},"city":"Chapel Hill","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fbc"}}
+{"_id":{"$oid":"5bc40a4793d2448a5edff1a9"},"city":"Baton Rouge","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fad"}}
+{"_id":{"$oid":"5bc40a4793d2448a5edff1ac"},"city":"Miami","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fa4"}}
+{"_id":{"$oid":"5bc40a4793d2448a5edff1ad"},"city":"Miami","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fa4"}}
+{"_id":{"$oid":"5bc40a4793d2448a5edff1b1"},"city":"Sunbury","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fc1"}}
+{"_id":{"$oid":"5bc40a4793d2448a5edff1b2"},"city":"Chicago","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fa8"}}
+{"_id":{"$oid":"5bc40a4793d2448a5edff1b8"},"city":"Bowling Green","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fbe"}}
+{"_id":{"$oid":"5bc40a4793d2448a5edff1b9"},"city":"Bowling Green","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fbe"}}
+{"_id":{"$oid":"5bc40a4793d2448a5edff1be"},"city":"State College","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fc1"}}
+{"_id":{"$oid":"5bc40a4793d2448a5edff1bf"},"city":"State College","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fc1"}}
+{"_id":{"$oid":"5bc40a6693d2448a5edff207"},"city":"Annapolis","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7faf"}}
+{"_id":{"$oid":"5bc40a6693d2448a5edff20b"},"city":"Brookings","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fc4"}}
+{"_id":{"$oid":"5bc40a6693d2448a5edff20d"},"city":"Abilene","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fc6"}}
+{"_id":{"$oid":"5bc40a6693d2448a5edff218"},"city":"Raleigh","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fbc"}}
+{"_id":{"$oid":"5bc40a6693d2448a5edff221"},"city":"Lewiston","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fae"}}
+{"_id":{"$oid":"5bc40a6693d2448a5edff222"},"city":"Zionsville","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fa9"}}
+{"_id":{"$oid":"5bc40a6693d2448a5edff223"},"city":"Lewiston","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fae"}}
+{"_id":{"$oid":"5bc40a7b93d2448a5edff263"},"city":"Pendleton","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fc0"}}
+{"_id":{"$oid":"5bc40a7b93d2448a5edff264"},"city":"Pendleton","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fc0"}}
+{"_id":{"$oid":"5bc40a7b93d2448a5edff26c"},"city":"Des Moines","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7faa"}}
+{"_id":{"$oid":"5bc40a7b93d2448a5edff276"},"city":"Logan","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fc7"}}
+{"_id":{"$oid":"5bc40a7b93d2448a5edff278"},"city":"Twin Falls","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fa7"}}
+{"_id":{"$oid":"5bc40a7b93d2448a5edff27e"},"city":"Loveland","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fa1"}}
+{"_id":{"$oid":"5bc40a9093d2448a5edff2b8"},"city":"Reno","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fb7"}}
+{"_id":{"$oid":"5bc40a9093d2448a5edff2bc"},"city":"Foxborough","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fb0"}}
+{"_id":{"$oid":"5bc40a9093d2448a5edff2bd"},"city":"Foxborough","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fb0"}}
+{"_id":{"$oid":"5bc40a9093d2448a5edff2c8"},"city":"Nacogdoches","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fc6"}}
+{"_id":{"$oid":"5bc40a9093d2448a5edff2ce"},"city":"Mt Pleasant","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fc3"}}
+{"_id":{"$oid":"5bc40a9093d2448a5edff2d7"},"city":"Battle Creek","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fb1"}}
+{"_id":{"$oid":"5bc40a9093d2448a5edff2e1"},"city":"Watertown","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fbb"}}
+{"_id":{"$oid":"5bc40a9093d2448a5edff2e3"},"city":"Baltimore","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7faf"}}
+{"_id":{"$oid":"5bc40aa893d2448a5edff328"},"city":"Nashville","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fc5"}}
+{"_id":{"$oid":"5bc40aa893d2448a5edff329"},"city":"Nashville","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fc5"}}
+{"_id":{"$oid":"5bc40aa893d2448a5edff32a"},"city":"Schenectady","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fbb"}}
+{"_id":{"$oid":"5bc40aa893d2448a5edff32b"},"city":"Schenectady","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fbb"}}
+{"_id":{"$oid":"5bc40aa893d2448a5edff331"},"city":"Cottonwood","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7f9e"}}
+{"_id":{"$oid":"5bc40aa893d2448a5edff332"},"city":"Cottonwood","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7f9e"}}
+{"_id":{"$oid":"5bc40aa893d2448a5edff338"},"city":"Erie","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fc1"}}
+{"_id":{"$oid":"5bc40aa893d2448a5edff339"},"city":"Missoula","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fb5"}}
+{"_id":{"$oid":"5bc40aa893d2448a5edff341"},"city":"Lynchburg","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fc9"}}
+{"_id":{"$oid":"5bc40aa893d2448a5edff342"},"city":"Lynchburg","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fc9"}}
+{"_id":{"$oid":"5bc40aa893d2448a5edff34d"},"city":"Orangeburg","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fc3"}}
+{"_id":{"$oid":"5bc40aa893d2448a5edff34e"},"city":"Orangeburg","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fc3"}}
+{"_id":{"$oid":"5bc40ac693d2448a5edff398"},"city":"Evanston","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fa8"}}
+{"_id":{"$oid":"5bc40ac693d2448a5edff3a3"},"city":"Wormleysburg","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fc1"}}
+{"_id":{"$oid":"5bc40ac693d2448a5edff3a4"},"city":"Burlington","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fc8"}}
+{"_id":{"$oid":"5bc40ac693d2448a5edff3a5"},"city":"Wormleysburg","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fc1"}}
+{"_id":{"$oid":"5bc40ac693d2448a5edff3ab"},"city":"Charlottesville","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fc9"}}
+{"_id":{"$oid":"5bc40ac693d2448a5edff3ac"},"city":"Charlottesville","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fc9"}}
+{"_id":{"$oid":"5bc40ad393d2448a5edff3e9"},"city":"Los Angeles","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fa0"}}
+{"_id":{"$oid":"5bc40ad393d2448a5edff3ee"},"city":"Summerville","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fc3"}}
+{"_id":{"$oid":"5bc40ad393d2448a5edff3f6"},"city":"South Bend","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fa9"}}
+{"_id":{"$oid":"5bc40ad393d2448a5edff3f7"},"city":"Westlake","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fbe"}}
+{"_id":{"$oid":"5bc40ad393d2448a5edff3f9"},"city":"Lebanon","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fab"}}
+{"_id":{"$oid":"5bc40ad393d2448a5edff3fd"},"city":"Omaha","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fb6"}}
+{"_id":{"$oid":"5bc40ad393d2448a5edff407"},"city":"Aurora","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fa1"}}
+{"_id":{"$oid":"5bc40adf93d2448a5edff43a"},"city":"Janesville","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fcc"}}
+{"_id":{"$oid":"5bc40adf93d2448a5edff43b"},"city":"Janesville","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fcc"}}
+{"_id":{"$oid":"5bc40adf93d2448a5edff43c"},"city":"Janesville","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fcc"}}
+{"_id":{"$oid":"5bc40adf93d2448a5edff43d"},"city":"Janesville","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fcc"}}
+{"_id":{"$oid":"5bc40adf93d2448a5edff444"},"city":"Wausau","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fcc"}}
+{"_id":{"$oid":"5bc40adf93d2448a5edff445"},"city":"Wausau","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fcc"}}
+{"_id":{"$oid":"5bc40adf93d2448a5edff44d"},"city":"Hartford","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fa2"}}
+{"_id":{"$oid":"5bc40adf93d2448a5edff44e"},"city":"Hartford","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fa2"}}
+{"_id":{"$oid":"5bc40adf93d2448a5edff452"},"city":"Lansing","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fb1"}}
+{"_id":{"$oid":"5bc40aec93d2448a5edff493"},"city":"Austin","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fc6"}}
+{"_id":{"$oid":"5bc40aec93d2448a5edff494"},"city":"Austin","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fc6"}}
+{"_id":{"$oid":"5bc40aec93d2448a5edff496"},"city":"Indianapolis","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fa9"}}
+{"_id":{"$oid":"5bc40aec93d2448a5edff497"},"city":"Indianapolis","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fa9"}}
+{"_id":{"$oid":"5bc40aec93d2448a5edff49d"},"city":"Providence","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fc2"}}
+{"_id":{"$oid":"5bc40aec93d2448a5edff49e"},"city":"Ann Arbor","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fb1"}}
+{"_id":{"$oid":"5bc40aec93d2448a5edff49f"},"city":"Providence","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fc2"}}
+{"_id":{"$oid":"5bc40aec93d2448a5edff4a3"},"city":"Ann Arbor","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fb1"}}
+{"_id":{"$oid":"5bc40aec93d2448a5edff4a4"},"city":"Cheyenne","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fcd"}}
+{"_id":{"$oid":"5bc40aec93d2448a5edff4aa"},"city":"Portland","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fae"}}
+{"_id":{"$oid":"5bc40aec93d2448a5edff4b3"},"city":"Taft","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fc6"}}
+{"_id":{"$oid":"5bc40aec93d2448a5edff4b4"},"city":"Taft","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fc6"}}
+{"_id":{"$oid":"5bc40aec93d2448a5edff4b9"},"city":"Kemp","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fc6"}}
+{"_id":{"$oid":"5bc40af793d2448a5edff4ee"},"city":"Lynn Haven","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fa4"}}
+{"_id":{"$oid":"5bc40af793d2448a5edff4ef"},"city":"Lynn Haven","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fa4"}}
+{"_id":{"$oid":"5bc40af793d2448a5edff4f5"},"city":"Macon","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fa5"}}
+{"_id":{"$oid":"5bc40af793d2448a5edff4f6"},"city":"Macon","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fa5"}}
+{"_id":{"$oid":"5bc40af793d2448a5edff502"},"city":"Muskegon","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fb1"}}
+{"_id":{"$oid":"5bc40af793d2448a5edff503"},"city":"Santa Rosa","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fa0"}}
+{"_id":{"$oid":"5bc40af793d2448a5edff505"},"city":"Muskegon","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fb1"}}
+{"_id":{"$oid":"5bc40af793d2448a5edff50a"},"city":"Tuscaloosa","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7f9c"}}
+{"_id":{"$oid":"5bc40af793d2448a5edff511"},"city":"Norfolk","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fc9"}}
+{"_id":{"$oid":"5bc40af793d2448a5edff513"},"city":"Norfolk","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fc9"}}
+{"_id":{"$oid":"5bc40b0393d2448a5edff548"},"city":"Pembroke","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fbc"}}
+{"_id":{"$oid":"5bc40b0393d2448a5edff555"},"city":"Greenville","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fc3"}}
+{"_id":{"$oid":"5bc40b2093d2448a5edff5d1"},"city":"Lincoln","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fb6"}}
+{"_id":{"$oid":"5bc40b2093d2448a5edff5d8"},"city":"Atlanta","__v":0,"state":{"$oid":"5bc0c7770c9db245001c7fa5"}}
