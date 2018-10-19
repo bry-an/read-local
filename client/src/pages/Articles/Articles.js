@@ -7,9 +7,7 @@ import "./Articles.css";
 
 class Articles extends Component {
   state = {
-    articles: [],
-    showLess: "articleBodyTrunc",
-    more: "more"
+    articles: []
   };
 
   componentDidMount() {
@@ -25,8 +23,20 @@ class Articles extends Component {
     .catch(err => console.log(err));
   }
 
-  showMore = () => {
-    (this.state.more === "more" ? this.setState({showLess: "articleBodyLong", more: "less"}) : this.setState({showLess: "articleBodyTrunc", more: "more"}));
+  showMore = (i) => {
+    var itemId = "articleId-" + i;
+    var moreId = "moreId-" + i;
+    var x = document.getElementById(itemId);
+    var y = document.getElementById(moreId);
+    if (y.textContent === "more...") {
+      y.innerHTML="less..";
+      x.removeAttribute("class");
+      x.setAttribute("class", "articleBodyLong")
+    } else {
+      y.innerHTML="more...";
+      x.removeAttribute("class");
+      x.setAttribute("class", "articleBodyTrunc")
+    }  
   }
 
   render() {
@@ -45,10 +55,10 @@ class Articles extends Component {
                       </strong>
                     </a>
                     <hr></hr>
-                    <div className={this.state.showLess}>{article.body.slice(1, -1).replace(/\\\"/g, "\"").split("\\n\\n").map((item, index)=>
+                    <div className="articleBodyTrunc" id={"articleId-" + article._id}>{article.body.slice(1, -1).replace(/\\\"/g, "\"").split("\\n\\n").map((item, index)=>
                     <p className="articleText" key={item + index}>{item}</p>)}
                     </div>
-                    <p className="more" onClick={this.showMore}>{this.state.more}...</p>
+                    <p className="more" id={"moreId-" + article._id} onClick={()=>this.showMore(article._id)}>more...</p>
                     <hr></hr>
                   </ListItem>
                   );
