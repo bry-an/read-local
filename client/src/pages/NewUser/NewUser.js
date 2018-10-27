@@ -4,6 +4,7 @@ import { Row, Col } from "../../components/Grid";
 import { FormBtn, Input, Label, LinkBtn } from "../../components/Form";
 import "./NewUser.css";
 import axios from "axios";
+import API from "../../utils/API";
 
 const customStyles = {
 	content: {
@@ -41,14 +42,12 @@ class NewUser extends Component {
 		event.preventDefault();
     this.setState({ showModal: false });
     console.log(this.state);
-     const regData = { 
+    const regData = { 
 			 email: this.state.email, 
 			 password: this.state.password, 
 			 firstname: this.state.firstName,
 			 lastname: this.state.lastName };
-     axios.post("/auth/register", regData)
-     .then(res => console.log(res))
-     .catch(err => console.log(err));
+	API.postNewUser(regData);
   }
 
 	handleInputChange = event => {

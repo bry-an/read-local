@@ -21,7 +21,7 @@ router.post('/register', function (req, res) {
         login_email: req.body.email,
         password: hashedPassword
     }, { upsert: true, returnNewDocument: true }, 
-    function (err, logins) {
+    function (logins, err) {
         console.log(logins);
         if (err) return res.status(500).send("There was a problem registering the user.")
         // create a token
@@ -34,8 +34,8 @@ router.post('/register', function (req, res) {
 
 router.post('/login', function (req, res) {
     console.log(req.body);
-    db.Login.findOne( { login_email: req.body.email } ).then((err, logins) => {
-        console.log(logins);
+    db.Login.findOne( { login_email: req.body.email } ).then((logins, err) => {
+        console.log(err, logins);
         if (err) return res.status(500).send('Error on the server.');
         if (!logins) return res.status(404).send({ auth: false });
         var passwordIsValid = bcrypt.compareSync(req.body.password, logins.password);
@@ -44,7 +44,8 @@ router.post('/login', function (req, res) {
             expiresIn: 86400 // expires in 24 hours
         });
         res.status(200).send({ auth: true, token: token });
-    });
+    })
+    .catch(err => console.log(err));
 });
 
 router.get('/logout', function (req, res) {
@@ -54,12 +55,13 @@ router.get('/logout', function (req, res) {
 router.get('/check', verifyToken, function (req, res, next) {
 
     db.Login.findOne( { _id: req.loginsId } )
-        .then(function (err, logins) {
+        .then(function (logins, err) {
             if (err) return res.status(500).send("There was a problem finding the user.");
             if (!logins) return res.status(404).send("No user found.");
             // res.status(200).send(user); Comment this out!
             res.status(200).send(logins);
             console.log(logins);
+            next();
         });
 });
 
