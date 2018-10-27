@@ -2,7 +2,7 @@ import React, { Component, Fragment } from "react";
 import ReactModal from 'react-modal';
 import { Label, Input, FormBtn } from "../../Form";
 import "./NavLogin.css";
-import axios from "axios";
+import API from "../../../utils/API";
 
 const customStyles = {
   content : {
@@ -39,9 +39,7 @@ class NavLogin extends Component {
     this.setState({ showModal: false });
     console.log(this.state.login, this.state.password);
      const loginData = { login_email: this.state.login, password: this.state.password };
-     axios.post("/auth/login", loginData)
-     .then(res => console.log(res))
-     .catch(err => console.log(err));
+     API.postLogin(loginData);     
   }
 
   handleInputChange = event => {

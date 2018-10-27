@@ -7,17 +7,25 @@ export default {
   },
 
   fillStates: function () {
-    const states = axios.get('/api/articles/usstates');
-    return states;
+    return axios.get('/api/articles/usstates');
   },
   fillArticles: function () {
-    const articles = axios.get('/api/articles');
-    return articles;
+    return axios.get('/api/articles');
   },
   getCities: function (stateCode) {
     console.log("in getCities", stateCode);
-    const cities = axios.get('/api/articles/cities/' + stateCode);
-    console.log(cities);
-    return cities;
+    return axios.get('/api/articles/cities/' + stateCode);
+  },
+  postLogin: function (loginData) {
+    console.log("in postLogin", loginData);
+    axios.post('/auth/login', loginData)
+     .then(res => console.log(res))
+     .catch(err => console.log(err));
+  },
+  postNewUser: function (regData) {
+    console.log("in postNewUser", regData);
+    axios.post("/auth/register", regData)
+    .then(res => console.log(res))
+    .catch(err => console.log(err));
   }
 };
