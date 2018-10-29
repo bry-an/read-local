@@ -3,15 +3,17 @@ const router = express.Router();
 const bodyParser = require('body-parser');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
-const config = require('../config/config.js');
+const config = require('../config/config');
 const db = require("../models");
-const verifyToken = require('../public/js/verifyToken.js');
+const verifyToken = require('../public/js/verifyToken');
 
 router.use(bodyParser.urlencoded({ extended: true }));
 router.use(bodyParser.json());
 
-router.post('/register', function (req, res) {
-    console.log("in register");
+module.exports = {
+
+newUser: function (req, res) {
+    console.log("creating user");
     console.log(req.body);
     var hashedPassword = bcrypt.hashSync(req.body.password, 8);
     db.Login.findOneAndUpdate({
@@ -20,8 +22,8 @@ router.post('/register', function (req, res) {
         last_name: req.body.lastname,
         login_email: req.body.email,
         password: hashedPassword
-    }, { upsert: true, returnNewDocument: true }, 
-    function (logins, err) {
+    }, { upsert: true, returnNewDocument: true })
+    .then ((logins, err) => {
         console.log(logins);
         if (err) return res.status(500).send("There was a problem registering the user.")
         // create a token
@@ -29,12 +31,14 @@ router.post('/register', function (req, res) {
             expiresIn: 86400 // expires in 24 hours
         });
         res.status(200).send({ auth: true, token: token });
-    });
-});
+    })
+    .catch (err => console.log(err));
+},
 
-router.post('/login', function (req, res) {
+login: function (req, res) {
     console.log(req.body);
-    db.Login.findOne( { login_email: req.body.email } ).then((logins, err) => {
+    db.Login.findOne( { login_email: req.body.login_email } )
+    .then((logins, err) => {
         console.log(err, logins);
         if (err) return res.status(500).send('Error on the server.');
         if (!logins) return res.status(404).send({ auth: false });
@@ -46,14 +50,15 @@ router.post('/login', function (req, res) {
         res.status(200).send({ auth: true, token: token });
     })
     .catch(err => console.log(err));
-});
+},
 
-router.get('/logout', function (req, res) {
+logout: function (req, res) {
     res.status(200).send({ auth: false, token: null });
-});
+},
 
-router.get('/check', verifyToken, function (req, res, next) {
-
+verify: function (req, res, next) {
+    console.log("in verify in controller");
+    verifyToken;
     db.Login.findOne( { _id: req.loginsId } )
         .then(function (logins, err) {
             if (err) return res.status(500).send("There was a problem finding the user.");
@@ -63,6 +68,5 @@ router.get('/check', verifyToken, function (req, res, next) {
             console.log(logins);
             next();
         });
-});
-
-module.exports = router;
+}
+}

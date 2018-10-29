@@ -18,13 +18,17 @@ export default {
   },
   postLogin: function (loginData) {
     console.log("in postLogin", loginData);
-    axios.post('/auth/login', loginData)
-     .then(res => console.log(res))
-     .catch(err => console.log(err));
+    return axios.post("/api/auth/login", loginData);
   },
   postNewUser: function (regData) {
     console.log("in postNewUser", regData);
-    axios.post("/auth/register", regData)
+    axios.post("/api/auth/register", regData)
+    .then(res => console.log(res))
+    .catch(err => console.log(err));
+  },
+  getVerify: function (token) {
+    console.log("in getVerify", token);
+    axios.get("/api/auth/verify", token)
     .then(res => console.log(res))
     .catch(err => console.log(err));
   }

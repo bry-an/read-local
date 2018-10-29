@@ -2,7 +2,7 @@ var jwt = require('jsonwebtoken');
 var config = require('../../config/config.js');
 
 function verifyToken(req, res, next) {
-    console.log("in verify");
+    console.log("in verifyToken.js");
   var token = req.headers['x-access-token'];
   if (!token)
     return res.status(403).send({ auth: false, message: 'No token provided.' });
