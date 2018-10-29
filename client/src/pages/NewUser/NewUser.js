@@ -3,7 +3,6 @@ import ReactModal from 'react-modal';
 import { Row, Col } from "../../components/Grid";
 import { FormBtn, Input, Label, LinkBtn } from "../../components/Form";
 import "./NewUser.css";
-import axios from "axios";
 import API from "../../utils/API";
 
 const customStyles = {
