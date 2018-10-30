@@ -1,5 +1,6 @@
 const router = require("express").Router();
 const loginController = require("../../controllers/loginController");
+const verifyToken = require("../../public/js/verifyToken");
 
 router
   .route("/register")
@@ -13,8 +14,8 @@ router
   .route("/logout")
   .get(loginController.logout);
 
-router
-  .route("/verify")
-  .get(loginController.verify);
+router.get("/verify", verifyToken, function (req, res, next) {
+    loginController.verify(req, res, next);
+});
 
 module.exports = router;

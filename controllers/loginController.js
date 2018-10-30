@@ -5,7 +5,6 @@ const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
 const config = require('../config/config');
 const db = require("../models");
-const verifyToken = require('../public/js/verifyToken');
 
 router.use(bodyParser.urlencoded({ extended: true }));
 router.use(bodyParser.json());
@@ -57,16 +56,13 @@ logout: function (req, res) {
 },
 
 verify: function (req, res, next) {
-    console.log("in verify in controller");
-    verifyToken;
     db.Login.findOne( { _id: req.loginsId } )
         .then(function (logins, err) {
             if (err) return res.status(500).send("There was a problem finding the user.");
             if (!logins) return res.status(404).send("No user found.");
-            // res.status(200).send(user); Comment this out!
             res.status(200).send(logins);
             console.log(logins);
             next();
         });
-}
+    }
 }

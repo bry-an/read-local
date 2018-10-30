@@ -40,7 +40,10 @@ class NavLogin extends Component {
     console.log(this.state.login, this.state.password);
      const loginData = { login_email: this.state.login, password: this.state.password };
      API.postLogin(loginData)
-     .then(res => localStorage.setItem("token", res.data.token));     
+     .then(res => {
+       localStorage.setItem("token", res.data.token);
+
+    });
   }
 
   handleInputChange = event => {
