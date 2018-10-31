@@ -42,7 +42,7 @@ class NavLogin extends Component {
      API.postLogin(loginData)
      .then(res => {
        localStorage.setItem("token", res.data.token);
-
+        this.props.login();
     });
   }
 
