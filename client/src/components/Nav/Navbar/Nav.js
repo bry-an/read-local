@@ -27,8 +27,7 @@ class Nav extends Component {
         console.log(res.data);
         this.setState({ stateItems: res.data });
         console.log(res.data, this.state.stateItems[0])
-      }
-      )
+      })
       .catch(err => console.log(err));
   }
 
