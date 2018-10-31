@@ -41,6 +41,18 @@ const mapStyle = [
     ]
   },
   {
+    "featureType": "administrative.country",
+    "elementType": "geometry.stroke",
+    "stylers": [
+      {
+        "color": "#111111"
+      },
+      {
+        "visibility": "on"
+      }
+    ]
+  },
+  {
     "featureType": "administrative.land_parcel",
     "elementType": "labels.text.fill",
     "stylers": [
@@ -54,7 +66,7 @@ const mapStyle = [
     "elementType": "geometry.stroke",
     "stylers": [
       {
-        "color": "#ffeb3b"
+        "color": "#111111"
       },
       {
         "visibility": "on"
