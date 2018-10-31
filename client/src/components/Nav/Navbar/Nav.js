@@ -31,6 +31,10 @@ class Nav extends Component {
       .catch(err => console.log(err));
   }
 
+  loginState() {
+    this.setState({logState: "Logout"});
+  }
+
   stateClick(event) {
     console.log("in stateClick", event.target.value);
     this.setState({ cityItems: [] });
@@ -76,7 +80,7 @@ class Nav extends Component {
           </Col>
 
           <Col size="one column" colId="navLogin">
-            <NavLogin value={this.state.logState} />
+            <NavLogin value={this.state.logState} login={this.loginState} />
           </Col>
         </Row>
         </Container>
