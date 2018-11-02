@@ -2,6 +2,7 @@ const db = require("../models");
 
 module.exports = {
   findAll: function (req, res) {
+    console.log("finding all articles");
     db.Article
       .find({})
       .then(articles => res.json(articles))

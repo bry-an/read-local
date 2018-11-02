@@ -21,6 +21,14 @@ class Nav extends Component {
     this.stateClick = this.stateClick.bind(this);
   }
 
+  getToken = () => {
+    if (localStorage.getItem("token")) {
+      return localStorage.getItem("token");
+    } else {
+      return "";
+    }
+  }
+
   componentWillMount() {
     API.fillStates()
       .then(res => {
@@ -31,11 +39,16 @@ class Nav extends Component {
       .catch(err => console.log(err));
   }
 
-  loginState() {
-    this.setState({logState: "Logout"});
+  loginState = () => {
+    console.log(this);
+    if (this.state.logState === "Login") {
+      this.setState({logState: "Logout"});
+    } else {
+      this.setState({logState: "Login"});
+    };
   }
 
-  stateClick(event) {
+  stateClick = (event) => {
     console.log("in stateClick", event.target.value);
     this.setState({ cityItems: [] });
     this.setState({ selectState: event.target.value });
@@ -47,9 +60,14 @@ class Nav extends Component {
       })
   }
 
-  cityClick(event) {
+  cityClick = (event) => {
     console.log(event.target.value);
-    window.location.assign("/articles");
+    const token = this.getToken();
+    API.getArticles({headers: {'x-access-token': token}})
+      .then(res => {
+        console.log(res);
+      });
+    // window.location.assign("/articles");
 
   }
 
