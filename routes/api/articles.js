@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const articleController = require("../../controllers/articleController");
-
+const verifyToken = require("../../public/js/verifyToken");
 
 router
   .route("/usstates")
@@ -11,8 +11,11 @@ router
   .get(articleController.getCities);
 
 // Matches with "/api/articles"
-router.route("/")
-  .get(articleController.findAll)
+router
+  .get("/", verifyToken, function (req, res, next) {
+    console.log("getting articles");
+    articleController.findAll(req, res, next);
+  });
  // .post(articleController.create);
 
 // Matches with "/api/articles/:id"
