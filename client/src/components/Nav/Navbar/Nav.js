@@ -83,7 +83,8 @@ class Nav extends Component {
             <select className={this.state.cityDisplay}
               onChange={this.cityClick} id="citySelect" defaultValue="City">
               <option value="" >Select City</option>
-              {this.state.cityItems.map(item => <Select options={item.city} key={item._id} />)}
+              {this.state.cityItems.map(item => <Select options={item.city} key={item._id} />)
+          }
             </select>
           </Col>
           <Col size="two columns" colId="stateSel">
