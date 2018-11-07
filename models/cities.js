@@ -9,6 +9,7 @@ const citySchema = new Schema({
     ref: "UsState"
   }
 });
+// citySchema.index({ city: 1, state: 1 }, { unique: true, dropDups: true });
 
 const City = mongoose.model("City", citySchema);
 

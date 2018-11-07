@@ -12,7 +12,7 @@ router
 
 // Matches with "/api/articles"
 router
-  .get("/", verifyToken, function (req, res, next) {
+  .get("/", function (req, res, next) {
     console.log("getting articles");
     articleController.findAll(req, res, next);
   });

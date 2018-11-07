@@ -47,7 +47,7 @@ class GoogleMapContainer extends Component {
             if (err) console.log(err)
             console.log('compound code', data.plus_code.compound_code)
             const compoundCode = data.plus_code.compound_code
-            const article = `https://cors-anywhere.herokuapp.com/https://news.google.com/news/rss/local/section/geo/${compoundCode}?ned=us&gl=US&hl=en&num=100`
+            const article = `https://cors-anywhere.herokuapp.com/https://news.google.com/news/rss/local/section/geo/${compoundCode}?ned=us&gl=US&hl=en&num=30`
             axios.get(article)
                 .then(x => parseString(x.data, (err, res) => {
                     if (err) console.log(err)
