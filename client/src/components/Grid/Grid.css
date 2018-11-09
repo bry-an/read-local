@@ -1,6 +1,7 @@
 .container {
   margin-bottom: 3rem;
   width: 100%;
+  position: relative;
 }
 
 /*# sourceMappingURL=Grid.css.map */

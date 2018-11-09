@@ -1,6 +1,8 @@
 .navbar {
 	width: 100%;
 	margin-top: 2rem;
+	position:relative;
+	z-index: 50;
   }
 
   select, form {
@@ -52,6 +54,8 @@ ul#citySelect {
 	margin: 0;
 	height: 36px;
 	cursor: context-menu;
+	position:relative;
+	z-index: 50;
 }
 
 #select {
@@ -59,9 +63,24 @@ ul#citySelect {
 	margin: 8px 0 0;
 }
 
-.city {
+.citiesDisplayTrue {
 	text-decoration: none;
 	color: #222;
+}
+
+li.city {
+	margin: 0;
+}
+
+.city:hover {
+	background-color: #1E90FF;
+	margin: 0 -1rem;
+}
+
+.citiesDisplayTrue:hover {
+	color: #eee;
+	margin-left: 1rem;
+	margin-right: 1rem;
 }
 
 .citiesDisplayFalse {

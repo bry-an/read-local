@@ -41,6 +41,7 @@ class Articles extends Component {
 
   render() {
     return (
+	<div className="zin">
       <Container>
         <Row>
           <Col size="twelve columns">
@@ -54,7 +55,6 @@ class Articles extends Component {
                         {article.title.slice(1, -1)}
                       </strong>
                     </a>
-                    <hr></hr>
                     <div className="articleBodyTrunc" id={"articleId-" + article._id}>{article.body.slice(1, -1).replace(/\\\"/g, "\"").split("\\n\\n").map((item, index)=>
                     <p className="articleText" key={item + index}>{item}</p>)}
                     </div>
@@ -68,6 +68,7 @@ class Articles extends Component {
           </Col>
         </Row>
       </Container>
+	  </div>
     );
   }
 }

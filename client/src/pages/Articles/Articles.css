@@ -18,3 +18,8 @@
 .more {
 	color: #cc0000;
 }
+
+.zin {
+	position: relative;
+	z-index: 1;
+}

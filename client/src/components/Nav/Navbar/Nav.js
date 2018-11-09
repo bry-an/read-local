@@ -77,10 +77,14 @@ class Nav extends Component {
 		document.getElementById("citySelect").style.height="auto";
 		document.getElementById("select").style.marginBottom="10px"
 	} else {
-		this.setState({citiesDisplay : "citiesDisplayFalse"})
-		document.getElementById("citySelect").style.height="36px";
+		this.resetCity()
 	}
 	console.log(this.state.citiesDisplay)
+  }
+  
+  resetCity = () => {
+	  this.setState({citiesDisplay : "citiesDisplayFalse"})
+		document.getElementById("citySelect").style.height="36px";
   }
 
   render() {
@@ -95,7 +99,7 @@ class Nav extends Component {
             <ul className={this.state.cityDisplay} id="citySelect" >
               <li id="select" onClick={this.showCities}>Select City <span className="selectArrow">&#x25BC;</span></li>
 
-              {this.state.cityItems.map(item => <li key={item._id} ><Link to="/articles" className={`city ${this.state.citiesDisplay}`}>{item.city}</Link></li>)
+              {this.state.cityItems.map(item => <li key={item._id} className="city"><Link to="/articles" className={`${this.state.citiesDisplay}`} onClick={this.resetCity}>{item.city}</Link></li>)
           }
 
             </ul>
