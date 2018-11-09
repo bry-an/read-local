@@ -1,7 +1,12 @@
 import axios from "axios";
 
 export default {
-  // Gets all articles
+  // gets articles from api
+  pullArticles: function(header, query) {
+    return axios.get(`https://cors-anywhere.herokuapp.com/https://newsapi.org/v2/everything?q=${query}&apiKey=c3729246d799406a84cde63905f0d328`, header);
+  },
+
+  // Gets all articles from db
   getArticles: function (header) {
     return axios.get('/api/articles', header)
   },
@@ -9,8 +14,10 @@ export default {
   fillStates: function () {
     return axios.get('/api/articles/usstates');
   },
-  fillArticles: function () {
-    return axios.get('/api/articles');
+
+  // writes articles to db
+  fillArticles: function (coll) {
+    return axios.post('/api/articles', coll);
   },
   getCities: function (stateCode) {
     console.log("in getCities", stateCode);

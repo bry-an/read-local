@@ -63,9 +63,11 @@ class Nav extends Component {
   cityClick = (event) => {
     console.log(event.target.value);
     const token = this.getToken();
-    API.getArticles({headers: {'x-access-token': token}})
+    API.pullArticles({headers: {'x-access-token': token}}, event.target.value)
       .then(res => {
-        console.log(res);
+        const collName = localStorage.getItem("email");
+        console.log(res, collName);
+        API.fillArticles({ "coll": collName, "articles": res.data.articles });
       });
     // window.location.assign("/articles");
 

@@ -1,6 +1,59 @@
+const mongoose = require("mongoose");
 const db = require("../models");
+const articleSchema = new mongoose.Schema({
+  title: { type: String, required: true },
+  body: { type: String, required: true },
+  author: { type: String, required: true },
+  published: { type: Date, required: true },
+  url: { type: String, required: true },
+  imgUrl: { type: String, required: true },
+  location: { type: String },
+  lat: { type: Number },
+  long: { type: Number }  
+});
 
 module.exports = {
+  create: function(req, res) {
+    if (req.body.coll) {
+      console.log("in coll if");
+      let coll = req.body.coll;
+      coll = mongoose.model(coll, articleSchema);
+      console.log(coll, req.body.articles[0]);
+      for (let i = 0; i < req.body.articles.length; i++) {
+        console.log("in create user articles for loop");
+        let newUserArticle = new coll ({
+          "title":  req.body.articles[i].title,
+          "body": req.body.articles[i].content,
+          "author": req.body.articles[i].author,
+          "published": req.body.articles[i].publishedAt,
+          "url": req.body.articles[i].url,
+          "imgUrl": req.body.articles[i].urlToImage
+        });
+        newUserArticle.save(err => {
+          if (err) console.log ("res.status(500)", err);
+          console.log("res.status(200)");
+        });
+      }
+    } else {
+      const anon = mongoose.model("anon", articleSchema);
+      for (let i = 0; i < req.body.articles.length; i++) {
+        console.log("in create anon articles for loop");
+        let newUserArticle = new anon ({
+          "title":  req.body.articles[i].title,
+          "body": req.body.articles[i].content,
+          "author": req.body.articles[i].author,
+          "published": req.body.articles[i].publishedAt,
+          "url": req.body.articles[i].url,
+          "imgUrl": req.body.articles[i].urlToImage
+        });
+        newUserArticle.save(err => {
+          if (err) console.log ("res.status(500)", err);
+          console.log("res.status(200)");
+        });
+      }
+    };
+  },
+
   findAll: function (req, res) {
     console.log("finding all articles");
     db.Article
