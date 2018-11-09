@@ -41,6 +41,7 @@ class NavLogin extends Component {
      const loginData = { login_email: this.state.login, password: this.state.password };
      API.postLogin(loginData)
      .then(res => {
+       localStorage.setItem("email", loginData.login_email);
        localStorage.setItem("token", res.data.token);
         this.props.login();
     });

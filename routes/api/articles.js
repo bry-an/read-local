@@ -15,8 +15,10 @@ router
   .get("/", function (req, res, next) {
     console.log("getting articles");
     articleController.findAll(req, res, next);
+  })
+  .post("/", function(req, res) {
+    articleController.create(req, res);
   });
- // .post(articleController.create);
 
 // Matches with "/api/articles/:id"
 router
