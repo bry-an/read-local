@@ -4,6 +4,7 @@ import NavLogin from "..//NavLogin";
 import NavLink from "..//NavLink";
 import { Select } from "../../Form";
 import "./Nav.css";
+import { Link } from "react-router-dom";
 import API from "../../../utils/API";
 
 class Nav extends Component {
@@ -14,6 +15,7 @@ class Nav extends Component {
       stateItems: [],
       cityItems: [],
       cityDisplay: "cityDisplayFalse",
+	  citiesDisplay: "citiesDisplayFalse",
       logState: "Login",
       selectState: "State",
       selectCity: "City"
@@ -67,8 +69,18 @@ class Nav extends Component {
       .then(res => {
         console.log(res);
       });
-    // window.location.assign("/articles");
-
+  }
+  
+  showCities = () => {
+	if (this.state.citiesDisplay === "citiesDisplayFalse") {
+		this.setState({citiesDisplay : "citiesDisplayTrue"})
+		document.getElementById("citySelect").style.height="auto";
+		document.getElementById("select").style.marginBottom="10px"
+	} else {
+		this.setState({citiesDisplay : "citiesDisplayFalse"})
+		document.getElementById("citySelect").style.height="36px";
+	}
+	console.log(this.state.citiesDisplay)
   }
 
   render() {
@@ -80,12 +92,13 @@ class Nav extends Component {
             <NavLink href="/" />
           </Col>
           <Col size="three columns" colId="cityCol" >
-            <select className={this.state.cityDisplay}
-              onChange={this.cityClick} id="citySelect" defaultValue="City">
-              <option value="" >Select City</option>
-              {this.state.cityItems.map(item => <Select options={item.city} key={item._id} />)
+            <ul className={this.state.cityDisplay} id="citySelect" >
+              <li id="select" onClick={this.showCities}>Select City <span className="selectArrow">&#x25BC;</span></li>
+
+              {this.state.cityItems.map(item => <li key={item._id} ><Link to="/articles" className={`city ${this.state.citiesDisplay}`}>{item.city}</Link></li>)
           }
-            </select>
+
+            </ul>
           </Col>
           <Col size="two columns" colId="stateSel">
             <select defaultValue={this.state.selectState}
