@@ -1,6 +1,8 @@
 .navbar {
 	width: 100%;
 	margin-top: 2rem;
+	position:relative;
+	z-index: 50;
   }
 
   select, form {
@@ -39,6 +41,60 @@
 
 #searchSel {
   margin-left: 1rem;
+}
+
+li {
+	list-style-type: none;
+}
+
+ul#citySelect {
+	border: 1px solid #d1d1d1;
+	padding: 0 1rem;
+	border-radius: 5px;
+	margin: 0;
+	height: 36px;
+	cursor: context-menu;
+	position:relative;
+	z-index: 50;
+}
+
+#select {
+	color: #222;
+	margin: 8px 0 0;
+}
+
+.citiesDisplayTrue {
+	text-decoration: none;
+	color: #222;
+}
+
+li.city {
+	margin: 0;
+}
+
+.city:hover {
+	background-color: #1E90FF;
+	margin: 0 -1rem;
+}
+
+.citiesDisplayTrue:hover {
+	color: #eee;
+	margin-left: 1rem;
+	margin-right: 1rem;
+}
+
+.citiesDisplayFalse {
+	display: none;
+}
+
+.citiesDisplayTrue {
+	display: block;
+}
+
+.selectArrow {
+	font-size: .6em;
+	float: right;
+	margin-top:3px;
 }
 
 /*# sourceMappingURL=Nav.css.map */

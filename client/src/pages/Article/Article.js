@@ -23,6 +23,7 @@ class Articles extends Component {
 
   render() {
     return (
+		<div className="zin">
       <Container>
         <Row>
           <Col size="twelve columns">
@@ -42,6 +43,7 @@ class Articles extends Component {
           </Col>
         </Row>
       </Container>
+	  </div>
     );
   }
 }
