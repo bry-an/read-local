@@ -3,6 +3,7 @@ import axios from "axios";
 export default {
   // gets articles from api
   pullArticles: function(header, query) {
+    console.log(query);
     return axios.get(`https://cors-anywhere.herokuapp.com/https://newsapi.org/v2/everything?q=${query}&apiKey=c3729246d799406a84cde63905f0d328`, header);
   },
 

@@ -18,7 +18,7 @@ module.exports = {
       console.log("in coll if");
       let coll = req.body.coll;
       coll = mongoose.model(coll, articleSchema);
-      console.log(coll, req.body.articles[0]);
+      // console.log(coll, req.body.articles[0]);
       for (let i = 0; i < req.body.articles.length; i++) {
         console.log("in create user articles for loop");
         let newUserArticle = new coll ({
@@ -56,10 +56,16 @@ module.exports = {
 
   findAll: function (req, res) {
     console.log("finding all articles");
-    db.Article
-      .find({})
+    if (req.body.coll) {
+      db.coll.find({})
       .then(articles => res.json(articles))
       .catch(err => res.status(422).json(err));
+    } else {
+      db.Article
+        .find({})
+        .then(articles => res.json(articles))
+        .catch(err => res.status(422).json(err));
+    }
   },
   // Gets the article with the given id
   getSavedArticle: function(req, res) {

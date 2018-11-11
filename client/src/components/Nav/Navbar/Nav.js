@@ -62,7 +62,7 @@ class Nav extends Component {
       })
   }
 
-  cityClick = (event) => {
+  cityChange = (event) => {
     console.log(event.target.value);
     const token = this.getToken();
     API.pullArticles({headers: {'x-access-token': token}}, event.target.value)
@@ -84,9 +84,17 @@ class Nav extends Component {
 	console.log(this.state.citiesDisplay)
   }
   
-  resetCity = () => {
+  resetCity = () => {    
+    console.log(this.state);
 	  this.setState({citiesDisplay : "citiesDisplayFalse"})
-		document.getElementById("citySelect").style.height="36px";
+    document.getElementById("citySelect").style.height="36px";
+    const token = this.getToken();
+    API.pullArticles({headers: {'x-access-token': token}})
+      .then(res => {
+        const collName = localStorage.getItem("email");
+        console.log(res, collName);
+        API.fillArticles({ "coll": collName, "articles": res.data.articles });
+      });
   }
 
   render() {
@@ -101,7 +109,7 @@ class Nav extends Component {
             <ul className={this.state.cityDisplay} id="citySelect" >
               <li id="select" onClick={this.showCities}>Select City <span className="selectArrow">&#x25BC;</span></li>
 
-              {this.state.cityItems.map(item => <li key={item._id} className="city"><Link to="/articles" className={`${this.state.citiesDisplay}`} onClick={this.resetCity}>{item.city}</Link></li>)
+              {this.state.cityItems.map(item => <li key={item._id} className="city"><Link to="/articles" className={`${this.state.citiesDisplay}`} onClick={this.resetCity} id={item.city}>{item.city}</Link></li>)
           }
 
             </ul>
