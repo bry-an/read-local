@@ -6,11 +6,6 @@
 	margin:0;
 }
 
-.articleBodyTrunc {
-	height: 5rem;
-	overflow: hidden;
-}
-
 .articleBodyLong {
 	height: 100%;
 }
@@ -22,4 +17,8 @@
 .zin {
 	position: relative;
 	z-index: 1;
+}
+
+.articleImage {
+	width: 100%
 }
