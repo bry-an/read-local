@@ -1,8 +1,7 @@
 .navbar {
 	width: 100%;
 	margin-top: 2rem;
-	position:relative;
-	z-index: 50;
+	z-index: 49;
   }
 
   select, form {
@@ -56,6 +55,7 @@ ul#citySelect {
 	cursor: context-menu;
 	position:relative;
 	z-index: 50;
+	background-color: #fff;
 }
 
 #select {
