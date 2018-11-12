@@ -14,7 +14,7 @@ class Articles extends Component {
 
   componentDidMount() {
     console.log("getting articles");
-    this.getArticles();
+    this.getArticles(this.state.city);
   }
 
   updateState(city){
@@ -26,9 +26,10 @@ class Articles extends Component {
     console.log(prevProps.location.pathname)
     console.log(this.props.match.params.city)
     if(this.state.city!==this.props.match.params.city){
-      console.log("fuck yeah")
+      console.log("entered city change")
       this.setState({city: this.props.match.params.city})
-      this.getArticles();
+      this.getArticles(this.props.match.params.city);
+      console.log(this.state.city)
     }
     
   }
@@ -41,12 +42,14 @@ class Articles extends Component {
     }
   }
   
-  getArticles = () => {
-	  const token = this.getToken();
-	    API.pullArticles({headers: {'x-access-token': token}}, this.state.city)
+  getArticles = (city) => {
+    const token = this.getToken();
+    console.log(this.state.city)
+	    API.pullArticles({headers: {'x-access-token': token}}, city)
       .then(res => {
         const collName = localStorage.getItem("email");
         console.log(res);
+        console.log(this.state.city)
 		this.setState({articles: res.data.articles})
 		console.log(this.state.articles)
         API.fillArticles({ "coll": collName, "articles": res.data.articles });
@@ -65,7 +68,7 @@ class Articles extends Component {
               <List>
                 {this.state.articles.map((article, i) => {
                   return (
-                   <ListItem key={article.publishedAt} >
+                   <ListItem key={article.publishedAt+i} >
                    <Row>
                      <Col size="twelve columns">
 				            	<a href={article.url} target="_blank" rel="noopener" rel="noreferrer">
