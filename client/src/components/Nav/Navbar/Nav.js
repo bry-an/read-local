@@ -89,7 +89,7 @@ class Nav extends Component {
     API.pullArticles({headers: {'x-access-token': token}}, city)
       .then(res => {
         const collName = localStorage.getItem("email");
-        console.log(res, collName);
+        console.log(res);
         API.fillArticles({ "coll": collName, "articles": res.data.articles });
       });
   }
