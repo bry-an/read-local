@@ -85,13 +85,8 @@ class Nav extends Component {
   resetCity = city => {    
 	  this.setState({citiesDisplay : "citiesDisplayFalse"})
     document.getElementById("citySelect").style.height="36px";
-    const token = this.getToken();
-    API.pullArticles({headers: {'x-access-token': token}}, city)
-      .then(res => {
-        const collName = localStorage.getItem("email");
-        console.log(res);
-        API.fillArticles({ "coll": collName, "articles": res.data.articles });
-      });
+    
+
   }
 
   render() {
@@ -106,7 +101,7 @@ class Nav extends Component {
             <ul className={this.state.cityDisplay} id="citySelect" >
               <li id="select" onClick={this.showCities}>Select City <span className="selectArrow">&#x25BC;</span></li>
 
-              {this.state.cityItems.map(item => <li key={item._id} className="city"><Link to="/articles" className={`${this.state.citiesDisplay}`} onClick={()=>this.resetCity(item.city)} id={item.city}>{item.city}</Link></li>)
+              {this.state.cityItems.map(item => <li key={item._id} className="city"><Link to={`/articles/${item.city}`} className={`${this.state.citiesDisplay}`} onClick={()=>this.resetCity(item.city)} id={item.city}>{item.city}</Link></li>)
           }
 
             </ul>

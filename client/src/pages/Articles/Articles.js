@@ -15,29 +15,27 @@ class Articles extends Component {
     this.getArticles();
   }
 
+    getToken = () => {
+    if (localStorage.getItem("token")) {
+      return localStorage.getItem("token");
+    } else {
+      return "";
+    }
+  }
+  
   getArticles = () => {
-    API.fillArticles()
-      .then(res =>  {this.setState({ articles: res.data});
-      console.log(res)}
-  )
+	  const token = this.getToken();
+	    API.pullArticles({headers: {'x-access-token': token}}, this.props.match.params.city)
+      .then(res => {
+        const collName = localStorage.getItem("email");
+        console.log(res);
+		this.setState({articles: res.data.articles})
+		console.log(this.state.articles)
+        API.fillArticles({ "coll": collName, "articles": res.data.articles });
+      })
     .catch(err => console.log(err));
   }
 
-  showMore = (i) => {
-    var itemId = "articleId-" + i;
-    var moreId = "moreId-" + i;
-    var x = document.getElementById(itemId);
-    var y = document.getElementById(moreId);
-    if (y.textContent === "more...") {
-      y.innerHTML="less..";
-      x.removeAttribute("class");
-      x.setAttribute("class", "articleBodyLong")
-    } else {
-      y.innerHTML="more...";
-      x.removeAttribute("class");
-      x.setAttribute("class", "articleBodyTrunc")
-    }  
-  }
 
   render() {
     return (
@@ -49,18 +47,18 @@ class Articles extends Component {
               <List>
                 {this.state.articles.map((article, i) => {
                   return (
-                    <ListItem key={article._id} >
-                    <a href={"/articles/" + article._id} id={"id-" + article._id}>
+                   <ListItem key={article.publishedAt} >
+					<a href={article.url} target="_blank" rel="noopener" rel="noreferrer">
                       <strong>
-                        {article.title.slice(1, -1)}
+                        {article.title}
                       </strong>
                     </a>
-                    <div className="articleBodyTrunc" id={"articleId-" + article._id}>{article.body.slice(1, -1).replace(/\\\"/g, "\"").split("\\n\\n").map((item, index)=>
-                    <p className="articleText" key={item + index}>{item}</p>)}
+					<div className="articleBodyTrunc" id={"articleId-" + article.publishedAt}>
+						{article.description}
                     </div>
-                    <p className="more" id={"moreId-" + article._id} onClick={()=>this.showMore(article._id)}>more...</p>
+
                     <hr></hr>
-                  </ListItem>
+				   </ListItem>
                   );
                 })}
               </List>
