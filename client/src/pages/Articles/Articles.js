@@ -7,12 +7,30 @@ import "./Articles.css";
 
 class Articles extends Component {
   state = {
-    articles: []
+    articles: [],
+    city: this.props.match.params.city,
+    cityCheck: this.props.match.params
   };
 
   componentDidMount() {
     console.log("getting articles");
     this.getArticles();
+  }
+
+  updateState(city){
+    
+  }
+
+  componentDidUpdate(prevProps){
+    console.log(this.state.cityCheck.city)
+    console.log(prevProps.location.pathname)
+    console.log(this.props.match.params.city)
+    if(this.state.city!==this.props.match.params.city){
+      console.log("fuck yeah")
+      this.setState({city: this.props.match.params.city})
+      this.getArticles();
+    }
+    
   }
 
     getToken = () => {
@@ -25,7 +43,7 @@ class Articles extends Component {
   
   getArticles = () => {
 	  const token = this.getToken();
-	    API.pullArticles({headers: {'x-access-token': token}}, this.props.match.params.city)
+	    API.pullArticles({headers: {'x-access-token': token}}, this.state.city)
       .then(res => {
         const collName = localStorage.getItem("email");
         console.log(res);
@@ -48,15 +66,25 @@ class Articles extends Component {
                 {this.state.articles.map((article, i) => {
                   return (
                    <ListItem key={article.publishedAt} >
-					<a href={article.url} target="_blank" rel="noopener" rel="noreferrer">
+                   <Row>
+                     <Col size="twelve columns">
+				            	<a href={article.url} target="_blank" rel="noopener" rel="noreferrer">
                       <strong>
                         {article.title}
                       </strong>
                     </a>
-					<div className="articleBodyTrunc" id={"articleId-" + article.publishedAt}>
-						{article.description}
+                    </Col>
+                    </Row>
+                    <Row>
+                      <Col size="nine columns">
+					          <div className="articleBodyTrunc u-cf" id={"articleId-" + article.publishedAt}>
+                    {article.description}
                     </div>
-
+                    </Col>
+                    <Col size="three columns">
+                    <img src={article.urlToImage} className="articleImage" alt={article.title}/>
+                    </Col>
+                    </Row>
                     <hr></hr>
 				   </ListItem>
                   );
