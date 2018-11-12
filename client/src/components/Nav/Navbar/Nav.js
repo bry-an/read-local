@@ -34,9 +34,7 @@ class Nav extends Component {
   componentWillMount() {
     API.fillStates()
       .then(res => {
-        console.log(res.data);
         this.setState({ stateItems: res.data });
-        console.log(res.data, this.state.stateItems[0])
       })
       .catch(err => console.log(err));
   }
@@ -84,12 +82,11 @@ class Nav extends Component {
 	console.log(this.state.citiesDisplay)
   }
   
-  resetCity = () => {    
-    console.log(this.state);
+  resetCity = city => {    
 	  this.setState({citiesDisplay : "citiesDisplayFalse"})
     document.getElementById("citySelect").style.height="36px";
     const token = this.getToken();
-    API.pullArticles({headers: {'x-access-token': token}})
+    API.pullArticles({headers: {'x-access-token': token}}, city)
       .then(res => {
         const collName = localStorage.getItem("email");
         console.log(res, collName);
@@ -109,7 +106,7 @@ class Nav extends Component {
             <ul className={this.state.cityDisplay} id="citySelect" >
               <li id="select" onClick={this.showCities}>Select City <span className="selectArrow">&#x25BC;</span></li>
 
-              {this.state.cityItems.map(item => <li key={item._id} className="city"><Link to="/articles" className={`${this.state.citiesDisplay}`} onClick={this.resetCity} id={item.city}>{item.city}</Link></li>)
+              {this.state.cityItems.map(item => <li key={item._id} className="city"><Link to="/articles" className={`${this.state.citiesDisplay}`} onClick={()=>this.resetCity(item.city)} id={item.city}>{item.city}</Link></li>)
           }
 
             </ul>

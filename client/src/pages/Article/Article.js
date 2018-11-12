@@ -23,7 +23,7 @@ class Articles extends Component {
 
   render() {
     return (
-		<div className="zin">
+	<div className="zin">
       <Container>
         <Row>
           <Col size="twelve columns">
