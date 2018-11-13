@@ -21,7 +21,7 @@ class GoogleMapContainer extends Component {
         articles: [],
         filteredArticles: [],
         filtered: false,
-        keywordInput: ''
+        searchInput: ''
     }
 
     componentDidMount() {
@@ -40,7 +40,7 @@ class GoogleMapContainer extends Component {
         console.log('userInput', event)
         this.setState({
             [name]: value.trim()
-        }, () => this.filterHeadlines(value.trim()))
+        })
     }
 
     reverseGeocoder = (lat, lng) => {
@@ -135,10 +135,18 @@ class GoogleMapContainer extends Component {
             <Fragment>
                 <Row>
                    <Col size="nine columns offset-by-one">
-						<Input type='text' id='searchInput' name='searchInput' placeholder="Search..." className="u-full-width"/>
+						<Input 
+							type='text' 
+							id='searchInput' 
+							name='searchInput' 
+							placeholder="Search..." 
+							className="u-full-width"
+							value={this.state.searchInput} 
+							onChange={this.inputHandler}
+							/>
 				   </Col>
 				   <Col size="two columns">
-						<Link to={`/articles/:{}`} className="button button-primary u-full-width">Search</Link>
+						<Link to={`/articles/:${this.state.searchInput}`} className="button button-primary u-full-width">Search</Link>
 				   </Col>
                 </Row>
 				<Row>
