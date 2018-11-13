@@ -135,7 +135,7 @@ class GoogleMapContainer extends Component {
             <Fragment>
                 <Row>
                    <Col size="nine columns offset-by-one">
-						<Input type='text' id='searchInput' name='searchInput' className="u-full-width"/>
+						<Input type='text' id='searchInput' name='searchInput' placeholder="Search..." className="u-full-width"/>
 				   </Col>
 				   <Col size="two columns">
 						<Link to={`/articles/:{}`} className="button button-primary u-full-width">Search</Link>
