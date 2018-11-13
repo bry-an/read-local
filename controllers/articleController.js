@@ -27,7 +27,8 @@ module.exports = {
           "author": req.body.articles[i].author,
           "published": req.body.articles[i].publishedAt,
           "url": req.body.articles[i].url,
-          "imgUrl": req.body.articles[i].urlToImage
+          "imgUrl": req.body.articles[i].urlToImage,
+          "saved": false
         });
         newUserArticle.save(err => {
           if (err) console.log ("res.status(500)", err);
@@ -44,7 +45,8 @@ module.exports = {
           "author": req.body.articles[i].author,
           "published": req.body.articles[i].publishedAt,
           "url": req.body.articles[i].url,
-          "imgUrl": req.body.articles[i].urlToImage
+          "imgUrl": req.body.articles[i].urlToImage,
+          "saved": false
         });
         newUserArticle.save(err => {
           if (err) console.log ("res.status(500)", err);

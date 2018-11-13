@@ -1,4 +1,5 @@
 import React, { Fragment, Component } from 'react'
+import { Link } from "react-router-dom";
 import GoogleMap from './GoogleMap'
 import { Input } from "../Form"
 import { Col, Row } from "../Grid";
@@ -20,7 +21,8 @@ class GoogleMapContainer extends Component {
         articles: [],
         filteredArticles: [],
         filtered: false,
-        keywordInput: ''
+        keywordInput: '',
+        cityLink: ''
     }
 
     componentDidMount() {
@@ -45,16 +47,25 @@ class GoogleMapContainer extends Component {
     reverseGeocoder = (lat, lng) => {
         geocoder.reverseGeocode(lat, lng, (err, data) => {
             if (err) console.log(err)
-            console.log('compound code', data.plus_code.compound_code)
-            const compoundCode = data.plus_code.compound_code
-            const article = `https://cors-anywhere.herokuapp.com/https://news.google.com/news/rss/local/section/geo/${compoundCode}?ned=us&gl=US&hl=en&num=30`
-            axios.get(article)
-                .then(x => parseString(x.data, (err, res) => {
-                    if (err) console.log(err)
-                    console.log('json?', res)
+            console.log('compound code', typeof (data.plus_code.compound_code))
+            const compoundCode = data.plus_code.compound_code.split(",")[0].split(" ").slice(1).join(" ")
+            console.log(compoundCode)
+            // const article = `https://cors-anywhere.herokuapp.com/https://news.google.com/news/rss/local/section/geo/${compoundCode}?ned=us&gl=US&hl=en&num=30`
+            this.setState({ cityLink: compoundCode });
+            var evt = document.createEvent("MouseEvents");
+            evt.initMouseEvent("click", true, true, window,
+                0, 0, 0, 0, 0, false, false, false, false, 0, null);
+            var a = document.getElementById("cityLink");
+            a.dispatchEvent(evt); 
 
-                })
-                )
+            // const article = `/articles/${compoundCode}`
+            // axios.get(article)
+            //     .then(x => parseString(x.data, (err, res) => {
+            //         if (err) console.log(err)
+            //         console.log('json?', res)
+
+            //     })
+            //     )
         }, { key: "AIzaSyDqEyqqpMD23rErtt__7gxgYsuA6pfYdOE" })
 
     }
@@ -150,6 +161,7 @@ class GoogleMapContainer extends Component {
                             points={this.state.points}
                             geocoder={this.reverseGeocoder}
                         />
+                        <Link to={`/articles/${this.state.cityLink}`} id="cityLink"></Link>
                     </Col>
                 </Row>
                 {/* <Row>
