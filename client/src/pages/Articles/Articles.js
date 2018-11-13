@@ -93,7 +93,14 @@ class Articles extends Component {
                   );
                 })}
               </List>
-            ) : ""}
+            ) : (
+              <div>
+              <h4 className="loading">Loading Articles</h4>
+              <div id="spinner">
+              <img src="/assets/images/spinner.gif" alt=""  />
+              </div>
+              
+              </div> )}
           </Col>
         </Row>
       </Container>
