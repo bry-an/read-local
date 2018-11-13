@@ -59,17 +59,6 @@ class Nav extends Component {
          this.setState({ cityItems: res.data });
       })
   }
-
-  cityChange = (event) => {
-    console.log(event.target.value);
-    const token = this.getToken();
-    API.pullArticles({headers: {'x-access-token': token}}, event.target.value)
-      .then(res => {
-        const collName = localStorage.getItem("email");
-        console.log(res, collName);
-        API.fillArticles({ "coll": collName, "articles": res.data.articles });
-      });
-  }
   
   showCities = () => {
 	if (this.state.citiesDisplay === "citiesDisplayFalse") {
