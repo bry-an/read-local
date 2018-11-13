@@ -22,3 +22,13 @@
 .articleImage {
 	width: 100%
 }
+
+.loading {
+	text-align: center;
+	font-family: Cinzel, sans-serif;
+}
+
+#spinner {
+	width: 100px;
+	margin: 0 auto;
+}
