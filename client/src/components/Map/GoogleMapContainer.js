@@ -6,6 +6,7 @@ import API from '../../utils/API'
 import geocoder from 'geocoder'
 import axios from 'axios'
 import { parseString } from 'xml2js'
+import { Link } from 'react-router-dom';
 
 
 
@@ -132,34 +133,24 @@ class GoogleMapContainer extends Component {
     render() {
         return (
             <Fragment>
-
                 <Row>
-                    <Col size="five columns offset-by-one">
-                        <p>To search by specific location, enter it below</p>
-                        <Input type='text' id='locationInput' placeholder='Enter your location' />
-                    </Col>
-                    <Col size="five columns">
-                        <p className='keywordLabel'>To narrow results, enter keyword below</p>
-                        <Input type='text' id='keywordInput' name='keywordInput' value={this.state.keywordInput} onChange={this.inputHandler} placeholder='Keyword Search' />
-                    </Col>
+                   <Col size="nine columns offset-by-one">
+						<Input type='text' id='searchInput' name='searchInput' className="u-full-width"/>
+				   </Col>
+				   <Col size="two columns">
+						<Link to={`/articles/:{}`} className="button button-primary u-full-width">Search</Link>
+				   </Col>
                 </Row>
-                <Row>
-                    <Col size="twelve columns">
+				<Row>
+					<Col size="twelve columns">
+						
                         <GoogleMap
                             center={this.state.mapCenter}
                             points={this.state.points}
                             geocoder={this.reverseGeocoder}
                         />
                     </Col>
-                </Row>
-                {/* <Row>
-                    {this.state.filtered
-                        ? this.state.articles.map(article =>
-                            <ArticleItem articleHeadline={article.title} />
-                        )
-                        : null
-                    }</Row> */}
-
+				</Row>
             </Fragment>
         )
     }

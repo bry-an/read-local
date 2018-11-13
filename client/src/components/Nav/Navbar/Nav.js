@@ -94,7 +94,7 @@ class Nav extends Component {
       <nav className={"navbar"}>
       <Container>
         <Row>
-          <Col size="six columns">
+          <Col size="six columns" colId="navLinkSpace">
             <NavLink href="/" />
           </Col>
           <Col size="three columns" colId="cityCol" >
