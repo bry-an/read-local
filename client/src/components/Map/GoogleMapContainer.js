@@ -7,6 +7,7 @@ import API from '../../utils/API'
 import geocoder from 'geocoder'
 import axios from 'axios'
 import { parseString } from 'xml2js'
+import { Link } from 'react-router-dom';
 
 
 
@@ -41,7 +42,7 @@ class GoogleMapContainer extends Component {
         console.log('userInput', event)
         this.setState({
             [name]: value.trim()
-        }, () => this.filterHeadlines(value.trim()))
+        })
     }
 
     reverseGeocoder = (lat, lng) => {
@@ -143,19 +144,25 @@ class GoogleMapContainer extends Component {
     render() {
         return (
             <Fragment>
-
                 <Row>
-                    <Col size="five columns offset-by-one">
-                        <p>To search by specific location, enter it below</p>
-                        <Input type='text' id='locationInput' placeholder='Enter your location' />
-                    </Col>
-                    <Col size="five columns">
-                        <p className='keywordLabel'>To narrow results, enter keyword below</p>
-                        <Input type='text' id='keywordInput' name='keywordInput' value={this.state.keywordInput} onChange={this.inputHandler} placeholder='Keyword Search' />
-                    </Col>
+                   <Col size="nine columns offset-by-one">
+						<Input 
+							type='text' 
+							id='searchInput' 
+							name='searchInput' 
+							placeholder="Search..." 
+							className="u-full-width"
+							value={this.state.searchInput} 
+							onChange={this.inputHandler}
+							/>
+				   </Col>
+				   <Col size="two columns">
+						<Link to={`/articles/:${this.state.searchInput}`} className="button button-primary u-full-width">Search</Link>
+				   </Col>
                 </Row>
-                <Row>
-                    <Col size="twelve columns">
+				<Row>
+					<Col size="twelve columns">
+						
                         <GoogleMap
                             center={this.state.mapCenter}
                             points={this.state.points}
@@ -163,15 +170,7 @@ class GoogleMapContainer extends Component {
                         />
                         <Link to={`/articles/${this.state.cityLink}`} id="cityLink"></Link>
                     </Col>
-                </Row>
-                {/* <Row>
-                    {this.state.filtered
-                        ? this.state.articles.map(article =>
-                            <ArticleItem articleHeadline={article.title} />
-                        )
-                        : null
-                    }</Row> */}
-
+				</Row>
             </Fragment>
         )
     }
